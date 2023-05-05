@@ -1,0 +1,57 @@
+{
+  "HeaderIntroduce": "初めまして、私は John と申します。",
+  "Lang": "日本語",
+  "Common": {
+    "JP": "日本語",
+    "CH": "中国語（繁体字）",
+    "EN": "英語"
+  },
+  "CommonTitle": {
+    "MyWork": "私の作品集",
+    "Title": "プロジェク",
+    "Period": "時期",
+    "Team": "チーム",
+    "Character": "キャラクター",
+    "SkillList": "技能"
+  },
+  "CommonActivity": {
+    "BackTo": "ホームページに戻る"
+  },
+  "Skill": {
+    "WebDesign": "Web Design",
+    "RWD": "RWD",
+    "HTML5": "HTML5",
+    "SCSS": "SCSS",
+    "jQuery": "jQuery",
+    "JavaScript": "JavaScript",
+    "Vue3": "Vue3 Compostion API",
+    "Vite": "Vite",
+    "i18n": "i18n",
+    "UIAndUX": "UI/UX",
+    "iOS": "iOS",
+    "Andriod": "Andriod",
+    "Sketch": "Sketch",
+    "AI": "Illustrator",
+    "PS": "Photoshop"
+  },
+  "Nav": {
+    "HomePageTag": "ホームページ",
+    "InfoPageTag": "自己紹介"
+  },
+  "Home": {
+    "MainTitle": "初めまして、私は JohnYang と申します。",
+    "MainSelfIntro": "webデザイナー、フロントエンドエンジニアとして勤めています。</br>"
+  },
+  "HomeProfolio": {
+    "AnimePlateFormTitle": "動画配信サービスー動畫瘋（ドンファフン）",
+    "BahaWallTitle": "ACGNのソーシャルソフトウェアアプリー動態牆",
+    "BShoppingMallTitle": "ACGN商品を販売するネットショップー巴哈商城",
+    "HouaShinTitle": "ネットショップアプリー環盛"
+  },
+  "PersonalPage": {
+    "SectionOneTitle": "こんにちは，私は John です。現在、フロントエンドエンジニアとして勤めています。",
+    "SectionOneContent": "Webデザイン、UIデザイン経験が五年あり、約一年半前UIデザイナーから転職して、今はフロントエンジニアとして勤めております。デザイナー時期の経験とフロントエンジニアの技術を兼ねて誰でも理解しやすい、再利用性が高いコードを開発することが私の目標です。得意な技術については主にVue 3、TypeScript、HTML5、SCSSなどフロントエンド技術を扱っています。",
+    "SubTitleSkill": "得意な技術",
+    "SubTitleLang": "話せる言語"
+  }
+}

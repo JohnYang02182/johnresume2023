@@ -1,0 +1,57 @@
+{
+  "HeaderIntroduce": "Hello, I'm John, Nice to meet you：）",
+  "Lang": "English",
+  "Common": {
+    "JP": "Japanese",
+    "CH": "Traditional Chinese",
+    "EN": "English"
+  },
+  "CommonTitle": {
+    "MyWork": "MY WORKS",
+    "Title": "Title",
+    "Period": "Period",
+    "Team": "Team",
+    "Character": "Character",
+    "SkillList": "Skills"
+  },
+  "CommonActivity": {
+    "BackTo": "Back To"
+  },
+  "Skill": {
+    "WebDesign": "Web Design",
+    "RWD": "RWD",
+    "HTML5": "HTML5",
+    "SCSS": "SCSS",
+    "jQuery": "jQuery",
+    "JavaScript": "JavaScript",
+    "Vue3": "Vue3 Compostion API",
+    "Vite": "Vite",
+    "i18n": "i18n",
+    "UIAndUX": "UI/UX",
+    "iOS": "iOS",
+    "Andriod": "Andriod",
+    "Sketch": "Sketch",
+    "AI": "Illustrator",
+    "PS": "Photoshop"
+  },
+  "Nav": {
+    "HomePageTag": "Home",
+    "InfoPageTag": "About me"
+  },
+  "Home": {
+    "MainTitle": "Hello, my name is John, Nice to meet you：）",
+    "MainSelfIntro": "a front-end developer & designer</br>always curious about the last web developmnet trands and technologies."
+  },
+  "HomeProfolio": {
+    "AnimePlateFormTitle": "Animate PlatFormー動畫瘋",
+    "BahaWallTitle": "Social Software Appー動態牆",
+    "BShoppingMallTitle": "Anime Shopping Mallー巴哈商城",
+    "HouaShinTitle": "Shopping Mall Appー環盛"
+  },
+  "PersonalPage": {
+    "SectionOneTitle": "Hi，I'm John, a front-end developer & a web designer",
+    "SectionOneContent": " I write JavaScript, TypeScript, and Vue3 mainly. I have UI designer and front-end developer experience, which lets me could think more softly than others. My expertise is writing code that can be easily used by everyone. That pretty much sums me up.",
+    "SubTitleSkill": "I'm good at",
+    "SubTitleLang": "About my level of language proficiency"
+  }
+}

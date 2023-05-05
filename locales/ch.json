@@ -1,0 +1,57 @@
+{
+  "HeaderIntroduce": "hi, 您好, 我是 John ：）",
+  "Lang": "中文",
+  "Common": {
+    "JP": "日文",
+    "CH": "繁體中文",
+    "EN": "英文"
+  },
+  "CommonTitle": {
+    "MyWork": "我的作品集",
+    "Title": "標題",
+    "Period": "日期",
+    "Team": "團隊",
+    "Character": "角色",
+    "SkillList": "技能"
+  },
+  "CommonActivity": {
+    "BackTo": "回到上一頁"
+  },
+  "Skill": {
+    "WebDesign": "網頁設計",
+    "RWD": "RWD",
+    "HTML5": "HTML5",
+    "SCSS": "SCSS",
+    "jQuery": "jQuery",
+    "JavaScript": "JavaScript",
+    "Vue3": "Vue3 Compostion API",
+    "Vite": "Vite",
+    "i18n": "i18n",
+    "UIAndUX": "UI/UX",
+    "iOS": "iOS",
+    "Andriod": "Andriod",
+    "Sketch": "Sketch",
+    "AI": "Illustrator",
+    "PS": "Photoshop"
+  },
+  "Nav": {
+    "HomePageTag": "Home",
+    "InfoPageTag": "About me"
+  },
+  "Home": {
+    "MainTitle": "hi, 您好, 我是 John ：）",
+    "MainSelfIntro": "是一名網頁設計師 ＆ 前端工程師。</br>喜歡研究各式前端的新技術以及網頁設計的效果，希望能與大家多多交流^__^"
+  },
+  "HomeProfolio": {
+    "AnimePlateFormTitle": "動畫瘋改版",
+    "BahaWallTitle": "巴哈動態牆",
+    "BShoppingMallTitle": "巴哈商城改版",
+    "HouaShinTitle": "環盛APP"
+  },
+  "PersonalPage": {
+    "SectionOneTitle": "Hi，我是John，是一名前端工程 / 網頁設計師",
+    "SectionOneContent": "HTML / CSS / Javascript 有五年經驗。從網頁設計的圖像設計、版型切版做為起點逐步深入前端領域，最開始學習活用jQuery實現基本動態效果、串接api，後面開始為了深入Javascript理解js本質原理開始只使用JS，這過程中對前端技術的熱情有增無減，持續通過各式網路資源增強自己的前端實力。</br></br>在三個月前開始透過Udemy學習Vue.js，將課程中的練習以及筆記分別記錄在github以及linked。",
+    "SubTitleSkill": "擅長技能",
+    "SubTitleLang": "語言能力"
+  }
+}
