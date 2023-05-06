@@ -1,6 +1,6 @@
 import { createI18n } from 'vue-i18n'
 import messages from '@intlify/unplugin-vue-i18n/messages'
-
+import { app } from '/@/main'
 export const SUPPORT_LOCALES = [
   {
     langOption: 'en',
@@ -14,22 +14,23 @@ export const SUPPORT_LOCALES = [
   }
 ]
 
-export async function setupI18n(options:string) {
-  const i18n = await createI18n({
+export function setupI18n() {
+  const i18n = createI18n({
+    globalInjection: true,
     legacy: false,
-    locale: options || 'en',
-    fallbackLocale: options || 'en',
+    locale: localStorage.getItem('lang') ?? 'en',
+    fallbackLocale: localStorage.getItem('lang') ?? 'en',
     sync: true,
     messages
   })
   try {
-    console.log('setmes', messages )
-    console.log('setops', options )
-    i18n.global.locale.value = options
+    console.log('setmes', localStorage.getItem('lang') )
+    // console.log('setops', options )
+    i18n.global.locale.value = localStorage.getItem('lang') ? localStorage.getItem('lang')! : 'en'
     console.log('global',i18n.global.locale.value)
   } finally {
-     document.querySelector('html')!.setAttribute('lang', options)
-    return i18n
+      document.querySelector('html')!.setAttribute('lang', localStorage.getItem('lang') ?? 'en')
+      return i18n
   }
 }
 

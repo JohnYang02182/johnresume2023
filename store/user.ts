@@ -22,6 +22,7 @@ export const useUserStore = defineStore('user', {
     },
     getLanguage() {
       const thisLang = localStorage.getItem('lang') ?? 'en'
+      console.log('get',thisLang)
       this.setLanguage(thisLang)
       this.lang = thisLang
     }
