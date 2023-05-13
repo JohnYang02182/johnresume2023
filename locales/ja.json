@@ -14,8 +14,29 @@
     "Character": "キャラクター",
     "SkillList": "技能"
   },
+  "Character": {
+    "UIUXDesigner": "UI/UX デザイナー",
+    "GraphicDesigner": "グラフィック デザイナー",
+    "FEDeveloper": "フロントエンドエンジニア",
+    "BDDeveloper": "バックエンドエンジニア",
+    "PM": "プロジェクトマネジメント"
+  },
   "CommonActivity": {
-    "BackTo": "ホームページに戻る"
+    "BackTo": "ホームページに戻る",
+    "Submit": "送信する"
+  },
+  "Team": {
+    "ShinchiDevelope": "シンチー開発部",
+    "ShinchiDesign": "シンチーデザイン部",
+    "ShinchiPM": "シンチーＰＭ部",
+    "BahamutAnime": "バハムートITサービス部アニメチーム",
+    "BahamutProduce": "バハムートITサービス部",
+    "BahamutEC": "バハムート商品部",
+    "BahamutHara": "バハムートITサービス部ハーラーチーム",
+    "BahamutSocial": "バハムートITサービス部ソーシャルメディアチーム",
+    "HuanShunDevelope": "フワンシュン開発チーム",
+    "Myself": "自分",
+    "MemberNum": "人数"
   },
   "Skill": {
     "WebDesign": "Web Design",
@@ -46,7 +67,10 @@
     "AnimePlateFormTitle": "動画配信サービスー動畫瘋（ドンファフン）",
     "BahaWallTitle": "ACGNのソーシャルソフトウェアアプリー動態牆",
     "BShoppingMallTitle": "ACGN商品を販売するネットショップー巴哈商城",
-    "HouaShinTitle": "ネットショップアプリー環盛"
+    "HuanShunTitle": "ネットショップアプリー環盛"
+  },
+  "SidePorject": {
+    "ChatingWithChatGPT": "ChatGPTと喋りましょう"
   },
   "PersonalPage": {
     "SectionOneTitle": "こんにちは，私は John です。現在、フロントエンドエンジニアとして勤めています。",

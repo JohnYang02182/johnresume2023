@@ -103,7 +103,6 @@ h2 {
 
 /*ui 組件 開始*/
 .tips-text {
-	margin-right: 8px;
   padding: 6px 8px;
   border-radius: 8px;
   background-color: rgba(0,180,216,.15);
@@ -319,7 +318,7 @@ body {
 				font-weight: bold;
 			}
 			.time {
-				margin-top: 4px;
+				margin: 4px 0 8px;
 				font-size: 14px;
 				font-weight: bold;
 				color: #797979;
@@ -328,12 +327,7 @@ body {
 				display: flex;
 				flex-wrap: wrap;
 				align-items: center;
-				margin-top: 24px;
-			}
-			.tips-text {
-				&:not(:nth-last-child(1)) {
-					margin-right: 12px;
-				}
+				gap: 8px;
 			}
 		}
 	}
@@ -374,12 +368,8 @@ body {
 		.tips-area {
 			display: flex;
 			flex-wrap: wrap;
+			gap: 8px;
 			margin-bottom: 36px;
-			.tips-text {
-				&:not(:nth-last-of-type(1)) {
-					margin-right: 8px;
-				}
-			}
 		}
 		.section-sub-title {
 			margin-bottom: 0;
@@ -667,10 +657,7 @@ body {
 				border-radius: 0;
 				transform: none;
 				.tips-area {
-					margin-top: 4px;
-					.tips-text {
-						margin-top: 8px;
-					}
+					gap: 8px;
 				}
 			}
 		}
@@ -762,10 +749,7 @@ body {
 		}
 		.section-skill {
 			.tips-area {
-				margin-bottom: 20px;
-				.tips-text {
-					margin-bottom: 8px;
-				}
+				gap: 8px;
 			}
 			.language-block {
 				grid-template-columns: repeat(1, 1fr);

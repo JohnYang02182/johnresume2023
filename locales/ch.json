@@ -14,8 +14,29 @@
     "Character": "角色",
     "SkillList": "技能"
   },
+  "Character": {
+    "UIUXDesigner": "UI/UX設計師",
+    "GraphicDesigner": "視覺設計師",
+    "FEDeveloper": "前端工程師",
+    "BDDeveloper": "後端工程師",
+    "PM": "專案管理師"
+  },
   "CommonActivity": {
-    "BackTo": "回到上一頁"
+    "BackTo": "回到上一頁",
+    "Submit": "送出"
+  },
+  "Team": {
+    "ShinchiDevelope": "新騎開發部",
+    "ShinchiDesign": "新騎設計部",
+    "ShinchiPM": "新騎ＰＭ部",
+    "BahamutAnime": "巴哈姆特產品部動畫瘋組",
+    "BahamutProduce": "巴哈姆特產品部",
+    "BahamutEC": "巴哈姆特商城部",
+    "BahamutHara": "巴哈姆特產品部哈拉組",
+    "BahamutSocial": "巴哈姆特產品部社群組",
+    "HuanShunDevelope": "環盛開發組",
+    "Myself": "自己",
+    "MemberNum": "專案人數"
   },
   "Skill": {
     "WebDesign": "網頁設計",
@@ -46,7 +67,10 @@
     "AnimePlateFormTitle": "動畫瘋改版",
     "BahaWallTitle": "巴哈動態牆",
     "BShoppingMallTitle": "巴哈商城改版",
-    "HouaShinTitle": "環盛APP"
+    "HuanShunTitle": "環盛APP"
+  },
+  "SidePorject": {
+    "ChatingWithChatGPT": "與擅長安慰人的 ChatGPT 聊聊天吧"
   },
   "PersonalPage": {
     "SectionOneTitle": "Hi，我是John，是一名前端工程 / 網頁設計師",

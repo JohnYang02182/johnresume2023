@@ -14,8 +14,29 @@
     "Character": "Character",
     "SkillList": "Skills"
   },
+  "Character": {
+    "UIUXDesigner": "UI/UX Designer",
+    "GraphicDesigner": "Graphic Designer",
+    "FEDeveloper": "Front-end Developer",
+    "BDDeveloper": "Back-end Developer",
+    "PM": "Project Manager"
+  },
   "CommonActivity": {
-    "BackTo": "Back To"
+    "BackTo": "Back To",
+    "Submit": "Submit"
+  },
+  "Team": {
+    "ShinchiDevelope": "ShinChi Development Department",
+    "ShinchiDesign": "ShinChi Design Department",
+    "ShinchiPM": "ShinChi PM Department",
+    "BahamutAnime": "Bahamut Product Department Anime team",
+    "BahamutProduce": "Bahamut IT service Department",
+    "BahamutEC": "Bahamut Product Department",
+    "BahamutHara": "Bahamut Product Department Hara team",
+    "BahamutSocial": "Bahamut Product Department Social Media team",
+    "HuanShunDevelope": "HuanShun Development team",
+    "Myself": "Myself",
+    "MemberNum": "Number of Members"
   },
   "Skill": {
     "WebDesign": "Web Design",
@@ -46,7 +67,10 @@
     "AnimePlateFormTitle": "Animate PlatFormー動畫瘋",
     "BahaWallTitle": "Social Software Appー動態牆",
     "BShoppingMallTitle": "Anime Shopping Mallー巴哈商城",
-    "HouaShinTitle": "Shopping Mall Appー環盛"
+    "HuanShunTitle": "Shopping Mall Appー環盛"
+  },
+  "SidePorject": {
+    "ChatingWithChatGPT": "Have a bad mood? Try having a talk with ChatGPT"
   },
   "PersonalPage": {
     "SectionOneTitle": "Hi，I'm John, a front-end developer & a web designer",
