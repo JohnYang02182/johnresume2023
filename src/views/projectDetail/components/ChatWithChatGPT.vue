@@ -5,7 +5,7 @@
       <div class="input-wrapper" :class="{'active' : inputFocus}">
         <input class="input-content" type="text" name="chatContent" v-model="inputContent" @focus="inputFocus = true" @blur="inputFocus = false">
       </div>
-      <button class="btn btn-submit">submit</button>
+      <button class="btn btn-submit">{{ $t('CommonActivity.Submit') }}</button>
     </form>
     <div class="show-content-wrapper">
       <p class="show-content">{{ responseContent }}</p>
@@ -19,6 +19,9 @@ const inputFocus = ref(false)
 const inputContent = ref('')
 const contentForSending = ref()
 const responseContent = ref()
+const props = defineProps({
+  projectStitle: String
+})
 const sendingContent = (inputContent :string) => {
   let messageParam = {
     model: "gpt-3.5-turbo-0301",

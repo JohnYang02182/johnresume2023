@@ -12,42 +12,57 @@
         <div class="title-wrapper">
           <p class="info-title">{{ $t('CommonTitle.Title') }}:
           </p>
-          <h3 class="info-title-items">從 ChatGPT 上尋求慰藉吧</h3>
+          <h3 class="info-title-items">{{ $t(personalData.title)}}</h3>
         </div>
         <ul class="list-wrapper">
           <li class="list">
             <p class="list-title">{{ $t('CommonTitle.Period') }}：</p>
-            <span class="list-content">202304</span>
+            <span class="list-content">{{ $t(personalData.period) }}</span>
           </li>
           <li class="list">
             <p class="list-title">{{ $t('CommonTitle.Team') }}：</p>
-            <span class="list-content">自己</span>
+            <span class="list-content">{{ $t(personalData.team) }}</span>
           </li>
           <li class="list">
             <p class="list-title">{{ $t('CommonTitle.Character') }}:</p>
-            <span class="list-content">front-end developer</span>
+            <span class="list-content">{{ $t(personalData.character) }}</span>
           </li>
           <li class="list">
             <p class="list-title">{{ $t('CommonTitle.SkillList') }}:</p>
             <div class="skill-group">
-              <span class="skill-tag">Vue 3</span>
-              <span class="skill-tag">HTML5</span>
-              <span class="skill-tag">SCSS</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag" v-for="(itemTags,index) in personalData.tags" :key="index">
+                {{ $t(itemTags) }}
+              </span>
             </div>
           </li>
         </ul>
       </div>
     </section>
     <section class="inner-content-main">
-      <PortfolioRecord v-if="$route.params.id === '1'"  />
+      <AnimeDetail v-if="$route.params.id === '1'"  />
+      <ChatWithChatGPT v-else-if="$route.params.id === '5'"  />
+      <PortfolioRecord v-else />
     </section>
   </div>
 </template>
 <script setup lang="ts">
-import PortfolioRecord from './compoenets/PortfolioRecord.vue';
-import router from '/@/router';
+import { useRoute } from 'vue-router'
+import { Ref, onMounted, ref } from 'vue'
+import PortfolioRecord from './components/PortfolioRecord.vue'
+import AnimeDetail from './components/AnimeDetail.vue'
+import ChatWithChatGPT from './components/ChatWithChatGPT.vue'
+import { CardInfoDetail } from '/@/setting/profolioCard'
+import router from '/@/router'
+
+const props = defineProps ({
+  projectTitle: String,
+})
+const route = useRoute()
+const personalData: Ref<CardInfoDetail> = ref(route.meta.msg1 as CardInfoDetail)
+function getImageUrl(name: string) {
+  return new URL(`../../assets/images/${name}`, import.meta.url).href
+}
+console.log(router)
 </script>
 <style lang="scss" scoped>
 .skill-group {
@@ -73,8 +88,7 @@ import router from '/@/router';
   .list-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 2;
-    gap: 4px;
+    gap: 20px;
   }
   .list {
     display: flex;
@@ -139,11 +153,9 @@ import router from '/@/router';
     padding: 2px 12px;
     font-size: 16px;
     color: var(--text_primary);
-    border: 1px solid var(--text_primary);
     border-radius: 8px;
     &:hover {
       color: var(--text_secondary);
-      border: 1px solid var(--text_secondary);
     }
   }
 }

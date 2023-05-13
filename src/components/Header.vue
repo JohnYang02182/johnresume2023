@@ -3,7 +3,7 @@
     <div class="nav-outer">
       <div class="nav">
         <div class="logo">
-          <img :src="GloSrc('/logo.png')" alt="logo">
+          <img src="/IMG/logo.png" alt="logo">
         </div>
         <ul class="menu-list">
           <li v-for="(items, index) in navList" :key="index" class="menu-list-items" @click="router.push(items.path)">
@@ -29,7 +29,6 @@
   </header>
 </template>
 <script setup lang="ts">
-import { GloSrc } from '../../util/globalSrc'
 import router from '/@/router/index'
 import LanguageSelecter from '/@/components/modal/LanguageSelecter.vue'
 interface NavList {

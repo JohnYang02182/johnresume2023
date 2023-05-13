@@ -16,12 +16,12 @@
 					</li>
 					<li>
 						<a href="https://www.behance.net/john70581">
-							<img :src="GloSrc('/behance_icon.png')" alt="behance">
+							<img src="/IMG/behance_icon.png" alt="behance">
 						</a>
 					</li>
 					<li>
 						<a href="john705810420@gmail.com">
-							<img :src="GloSrc('/email_icon.png')" alt="email">
+							<img src="/IMG/email_icon.png" alt="email">
 						</a>
 					</li>
 				</ul>

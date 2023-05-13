@@ -1,8 +1,9 @@
+import { defineAsyncComponent } from 'vue'
 import { RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
-import Personal from '../views/Personal.vue'
-import Project from '../views/Project.vue'
-import ProjectDetail from '../views/projectDetail/ProjectDetail.vue'
+const Home = () => import('../views/Home.vue')
+const Personal = () => import('../views/Personal.vue')
+const Project = () => import('../views/Project.vue')
+const ProjectDetail = () => import('../views/projectDetail/ProjectDetail.vue')
 
 const routesParams: Array<RouteRecordRaw> = [
   {
@@ -24,7 +25,7 @@ const routesParams: Array<RouteRecordRaw> = [
     },
     children: [
       {
-        path: 'detail/:id', name: 'ProjectDetail', component: ProjectDetail,
+        path: 'detail:id', name: 'ProjectDetail', component: ProjectDetail, 
         meta: {
           layout: false
         }
@@ -32,5 +33,4 @@ const routesParams: Array<RouteRecordRaw> = [
     ]
   }
 ]
-
 export default routesParams
