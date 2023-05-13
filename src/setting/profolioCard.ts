@@ -61,11 +61,11 @@ export const designCardInfo: Array<CardInfoDetail> = [{
   params: '5',
   name: 'ChatWithChatGPT',
   bannerImg: 'pic_vue.png',
-  title: 'HomeProfolio.HuanShunTitle',
+  title: 'SidePorject.ChatingWithChatGPT',
   link: '',
   team: 'Team.Myself',
   character: 'Character.FEDeveloper',
   period: '202304',
-  tags: ['Skill.UIAndUX','Skill.Sketch','Skill.iOS','Skill.Andriod','Skill.AI','Skill.PS'],
+  tags: ['Skill.UIAndUX','Skill.TypeScript','Skill.JavaScript','Skill.Vue3','Skill.Vite','Skill.PS'],
   sideProject: false
 }]

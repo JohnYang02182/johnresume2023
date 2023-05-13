@@ -17,7 +17,7 @@
         <ul class="list-wrapper">
           <li class="list">
             <p class="list-title">{{ $t('CommonTitle.Period') }}：</p>
-            <span class="list-content">{{ $t(personalData.period) }}</span>
+            <span class="list-content">{{ personalData.period }}</span>
           </li>
           <li class="list">
             <p class="list-title">{{ $t('CommonTitle.Team') }}：</p>
@@ -117,7 +117,7 @@ console.log(router)
 .inner-content-wrapper {
   position: relative;
   width: 100dvw;
-  height: 100dvh;
+  min-height: 100dvh;
   background-color: #fff;
   color: var(--text_secondary);
   .inner-content-header {

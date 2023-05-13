@@ -19,9 +19,6 @@ const inputFocus = ref(false)
 const inputContent = ref('')
 const contentForSending = ref()
 const responseContent = ref()
-const props = defineProps({
-  projectStitle: String
-})
 const sendingContent = (inputContent :string) => {
   let messageParam = {
     model: "gpt-3.5-turbo-0301",
@@ -57,7 +54,8 @@ const sendingContent = (inputContent :string) => {
 // )
 const onSubmit = async () => {
   contentForSending.value = sendingContent(inputContent.value)
-  let res = await ChatGPTLink(contentForSending.value)
+  let res = await ChatGPTLink(contentForSending.value.messageParam)
+  console.log('res',res)
   responseContent.value = res.choices[0].message.content
   // resposneContent.value = await completion(inputContent.value)
   // console.log('test',resposneContent.value)

@@ -45,6 +45,7 @@
     "SCSS": "SCSS",
     "jQuery": "jQuery",
     "JavaScript": "JavaScript",
+    "TypeScript": "TypeScript",
     "Vue3": "Vue3 Compostion API",
     "Vite": "Vite",
     "i18n": "i18n",

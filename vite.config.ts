@@ -1,9 +1,10 @@
 import { fileURLToPath, URL } from 'url'
 import path from 'path'
 import { defineConfig } from 'vite'
-import { resolve, dirname } from 'node:path'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import vue from '@vitejs/plugin-vue'
+
+const rootDir = path.resolve(__dirname, '..');
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -17,9 +18,20 @@ export default defineConfig({
     })
   ],
   resolve: {
-    alias: {
-      '/@': fileURLToPath(new URL("./src",import.meta.url)),
-      '/IMG': fileURLToPath(new URL('./src/assets/images/',import.meta.url))
-    }
+    // alias: {
+    //   '/@': path.resolve(__dirname, './src'),
+    //   '/IMG': fileURLToPath(new URL('./src/assets/images/',import.meta.url))
+    // },
+    alias: [
+      { find: '/@', replacement: fileURLToPath(new URL('./src', import.meta.url)) },
+      { find: '/IMG', replacement: fileURLToPath(new URL('./src/assets/images/', import.meta.url)) },
+    ]
   },
+  // optimizeDeps: {
+  //   include: [
+  //     'src/**/*.js',
+  //     'src/**/*.ts',
+  //     'src/**/*.vue',
+  //   ],
+  // }
 })
