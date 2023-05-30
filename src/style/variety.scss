@@ -1,18 +1,40 @@
+// @use "sass:math";
+// @function opacity-to-hex($hexColor, $opacity) {
+// 	$alpha: $opacity / 100; // Convert percentage to decimal value
+
+// 	$alphaHex: floor($alpha * 255); // Calculate the alpha value in hexadecimal
+
+// 	$hexAlpha: str-pad(str-slice($alphaHex, 1), 2, "0"); // Convert the alpha value to a two-digit hexadecimal
+
+// 	@return $hexColor + $hexAlpha;
+// }
+$primary: #3da9fc;
+$secondary: #90b4ce;
+$tertiary: #ef4565;
+$text_primary: #5f6c7b;
+$text_secondary: #094067;
 :root {
-	--font_default: 16px;
-	--font_card_subtitle: 12px;
-	--font_title: 28px;
-	--font_subtitle: 24px;
+	--font_label-small: 12px;
+	--font_body_small: 14px;
+	--font_body_medium: 16px;
+	--font_title_medium: 24px;
+	--font_title_large: 28px;
+	--font_headline_medium: 32px;
+	--font_headline_large: 36px;
+	--font_display_small: 20px;
+	--font_display_large: 42px;
 
 	--primary: #3da9fc;
 	--secondary: #90b4ce;
 	--tertiary: #ef4565;
-	--text_primary: #5f6c7b;
-	--text_secondary: #094067;
+	--text_primary: #{$text_primary};
+	--text_primary_70: #{rgba($text_primary, 70%)};
+	--text_secondary: #{$text_secondary};
 	--text_tertiary: #fffffe;
-	--stroke: #094067;
+	--stroke: #{$text_secondary};
 	--alert: #ef4565;
 	--bg-primary: #fffffe;
 	--bg-secondary: #d8eefe;
 	--bg_footer: #eaeaea;
+	--gardient100: #fff;
 }

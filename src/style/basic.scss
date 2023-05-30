@@ -1,3 +1,50 @@
+html,body {
+  font-family: 'NotoSanJP',Helvetica,Arial,sans-serif, "Microsoft JhengHei", "微軟正黑體";
+	@font-face {
+		font-family: 'NotoSanJP',Helvetica,Arial,sans-serif, "Microsoft JhengHei", "微軟正黑體", sans-serif;
+		src: url('../../assets/fonts/NotoSansJP-VariableFont_wght.ttf');
+	}
+}
+
 .main-wrapper {
   background-color: #ffffff;
 }
+
+/*setting font start*/
+div {
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+h2 {
+	font-size: clamp(1.6rem, 2.5vw,var(--font_headline_medium));
+	line-height: 36px;
+	color: var(--text_secondary);
+}
+.headline_01 {
+	font-size: 28px;
+	line-height: 32px;
+}
+.headline_02 {
+	font-size: 24px;
+	line-height: 28px;
+}
+
+.headline_03 {
+	font-size: 20px;
+	line-height: 24px;
+}
+.content-text {
+	font-size: var(--font_body_medium);
+	line-height: 20px;
+}
+.inline-text {
+	font-size: 14px;
+	line-height: 18px;
+}
+.tips-text {
+	font-size: 12px;
+	line-height: 14px;
+}
+/*setting font end*/

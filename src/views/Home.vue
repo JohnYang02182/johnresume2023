@@ -4,7 +4,7 @@
 			<div class="section-outer">
 				<div class="section section-banner">
 					<div class="banner_intro">
-						<h2>{{ $t('HeaderIntroduce') }}</h2>
+						<h2 class="section-main-title home-title">{{ $t('HeaderIntroduce') }}</h2>
 						<p class="headline_03" v-html="$t('Home.MainSelfIntro')" />
 						<a href="https://johnyang02182.github.io/johnyang705202108/my-profile_page.html" class="button primary-button">{{ $t('Nav.InfoPageTag') }}</a>
 					</div>
@@ -18,7 +18,7 @@
 			</div>
 			<div class="divid-line"></div>
 			<div class="section section-profile">
-				<h2>{{ $t('CommonTitle.MyWork') }}</h2>
+				<h2 class="section-main-title home-title">{{ $t('CommonTitle.MyWork') }}</h2>
 				<router-link class="profile_card" v-for="(item, index) in designCardInfo" :key="index" :to="{name: 'ProjectDetail', params: { id: item.params }}" @click="getElement(item.params)">
 					<div class="profile_card-pic">
 						<img :src="`${ httpDetect.test(item.bannerImg) ? item.bannerImg : getImageUrl(item.bannerImg)}`" alt="profile">
@@ -34,7 +34,7 @@
 			</div>
 			<div class="divid-line"></div>
 			<div class="section section-codepratice">
-				<h2>前端實作練習</h2>
+				<h2 class="section-main-title home-title">前端實作練習</h2>
 				<a href="https://github.com/JohnYang02182/vueproject" target="_blank" class="profile_card code_card">
 					<div class="profile_card-pic">
 						<img src="/IMG/pic_vue.png" alt="profile">

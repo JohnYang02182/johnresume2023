@@ -4,12 +4,19 @@ const Home = () => import('../views/Home.vue')
 const Personal = () => import('../views/Personal.vue')
 const Project = () => import('../views/Project.vue')
 const ProjectDetail = () => import('../views/projectDetail/ProjectDetail.vue')
+const ErrorPage = () => import('../components/Error.vue')
 
 const routesParams: Array<RouteRecordRaw> = [
   {
     path: '/', name: 'Home', component: Home,
     meta: {
       layout: true
+    }
+  },
+  {
+    path: '/:pathMatch(.*)*', name: 'Error', component: ErrorPage, 
+    meta: {
+      layout: false
     }
   },
   {

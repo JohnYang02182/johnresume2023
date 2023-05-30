@@ -6,7 +6,7 @@ export const SUPPORT_LOCALES = [
     langOption: 'en',
     langName: 'English'
   }, {
-    langOption: 'ja',
+    langOption: 'jp',
     langName: '日本語'
   }, {
     langOption: 'ch',

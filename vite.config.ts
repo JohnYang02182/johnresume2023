@@ -26,12 +26,5 @@ export default defineConfig({
       { find: '/@', replacement: fileURLToPath(new URL('./src', import.meta.url)) },
       { find: '/IMG', replacement: fileURLToPath(new URL('./src/assets/images/', import.meta.url)) },
     ]
-  },
-  // optimizeDeps: {
-  //   include: [
-  //     'src/**/*.js',
-  //     'src/**/*.ts',
-  //     'src/**/*.vue',
-  //   ],
-  // }
+  }
 })

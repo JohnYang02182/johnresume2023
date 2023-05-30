@@ -2,7 +2,7 @@
   <footer>
     <div class="footer">
 			<div class="list-contect-me">
-				<p class="headline_02">更多資訊</p>
+				<p class="footer-title">更多資訊</p>
 				<ul class="footer_list">
 					<li>
 						<a href="https://github.com/JohnYang02182/johnyang705202108/tree/main/main_page">

@@ -1,6 +1,11 @@
 {
   "HeaderIntroduce": "Hello, I'm John, Nice to meet you：）",
   "Lang": "English",
+  "LangLevel": {
+    "Business": "Business Level",
+    "Native": "Native",
+    "Passed": "{exam} passed"
+  },
   "Common": {
     "JP": "Japanese",
     "CH": "Traditional Chinese",
@@ -26,9 +31,9 @@
     "Submit": "Submit"
   },
   "Team": {
-    "ShinchiDevelope": "ShinChi Development Department",
-    "ShinchiDesign": "ShinChi Design Department",
-    "ShinchiPM": "ShinChi PM Department",
+    "ShinchiDevelope": "Stackcore Development Department",
+    "ShinchiDesign": "Stackcore Design Department",
+    "ShinchiPM": "Stackcore PM Department",
     "BahamutAnime": "Bahamut Product Department Anime team",
     "BahamutProduce": "Bahamut IT service Department",
     "BahamutEC": "Bahamut Product Department",
@@ -44,15 +49,17 @@
     "HTML5": "HTML5",
     "SCSS": "SCSS",
     "jQuery": "jQuery",
+    "GSAP": "GSAP",
     "JavaScript": "JavaScript",
     "TypeScript": "TypeScript",
-    "Vue3": "Vue3 Compostion API",
+    "Vue3": "Vue3 Composition API",
     "Vite": "Vite",
     "i18n": "i18n",
     "UIAndUX": "UI/UX",
-    "iOS": "iOS",
-    "Andriod": "Andriod",
+    "iOS": "iOS APP UI Design",
+    "Andriod": "Andriod APP UI Design",
     "Sketch": "Sketch",
+    "Figma": "Figma",
     "AI": "Illustrator",
     "PS": "Photoshop"
   },
@@ -77,6 +84,31 @@
     "SectionOneTitle": "Hi，I'm John, a front-end developer & a web designer",
     "SectionOneContent": " I write JavaScript, TypeScript, and Vue3 mainly. I have UI designer and front-end developer experience, which lets me could think more softly than others. My expertise is writing code that can be easily used by everyone. That pretty much sums me up.",
     "SubTitleSkill": "I'm good at",
-    "SubTitleLang": "About my level of language proficiency"
+    "SkillRankExpertise": "{num} years+ experience",
+    "SkillRange": "From {nums} years to {nume} years",
+    "SubTitleLang": "About my level of language proficiency",
+    "SubTitleExperience": "Work experience"
+  },
+  "WorkHistory1": {
+    "Company": "Stackcore Co., Ltd.",
+    "Period": "202110~202304",
+    "List01": "Developed a customer service platform and integrated third-party live customer service into the platform.",
+    "List02": "Maintained the code and rebuilt the functions which went out in the latest format.",
+    "List03": "Built a new code style guideline and collaborated with the designer team."
+  },
+  "WorkHistory2": {
+    "Company": "Oneup Network Co., Ltd.",
+    "Period": "201801~202103",
+    "List01": "Designed and coded an anime service platform with 1 graphic designer and 2 back-end developers which DAU (Daily Active Users) of over 8 million.",
+    "List02": "Redesigned the company’s primary service user interface for both Android and iOS with another UI designer.",
+    "List03": "Designed and coded a game-selling service platform collaborated with a background engineer.",
+    "List04": "Built a design guideline that combined all platforms with a graphic designer and the back-end engineer’s team.",
+    "List05": "Built an auto-compile program to make the designer team become more efficient."
+  },
+  "WorkHistory3": {
+    "Company": "HuaShun Network Co., Ltd.",
+    "Period": "201608~201708",
+    "List01": "Designed and coded a short-term event webpage using HTML, SASS, and Javascript.",
+    "List02": "Responsible for designing the UI for iOS and Android apps."
   }
 }

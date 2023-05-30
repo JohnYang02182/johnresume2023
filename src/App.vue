@@ -8,6 +8,8 @@
 import Main from './components/Main.vue'
 import './style/reset.scss'
 import './style/variety.scss'
-import './style/basic.scss'
 </script>
+<style lang="scss">
+@import './style/basic.scss';
+</style>
 

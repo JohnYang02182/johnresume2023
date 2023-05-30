@@ -5,12 +5,12 @@
         <div class="logo">
           <img src="/IMG/logo.png" alt="logo">
         </div>
-        <ul class="menu-list">
-          <li v-for="(items, index) in navList" :key="index" class="menu-list-items" @click="router.push(items.path)">
+        <div class="menu-list-wrapper">
+          <div v-for="(items, index) in navList" :key="index" class="menu-list" @click="router.push(items.path)">
             <a href="javascript:void(0)" class="menu-list-items" :class="{ 'nav-list-active': $route.name === items.name }">{{ $t(items.transName) }}</a>
-          </li>
-          <LanguageSelecter />
-        </ul>
+          </div>
+          <Languageselector />
+        </div>
         <div class="menu-buttom">
           <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="60">
             <path
@@ -30,7 +30,7 @@
 </template>
 <script setup lang="ts">
 import router from '/@/router/index'
-import LanguageSelecter from '/@/components/modal/LanguageSelecter.vue'
+import Languageselector from '/@/components/modal/Languageselector.vue'
 interface NavList {
   name: string
   path: string

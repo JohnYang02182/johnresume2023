@@ -1,16 +1,16 @@
 export interface CardInfoDetail {
-  params: string,
-  name: string,
-  bannerImg: string,
-  title: string,
-  link?: string,
-  team: string,
-  period: string,
-  character: string,
-  tags: Array<string>,
+  params: string
+  name: string
+  bannerImg: string
+  title: string
+  link?: string
+  team: string
+  period: string
+  character: string
+  tags: string[]
   sideProject: boolean
 }
-export const designCardInfo: Array<CardInfoDetail> = [{
+export const designCardInfo: CardInfoDetail[] = [{
   params: '1',
   name: 'AnimeDetail',
   bannerImg: 'anime_banner.png',
@@ -19,9 +19,9 @@ export const designCardInfo: Array<CardInfoDetail> = [{
   team: 'Team.BahamutAnime',
   period: '2021',
   character: 'Character.UIUXDesigner',
-  tags: ['Skill.WebDesign','Skill.RWD','Skill.HTML5','Skill.SCSS','Skill.jQuery','Skill.JavaScript'],
+  tags: ['Skill.WebDesign', 'Skill.RWD', 'Skill.HTML5', 'Skill.SCSS', 'Skill.jQuery', 'Skill.JavaScript'],
   sideProject: false
-},{
+}, {
   // params: 'https://www.behance.net/gallery/125095859/_',
   params: '2',
   name: 'BahawallDetail',
@@ -31,9 +31,9 @@ export const designCardInfo: Array<CardInfoDetail> = [{
   team: 'Team.BahamutProduce',
   period: '2020',
   character: 'Character.UIUXDesigner',
-  tags: ['Skill.WebDesign','Skill.RWD','Skill.HTML5','Skill.SCSS','Skill.jQuery'],
+  tags: ['Skill.WebDesign', 'Skill.RWD', 'Skill.HTML5', 'Skill.SCSS', 'Skill.jQuery'],
   sideProject: false
-},{
+}, {
   params: '3',
   name: 'ECDetail',
   bannerImg: 'shopping_banner.png',
@@ -42,9 +42,9 @@ export const designCardInfo: Array<CardInfoDetail> = [{
   team: 'Team.BahamutEC',
   character: 'Character.UIUXDesigner',
   period: '2019',
-  tags: ['Skill.UIAndUX','Skill.Sketch','Skill.iOS','Skill.Andriod','Skill.AI','Skill.PS'],
+  tags: ['Skill.UIAndUX', 'Skill.Sketch', 'Skill.iOS', 'Skill.Andriod', 'Skill.AI', 'Skill.PS'],
   sideProject: false
-},{
+}, {
   // params: 'https://www.behance.net/gallery/56143553/APP_Project',
   params: '4',
   name: 'HuanShunDetail',
@@ -54,9 +54,9 @@ export const designCardInfo: Array<CardInfoDetail> = [{
   team: 'Team.HuanShunDevelope',
   character: 'Character.UIUXDesigner',
   period: '2018',
-  tags: ['Skill.UIAndUX','Skill.Sketch','Skill.iOS','Skill.Andriod','Skill.AI','Skill.PS'],
+  tags: ['Skill.UIAndUX', 'Skill.Sketch', 'Skill.iOS', 'Skill.Andriod', 'Skill.AI', 'Skill.PS'],
   sideProject: false
-},{
+}, {
   // params: 'https://www.behance.net/gallery/56143553/APP_Project',
   params: '5',
   name: 'ChatWithChatGPT',
@@ -66,6 +66,6 @@ export const designCardInfo: Array<CardInfoDetail> = [{
   team: 'Team.Myself',
   character: 'Character.FEDeveloper',
   period: '202304',
-  tags: ['Skill.UIAndUX','Skill.TypeScript','Skill.JavaScript','Skill.Vue3','Skill.Vite','Skill.PS'],
+  tags: ['Skill.UIAndUX', 'Skill.TypeScript', 'Skill.JavaScript', 'Skill.Vue3', 'Skill.Vite', 'Skill.PS'],
   sideProject: false
 }]

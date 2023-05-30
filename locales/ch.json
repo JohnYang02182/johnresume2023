@@ -1,6 +1,11 @@
 {
   "HeaderIntroduce": "hi, 您好, 我是 John ：）",
   "Lang": "中文",
+  "LangLevel": {
+    "Business": "商務應用",
+    "Native": "母語",
+    "Passed": "{exam} 合格"
+  },
   "Common": {
     "JP": "日文",
     "CH": "繁體中文",
@@ -44,15 +49,17 @@
     "HTML5": "HTML5",
     "SCSS": "SCSS",
     "jQuery": "jQuery",
+    "GSAP": "GSAP",
     "JavaScript": "JavaScript",
     "TypeScript": "TypeScript",
-    "Vue3": "Vue3 Compostion API",
+    "Vue3": "Vue3 Composition API",
     "Vite": "Vite",
     "i18n": "i18n",
     "UIAndUX": "UI/UX",
-    "iOS": "iOS",
-    "Andriod": "Andriod",
+    "iOS": "iOS APP UI Design",
+    "Andriod": "Andriod APP UI Design",
     "Sketch": "Sketch",
+    "Figma": "Figma",
     "AI": "Illustrator",
     "PS": "Photoshop"
   },
@@ -77,6 +84,31 @@
     "SectionOneTitle": "Hi，我是John，是一名前端工程 / 網頁設計師",
     "SectionOneContent": "HTML / CSS / Javascript 有五年經驗。從網頁設計的圖像設計、版型切版做為起點逐步深入前端領域，最開始學習活用jQuery實現基本動態效果、串接api，後面開始為了深入Javascript理解js本質原理開始只使用JS，這過程中對前端技術的熱情有增無減，持續通過各式網路資源增強自己的前端實力。</br></br>在三個月前開始透過Udemy學習Vue.js，將課程中的練習以及筆記分別記錄在github以及linked。",
     "SubTitleSkill": "擅長技能",
-    "SubTitleLang": "語言能力"
+    "SkillRankExpertise": "{num} 年經驗以上",
+    "SkillRange": "{nums} 年至 {nume} 年經驗",
+    "SubTitleLang": "語言能力",
+    "SubTitleExperience": "工作經驗"
+  },
+  "WorkHistory1": {
+    "Company": "Stackcore Co., Ltd.",
+    "Period": "202110~202304",
+    "List01": "開發各個品牌專案，維護既有程式碼與第三方插件。",
+    "List02": "擔任前端團隊中的窗口，協調與設計、ＰＭ團隊之間的協作。",
+    "List03": "與設計團隊協作制定 Code Style Guideline。"
+  },
+  "WorkHistory2": {
+    "Company": "旺普網路有限公司（巴哈姆特）",
+    "Period": "201801~202103",
+    "List01": "負責重構前端靜態程式碼、重新設計 DAU 超過800萬線上動畫播放網頁服務-動畫瘋，在重新設計的新版發佈一個月後，DAU成長至 1000 萬人。",
+    "List02": "與另一位 UI 設計師合作重新設計了在Android和iOS上的巴哈姆特的主 APP 用戶界面。",
+    "List03": "負責重新設計 ACG 相關販售網站-巴哈商城，設計中導入 RWD、並重構前端程式碼，讓日後需維護的時間能夠再減少50 %。",
+    "List04": "將各站服務統整，並與設計團隊制定全站的設計規範。",
+    "List05": "導入打包工具 Gulp ，優化設計團隊整體作業流程。"
+  },
+  "WorkHistory3": {
+    "Company": "環盛網路有限公司",
+    "Period": "201608~201708",
+    "List01": "使用 HTML5、Less、jQuery 設計短期活動網頁，有時會支援前端API串接。",
+    "List02": "負責設計公司服務 app iOS 與 Android 的 UI。"
   }
 }

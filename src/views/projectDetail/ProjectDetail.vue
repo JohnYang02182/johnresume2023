@@ -76,7 +76,7 @@ console.log(router)
   border: 1px solid var(--text_primary);
 }
 .btn-back {
-  font-size: var(--font_title);
+  font-size: var(--font_title_large);
 }
 .info-wrapper {
   display: flex;

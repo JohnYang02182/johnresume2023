@@ -1,0 +1,114 @@
+{
+  "HeaderIntroduce": "初めまして、私は John と申します。",
+  "Lang": "日本語",
+  "LangLevel": {
+    "Business": "ビジネスレベル",
+    "Native": "ネイティブスピーカー",
+    "Passed": "{exam} 合格"
+  },
+  "Common": {
+    "JP": "日本語",
+    "CH": "中国語（繁体字）",
+    "EN": "英語"
+  },
+  "CommonTitle": {
+    "MyWork": "私の作品集",
+    "Title": "プロジェク",
+    "Period": "時期",
+    "Team": "チーム",
+    "Character": "キャラクター",
+    "SkillList": "技能"
+  },
+  "Character": {
+    "UIUXDesigner": "UI/UX デザイナー",
+    "GraphicDesigner": "グラフィック デザイナー",
+    "FEDeveloper": "フロントエンドエンジニア",
+    "BDDeveloper": "バックエンドエンジニア",
+    "PM": "プロジェクトマネジメント"
+  },
+  "CommonActivity": {
+    "BackTo": "ホームページに戻る",
+    "Submit": "送信する"
+  },
+  "Team": {
+    "ShinchiDevelope": "シンチー開発部",
+    "ShinchiDesign": "シンチーデザイン部",
+    "ShinchiPM": "シンチーＰＭ部",
+    "BahamutAnime": "バハムートITサービス部アニメチーム",
+    "BahamutProduce": "バハムートITサービス部",
+    "BahamutEC": "バハムート商品部",
+    "BahamutHara": "バハムートITサービス部ハーラーチーム",
+    "BahamutSocial": "バハムートITサービス部ソーシャルメディアチーム",
+    "HuanShunDevelope": "フワンシュン開発チーム",
+    "Myself": "自分",
+    "MemberNum": "人数"
+  },
+  "Skill": {
+    "WebDesign": "Web Design",
+    "RWD": "RWD",
+    "HTML5": "HTML5",
+    "SCSS": "SCSS",
+    "GSAP": "GSAP",
+    "jQuery": "jQuery",
+    "JavaScript": "JavaScript",
+    "TypeScript": "TypeScript",
+    "Vue3": "Vue3 Composition API",
+    "Vite": "Vite",
+    "i18n": "i18n",
+    "UIAndUX": "UI/UX",
+    "iOS": "iOS APP UI Design",
+    "Andriod": "Andriod APP UI Design",
+    "Sketch": "Sketch",
+    "Figma": "Figma",
+    "AI": "Illustrator",
+    "PS": "Photoshop"
+  },
+  "Nav": {
+    "HomePageTag": "ホームページ",
+    "InfoPageTag": "自己紹介"
+  },
+  "Home": {
+    "MainTitle": "初めまして、私は JohnYang と申します。",
+    "MainSelfIntro": "webデザイナー、フロントエンドエンジニアとして勤めています。</br>"
+  },
+  "HomeProfolio": {
+    "AnimePlateFormTitle": "動画配信サービスー動畫瘋（ドンファフン）",
+    "BahaWallTitle": "ACGNのソーシャルソフトウェアアプリー動態牆",
+    "BShoppingMallTitle": "ACGN商品を販売するネットショップー巴哈商城",
+    "HuanShunTitle": "ネットショップアプリー環盛"
+  },
+  "SidePorject": {
+    "ChatingWithChatGPT": "ChatGPTと喋りましょう"
+  },
+  "PersonalPage": {
+    "SectionOneTitle": "こんにちは，私は John です。現在、フロントエンドエンジニアとして勤めています。",
+    "SectionOneContent": "Webデザイン、UIデザイン経験が五年あり、フロントエンド経験が一年半あります。現在フロントエンジニアとして勤めております。UIデザイナーとしての経験とフロントエンジニアの技術を連携して誰でも理解しやすい、再利用性が高いコードを開発することが私の目標です。私が扱っている主な言語は TypeScript と JavaScript です。また、フレームワークとしては Vue3（Composition API）を使用しています。",
+    "SubTitleSkill": "得意な技術について",
+    "SkillRankExpertise": "經驗 {num} 年以上",
+    "SkillRange": "經驗 {nums} 年から {nume} 年まで",
+    "SubTitleLang": "話せる言語",
+    "SubTitleExperience": "勤務経歴"
+  },
+  "WorkHistory1": {
+    "Company": "株式会社 シンチー",
+    "Period": "202110~202304",
+    "List01": "Vue3、TypeSciprtでウェブサービスを機能開発し、ウェブサービスのメンテナンスしました。",
+    "List02": "フロントエンドチームの窓口として、デザイーチームとプロジェクマネジャーチームと新しいサービスの作成、UXの改善について取り組んできました。",
+    "List03": "デザイナーチームと協力してコードガイドラインを定めてきました。"
+  },
+  "WorkHistory2": {
+    "Company": "株式会社 バハムート（台湾のゲームメディア会社）",
+    "Period": "201801~202103",
+    "List01": "DAU（1日のアクティブユーザー数）が800万人を超えるアニメサービスプラットフォームを設計し、コーディングしました。",
+    "List02": "会社の主要サービスのユーザーインターフェースを Android と iOS の両方に再設計しました。",
+    "List03": "バックグラウンドエンジニアと協力して、ゲームに関する商品販売ウェブサービスのプラットフォームを設計し、コーディングしました。",
+    "List04": "プラットフォームを統合したデザインガイドラインを作成しました。",
+    "List05": "デザイナーチームの効率を向上させるために、自動コンパイルプログラムを作成しました。"
+  },
+  "WorkHistory3": {
+    "Company": "株式会社 フアンシュン",
+    "Period": "201608~201708",
+    "List01": "HTML、SASS、jQueryを使用して、短期イベントのウェブページを設計しました。",
+    "List02": "サービスのAndroid APPとiOS APPのプロダクトを UX デザインの原案作成からプロトタイプの作成まで担当していました。"
+  }
+}

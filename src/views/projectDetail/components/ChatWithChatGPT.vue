@@ -75,7 +75,7 @@ const onSubmit = async () => {
   max-width: 1440px;
   width: 100%;
   .section-title {
-    color: #323232;
+    color: var(--text_primary);
   }
   .btn-submit {
     margin-top: 12px;
@@ -125,7 +125,7 @@ const onSubmit = async () => {
     width: 100%;
     font-size: 24px;
     color: var(--text_tertiary);
-    background-color: #323232;
+    background-color: var(--text_primary);
     border-radius: 8px;
     white-space: break-spaces;
   }
