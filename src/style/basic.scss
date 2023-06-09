@@ -1,5 +1,6 @@
 html,body {
   font-family: 'NotoSanJP',Helvetica,Arial,sans-serif, "Microsoft JhengHei", "微軟正黑體";
+	background-color: #fff;
 	@font-face {
 		font-family: 'NotoSanJP',Helvetica,Arial,sans-serif, "Microsoft JhengHei", "微軟正黑體", sans-serif;
 		src: url('../../assets/fonts/NotoSansJP-VariableFont_wght.ttf');
@@ -37,7 +38,7 @@ h2 {
 }
 .content-text {
 	font-size: var(--font_body_medium);
-	line-height: 20px;
+	line-height: 24px;
 }
 .inline-text {
 	font-size: 14px;
@@ -47,4 +48,5 @@ h2 {
 	font-size: 12px;
 	line-height: 14px;
 }
+
 /*setting font end*/

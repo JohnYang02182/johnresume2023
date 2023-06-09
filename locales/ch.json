@@ -110,5 +110,42 @@
     "Period": "201608~201708",
     "List01": "使用 HTML5、Less、jQuery 設計短期活動網頁，有時會支援前端API串接。",
     "List02": "負責設計公司服務 app iOS 與 Android 的 UI。"
+  },
+  "ProjectCommon": {
+    "ProjectTitle01": "背景",
+    "ProjectTitle02": "參與人員",
+    "ProjectTitle03": "待解問題",
+    "ProjectTitle04": "執行專案"
+  },
+  "ProjectAnime": {
+    "Reason": "舊版動畫播放網頁服務未更新時間過長，隨時間推移使用者在 2020 年末急速上漲 、以及過去的 UX 現在已有落差，在需求會議與UX部門的討論後，決定這次的改版。",
+    "Problem01": "使用者動線混亂，看不懂動畫播放先後順序。",
+    "Problem02": "ＴＶ版與手機版的版型支援不完全。",
+    "Problem03": "彈幕過多有抖動的情況發生。",
+    "Process01": "確定目標",
+    "Process02": "製作 User Flow",
+    "Process03": "定義 UI Components ＆ Color themes",
+    "Process04": "優化既有設計",
+    "Process05": "成果",
+    "Process01MainTitle": "在設計頁面前先確認設計準則：",
+    "Process01ListTitle01": "具備一致性：",
+    "Process01ListContent01": "讓用戶不會因為巨大的風格差異而迷惘。",
+    "Process01ListTitle02": "更清楚的資訊呈現：",
+    "Process01ListContent02": "讓使用者在做短的時間內能達到目的。",
+    "Process02ListContent01": "釐清整體服務動線，與頁面結構。繪製 User Flow 與 PM 進行流程優化。",
+    "Process03ListContent01":"定義暗亮色的元件，並建立 UI library 增加繪製 Mockup 速度。",
+    "Process04ListTitle01": "動畫排列：",
+    "Process04ListContent01": "將排列由左至右，增加動態互動效果引導使用者動線。",
+    "Process04ListTitle02": "新增週期表：",
+    "Process04ListPointTitle": "新增功能要點:",
+    "Process04ListPointContent01": "標注今日日期",
+    "Process04ListPointContent02": "依照時間排序",
+    "Process04ListContent02": "以一週為單位的動畫節目文字化，提供使用者更直接的資訊。",
+    "Process04ListTitle03": "元件一致化：",
+    "Process04ListContent03": "將功能相似的元件進行分類，並在視覺上進行統一。",
+    "Process04ListTitle04": "將動線優化：",
+    "Process04ListContent04": "重新依據功能進行分類，簡化頁面複雜度。",
+    "Process04ListTitle0501": "<p>PV 超過原本預期的 <strong class='heighLight'>800萬</strong> 至 <strong class='heighLight'>900萬</strong>。</p>",
+    "Process04ListTitle0502": "<p>半年內付費會員成長率從 <strong class='heighLight'>4%</strong> 到 <strong class='heighLight'>8%</strong>。</p>"
   }
 }

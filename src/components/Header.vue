@@ -30,7 +30,7 @@
 </template>
 <script setup lang="ts">
 import router from '/@/router/index'
-import Languageselector from '/@/components/modal/Languageselector.vue'
+import Languageselector from '/@/components/modal/LanguageSelector.vue'
 interface NavList {
   name: string
   path: string

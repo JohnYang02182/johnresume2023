@@ -110,5 +110,42 @@
     "Period": "201608~201708",
     "List01": "HTML、SASS、jQueryを使用して、短期イベントのウェブページを設計しました。",
     "List02": "サービスのAndroid APPとiOS APPのプロダクトを UX デザインの原案作成からプロトタイプの作成まで担当していました。"
+  },
+  "ProjectCommon": {
+    "ProjectTitle01": "プロジェクト実施の背景",
+    "ProjectTitle02": "人員",
+    "ProjectTitle03": "未解決issue",
+    "ProjectTitle04": "プロジェクトのプロセス"
+  },
+  "ProjectAnime": {
+    "Reason": "旧バージョンのアニメ再生ウェブサービスは長い間更新されていなかったため、時間の経過とともに2020年末に急速にユーザー数が増加し、過去のUXとのギャップが生じました。要件会議とUX部門との議論の後、今回の改版が決定されました。",
+    "Problem01": "ユーザーの動線が混乱しており、アニメリリースの時間順序が理解できません。",
+    "Problem02": "サービスのRWD対応をできませんでした。",
+    "Problem03": "弾幕のエラーが出ました。",
+    "Process01": "目標設定",
+    "Process02": "ユーザーフローの作成する",
+    "Process03": "UIコンポーネントとカラーテーマを定める",
+    "Process04": "既存デザインを最適化",
+    "Process05": "成果",
+    "Process01MainTitle": "デザインガイドラインを定める：",
+    "Process01ListTitle01": "一貫性の確保：",
+    "Process01ListContent01": "大きなスタイルの違いによってユーザーが迷子にならないようにします。",
+    "Process01ListTitle02": "情報の明確化：",
+    "Process01ListContent02": "ユーザーが短時間で目的を達成できるように情報を明確にします。",
+    "Process02ListContent01": "全体のサービスの動線とページの構造を明確にします。ユーザーフローを作成し、PMとプロセスの最適化を行います。",
+    "Process03ListContent01":"明暗のカラーコンポーネントを定義し、UIライブラリを作成してモックアップ作成の速度を向上させます。",
+    "Process04ListTitle01": "アニメの配置：",
+    "Process04ListContent01": "左から右に配置し、ダイナミックなインタラクション効果を追加してユーザーの動線を導きます。",
+    "Process04ListTitle02": "アニメのスケジュール表の追加：",
+    "Process04ListPointTitle": "新しい機能について:",
+    "Process04ListPointContent01": "日期をハイライトします",
+    "Process04ListPointContent02": "時間順に並べます",
+    "Process04ListContent02": "1週間単位でのアニメ番組をテキスト化し、ユーザーにより直接的な情報を提供します。",
+    "Process04ListTitle03": "コンポーネントの統一化：",
+    "Process04ListContent03": "機能が似ているコンポーネントを分類し、視覚的に統一します。",
+    "Process04ListTitle04": "動線の最適化：",
+    "Process04ListContent04": "機能に基づいて再分類し、ページの複雑さを簡素化します。",
+    "Process04ListTitle0501": "<p>PV数も予想の<strong class='heighLight'> 800万人 </strong>から<strong class='heighLight'> 900万人 </strong>以上になりました。</p>",
+    "Process04ListTitle0502": "<div class='list-content row'>サービスの再構成を行い、半年で有料会員の割合は<strong class='heighLight'> 2% </strong>上がリました。</div>"
   }
 }

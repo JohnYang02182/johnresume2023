@@ -85,7 +85,7 @@ $video_height: calc(($video_width/12)*9);
 }
 
 /*ui 組件 結束*/
-body {
+html, body {
 	font-family: "Noto Sans TC", 'seto', "Helvetica Neue", "Helvetica", "Arial", "PingFangTC-Light", "STHeitiTC-Light", "Microsoft JhengHei", "微軟正黑體", sans-serif;
 	background-color: #fff;
 }
@@ -162,7 +162,7 @@ body {
 			.headline_03 {
 				color: #909090;
 				line-height: 26px;
-				font-weight: 300;
+				font-weight: 400;
 			}
 			>.button {
 				margin-top: 32px;
@@ -429,16 +429,17 @@ body {
 			color: var(--text_secondary);
 		}
 		.work-job_title {
-			color: var(--text_secondary);
-			font-weight: lighter;
+			color: var(--text_primary);
+			font-weight: normal;
+			font-size: var(--font_body_small);
 		}
 		.work-time {
 			color: var(--secondary);
 		}
 		.work-content {
 			padding: 8px 0;
-			font-size: -var(--font_body_medium);
-			font-weight: lighter;
+			font-size: var(--font_body_medium);
+			font-weight: normal;
 			color: var(--text_primary);
 			li {
 				font-size: 14px;

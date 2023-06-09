@@ -17,6 +17,7 @@ $text_secondary: #094067;
 	--font_label-small: 12px;
 	--font_body_small: 14px;
 	--font_body_medium: 16px;
+	--font_title_small: 20px;
 	--font_title_medium: 24px;
 	--font_title_large: 28px;
 	--font_headline_medium: 32px;
@@ -25,6 +26,7 @@ $text_secondary: #094067;
 	--font_display_large: 42px;
 
 	--primary: #3da9fc;
+	--primary_50: #{rgba($primary, 50%)};
 	--secondary: #90b4ce;
 	--tertiary: #ef4565;
 	--text_primary: #{$text_primary};

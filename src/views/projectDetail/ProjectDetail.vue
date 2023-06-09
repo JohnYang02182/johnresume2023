@@ -38,22 +38,23 @@
         </ul>
       </div>
     </section>
-    <section class="inner-content-main">
-      <AnimeDetail v-if="$route.params.id === '1'"  />
-      <ChatWithChatGPT v-else-if="$route.params.id === '5'"  />
-      <PortfolioRecord v-else />
-    </section>
+    <AnimeDetail v-if="$route.params.id === '2'"  />
+    <ChatWithChatGPT v-else-if="$route.params.id === '1'"  />
+    <PortfolioRecord v-else />
   </div>
 </template>
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import { Ref, onMounted, ref } from 'vue'
+import { Ref, ref } from 'vue'
 import PortfolioRecord from './components/PortfolioRecord.vue'
 import AnimeDetail from './components/AnimeDetail.vue'
 import ChatWithChatGPT from './components/ChatWithChatGPT.vue'
 import { CardInfoDetail } from '/@/setting/profolioCard'
 import router from '/@/router'
-
+// const profolioCard = defineAsyncComponent(() => 
+//   import('/@/setting/profolioCard')
+// ) 
+// const { CardInfoDetail } = profolioCard()
 const props = defineProps ({
   projectTitle: String,
 })
