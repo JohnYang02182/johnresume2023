@@ -15,6 +15,6 @@ import Footer from '../components/Footer.vue'
 .tagPage-wrapper {
   position: relative;
   width: 100dvw;
-  background-color: var(--bg-primary);
+  background-color: var(--bg_primary);
 }
 </style>

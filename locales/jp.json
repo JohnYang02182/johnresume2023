@@ -61,7 +61,8 @@
     "Sketch": "Sketch",
     "Figma": "Figma",
     "AI": "Illustrator",
-    "PS": "Photoshop"
+    "PS": "Photoshop",
+    "UNOCSS": "UNOCSS"
   },
   "Nav": {
     "HomePageTag": "ホームページ",
@@ -75,7 +76,8 @@
     "AnimePlateFormTitle": "動画配信サービスー動畫瘋（ドンファフン）",
     "BahaWallTitle": "ACGNのソーシャルソフトウェアアプリー動態牆",
     "BShoppingMallTitle": "ACGN商品を販売するネットショップー巴哈商城",
-    "HuanShunTitle": "ネットショップアプリー環盛"
+    "HuanShunTitle": "ネットショップアプリー環盛",
+    "ShinchiEC": "ウェブサイトのテンプレート販売サービスー新騎"
   },
   "SidePorject": {
     "ChatingWithChatGPT": "ChatGPTと喋りましょう"
@@ -115,7 +117,8 @@
     "ProjectTitle01": "プロジェクト実施の背景",
     "ProjectTitle02": "人員",
     "ProjectTitle03": "未解決issue",
-    "ProjectTitle04": "プロジェクトのプロセス"
+    "ProjectTitle04": "プロジェクトのプロセス",
+    "ProjectTitle05": "機能について"
   },
   "ProjectAnime": {
     "Reason": "旧バージョンのアニメ再生ウェブサービスは長い間更新されていなかったため、時間の経過とともに2020年末に急速にユーザー数が増加し、過去のUXとのギャップが生じました。要件会議とUX部門との議論の後、今回の改版が決定されました。",
@@ -147,5 +150,11 @@
     "Process04ListContent04": "機能に基づいて再分類し、ページの複雑さを簡素化します。",
     "Process04ListTitle0501": "<p>PV数も予想の<strong class='heighLight'> 800万人 </strong>から<strong class='heighLight'> 900万人 </strong>以上になりました。</p>",
     "Process04ListTitle0502": "<div class='list-content row'>サービスの再構成を行い、半年で有料会員の割合は<strong class='heighLight'> 2% </strong>上がリました。</div>"
+  },
+  "SideProjectChatGPT": {
+    "Reason": "チャットGPTの仕組みを掘り下げるために、Open AIのドキュメントを勉強し、パラメータを再調整してチャットGPTをポートフォリオウェアで再現します。",
+    "Point01": "入力フォームは必要です、もし入力内容を書わなくまま送信ボタンを押しれば、エラーメッセージは出てきます。",
+    "Point02": "TypeScriptでエイシンクでAPIのやり取りを処理する。",
+    "Point03": "メッセージのパラメータを再調整する。"
   }
 }

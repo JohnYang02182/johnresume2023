@@ -1,5 +1,40 @@
 <template>
-  <div class="section-wrapper">
+  <section class="section-body">
+    <div class="banner-wrapper">
+      <div class="banner-content-wrapper">
+        <div class="banner-content-item">
+          <img class="banner-content-img" src="/IMG/banner_sample.png" alt=""/>
+        </div>
+      </div>
+    </div>
+    <div class="container-wrapper col">
+      <div class="content-wrapper col">
+        <h2 class="main-title">{{ $t('ProjectCommon.ProjectTitle01') }}</h2>
+        <p class="content-text">{{ $t('SideProjectChatGPT.Reason') }}</p>
+      </div>
+      <div class="content-wrapper col">
+        <h2 class="main-title">{{ $t('ProjectCommon.ProjectTitle05') }}</h2>
+        <ul class="list-wrapper dot-style">
+          <li class="list dot dot-primary">{{ $t('SideProjectChatGPT.Point01') }}</li>
+          <li class="list dot dot-primary">{{ $t('SideProjectChatGPT.Point02') }}</li>
+          <li class="list dot dot-primary">{{ $t('SideProjectChatGPT.Point03') }}</li>
+        </ul>
+      </div>
+      <div class="content-wrapper col">
+        <form class="form-content content-text" @submit.prevent="onSubmit">
+          <div class="input-wrapper" :class="{'active' : inputFocus}">
+            <input class="input-content" type="text" name="chatContent" v-model="value" @focus="inputFocus = true" @blur="inputFocus = false">
+          </div>
+          <span class="tips-alert" v-if="errorMessage">{{ errorMessage }}</span>
+          <button :disabled="!meta.dirty || !meta.valid" class="btn btn-submit" :class="{'btn-disable': !meta.dirty || !meta.valid}">{{ $t('CommonActivity.Submit') }}</button>
+        </form>
+        <div class="show-content-wrapper">
+          <p class="show-content">{{ responseContent }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <div class="section-wrapper">
     <p class="section-title headline_02">Try to chat with it!</p>
     <form class="form-content content-text" @submit.prevent="onSubmit">
       <div class="input-wrapper" :class="{'active' : inputFocus}">
@@ -10,11 +45,12 @@
     <div class="show-content-wrapper">
       <p class="show-content">{{ responseContent }}</p>
     </div>
-  </div>
+  </div> -->
 </template>
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { ChatGPTLink } from '/@/api/ChatGPTAPI'
+import { useField } from 'vee-validate';
 const inputFocus = ref(false)
 const inputContent = ref('')
 const contentForSending = ref()
@@ -38,25 +74,30 @@ const sendingContent = (inputContent :string) => {
     messageParam
   }
 }
-// const messageParam = ref({
-//   model: "gpt-3.5-turbo-0301",
-//   temperature: 1.0,
-//   messages: [
-//       {
-//           role: "system",
-//           content: "You are empathic and always encourage people when they fail, feel frustrated, feel sad."
-//       },
-//       {
-//           role: "user", 
-//           content: "I feel san today"
-//       }
-//   ]}
-// )
+function validateField(value: any) {
+  if (!value) {
+    return 'this field is required';
+  }
+
+  return true;
+}
+
+const { value, errorMessage, meta } = useField('ChatGPTRequest', validateField);
+
 const onSubmit = async () => {
-  contentForSending.value = sendingContent(inputContent.value)
-  let res = await ChatGPTLink(contentForSending.value.messageParam)
-  console.log('res',res)
-  responseContent.value = res.choices[0].message.content
+  let loading = ref()
+  let res = ref()
+  try {
+    loading.value = true
+    contentForSending.value = sendingContent(value.value)
+    res.value = await ChatGPTLink(contentForSending.value.messageParam)
+    console.log('res',res)
+    console.log('loading', loading.value)
+  } finally {
+    responseContent.value = res.value.choices[0].message.content
+    loading.value = false
+    console.log('loadingfinish', loading.value)
+  }
   // resposneContent.value = await completion(inputContent.value)
   // console.log('test',resposneContent.value)
   // console.log('input-content',inputContent.value)
@@ -67,67 +108,17 @@ const onSubmit = async () => {
 // })
 </script>
 <style lang="scss" scoped>
+@import url('../../../style/workH_detail.scss');
 .section-wrapper {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 24px;
+  margin: auto;
+  padding: 24px 0;
   max-width: 1440px;
-  width: 100%;
+  width: 75%;
   .section-title {
     color: var(--text_primary);
-  }
-  .btn-submit {
-    margin-top: 12px;
-    padding: 8px 20px;
-    font-size: 16px;
-    color: var(--text_tertiary);
-    background-color: var(--primary);
-    border: none;
-    outline-style: none;
-    border-radius: 4px;
-    &:hover {
-      box-shadow: 1px 1px 12px 0 var(--primary);
-    }
-  }
-  .form-content {
-    width: 100%;
-    .input-wrapper {
-      height: 240px;
-      border-radius: 8px;
-      overflow: hidden;
-      border: 2px solid #90b4ce;
-    }
-    .active {
-      border-color: var(--primary);
-    }
-    .input-content {
-      display: block;
-      padding: 4px 16px;
-      width: 100%;
-      color: var(--text_primary);
-      background-color: var(--bg_primary);
-      border: none;
-      &:active, &:hover, &:focus, &:focus-visible {
-        border: none;
-        outline-width: 0px;
-      }
-    }
-  }
-  .show-content-wrpper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    max-width: 1440px;
-  }
-  .show-content {
-    padding: 24px;
-    width: 100%;
-    font-size: 24px;
-    color: var(--text_tertiary);
-    background-color: var(--text_primary);
-    border-radius: 8px;
-    white-space: break-spaces;
   }
 }
 </style>

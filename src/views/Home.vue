@@ -18,7 +18,10 @@
 			</div>
 			<div class="divid-line"></div>
 			<div class="section section-profile">
-				<h2 class="section-main-title home-title">{{ $t('CommonTitle.MyWork') }}</h2>
+				<div class="section-main-title home-title">
+					<font-awesome-icon class="icon-home-title" icon="fa-solid fa-flag" />
+					<h2>{{ $t('CommonTitle.MyWork') }}</h2>
+				</div>
 				<router-link class="profile_card" v-for="(item, index) in designCardInfo" :key="index" :to="{name: 'ProjectDetail', params: { id: item.params }}" @click="getElement(item.params)">
 					<div class="profile_card-pic">
 						<img :src="`${ httpDetect.test(item.bannerImg) ? item.bannerImg : getImageUrl(item.bannerImg)}`" alt="profile">

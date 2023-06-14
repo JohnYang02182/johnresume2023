@@ -7,13 +7,13 @@
   transition: all .3s ease-out;
   z-index: 99;
 }
-.selector-wrapper-n {
+.selector-wrapper {
   position: relative;
   background-color: #fff;
   .selector-label {
     color: var(--text_primary);
   }
-  .selector-list-n {
+  .selector-list {
     position: absolute;
     top: 36px;
     left: 50%;
@@ -35,9 +35,9 @@
       text-align: center;
       font-size: var(--font_body_medium);
       color: var(--text_primary);
-      background-color: var(--gardient100);
+      background-color: var(--gradient_100);
       &:hover {
-        color: var(--gardient100);
+        color: var(--gradient_100);
         background-color: var(--secondary);
       }
     }
@@ -46,7 +46,17 @@
     }
     &.close {
       transform: scaleY(0) translateX(-50%);
-      transition-delay: 0.5s;
+      transition-delay: .1s;
+    }
+  }
+  .icon-arrow {
+    transition: all .2s ease-out;
+    &.active {
+      transform: rotate(180deg);
+    }
+    &.close {
+      transform: rotate(0deg);
+      transition-delay: .1s;
     }
   }
 }

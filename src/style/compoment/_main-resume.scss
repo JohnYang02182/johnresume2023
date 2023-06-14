@@ -119,6 +119,9 @@ html, body {
 			text-align: start;
 			color: var(--text_secondary);
 		}
+		.icon-home-title {
+			font-size: 20px;
+		}
 		.section-main-title {
 			display: flex;
 			align-items: center;
@@ -441,9 +444,24 @@ html, body {
 			font-size: var(--font_body_medium);
 			font-weight: normal;
 			color: var(--text_primary);
+			>ul {
+				display: grid;
+				gap: 4px;
+			}
 			li {
+				display: flex;
+				gap: 4px;
 				font-size: 14px;
 				line-height: 20px;
+				&::before {
+					content: '';
+					display: block;
+					margin: 6px 4px;
+					width: 6px;
+					height: 6px;
+					border-radius: 12px;
+					background-color: var(--secondary);
+				}
 			} 
 		}
 	}
@@ -505,7 +523,7 @@ html, body {
 .footer {
 	padding: 36px;
 	width: 100%;
-	background-color: var(--bg-primary);
+	background-color: var(--bg_primary);
 	box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .08);
 	.list-contect-me {
 		.footer-title {

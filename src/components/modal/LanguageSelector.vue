@@ -1,9 +1,11 @@
 <template>
-  <div class="selector-wrapper-n" @mouseover="switchLanListOn()" @mouseleave="switchLanListOff()">
+  <div class="selector-wrapper" @mouseover="switchLanListOn()" @mouseleave="switchLanListOff()">
     <label class='selector-label'>
+      <font-awesome-icon class="icon-home-title" icon="fa-solid fa-globe" />
       {{ $t(`Common.${i18n.locale.value.toUpperCase()}`) }}
+      <font-awesome-icon icon="fa-solid fa-chevron-down" class="icon-arrow" :class="{'active': listIsOpen, 'close': !listIsOpen}" />
     </label>
-    <ul class="selector-list-n" :class="{'active': listIsOpen, 'close': !listIsOpen}" @mouseenter="switchLanListOn()" @mouseleave="switchLanListOff()">
+    <ul class="selector-list" :class="{'active': listIsOpen, 'close': !listIsOpen}" @mouseenter="switchLanListOn()" @mouseleave="switchLanListOff()">
       <li v-for='(item, index) in SUPPORT_LOCALES' :key='index' class="selector-list-n-content">
         <a class="list-items" href="javascript:void(0)" @click="switchLanguage(item.langOption)">{{ item.langName }}</a>
       </li>

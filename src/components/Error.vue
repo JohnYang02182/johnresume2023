@@ -22,7 +22,7 @@ const router = useRouter()
   display: block;
   margin: 240px auto;
   .button-content {
-    color: var(--gardient100);
+    color: var(--gradient_100);
     padding: 4px 12px;
     border: 1px solid var(--primary);
     border-radius: 8px;
@@ -30,7 +30,7 @@ const router = useRouter()
   }
   .button-content-text {
     font-size: var(--font_body_medium);
-    color: var(--gardient100);
+    color: var(--gradient_100);
   }
 }
 </style>

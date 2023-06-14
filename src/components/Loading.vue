@@ -29,7 +29,7 @@
   left: 0;
   width: 100dvw;
   height: 100dvh;
-  background-color: var(--bg-primary);
+  background-color: var(--bg_primary);
   overflow: hidden;
   z-index: 999;
 }

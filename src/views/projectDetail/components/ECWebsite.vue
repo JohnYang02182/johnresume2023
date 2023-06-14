@@ -1,22 +1,24 @@
 <template>
   <section class="section-body">
     <div class="banner-wrapper">
-      <div class="banner-content-wrapper">
+      <div class="banner-content-wrapper row">
         <div class="banner-content-item">
-          <img class="banner-content-item" src="/IMG/banner_sample.png" alt="" @load="onImage" :class="{'img-loading': isImgLoading}"/>
+          <img class="banner-content-img" src="/IMG/banner_work_character.png" alt="" @load="onImage" :class="{'img-loading': isImgLoading}"/>
         </div>
+        <p class="banner-content-title" style="font-family: 'Android 101';">My Work</p>
       </div>
     </div>
     <div class="container-wrapper col">
-      <div class="content-wrapper col scrollAnimation">
+      <div class="content-wrapper col">
         <h2 class="main-title">{{ $t('ProjectCommon.ProjectTitle01') }}</h2>
-        <p class="content-text">{{ $t('ProjectAnime.Reason') }}</p>
+        <p class="content-text">新しい市場を開拓するために、ウェブのテンプレートを販売するサービスを定めした。今回のサービス開発について、クライアントが自由にテンプレートを設定するように拡張性が高い、メンテナンス優しい構造を作ることを決めた。</p>
       </div>
-      <div class="content-wrapper col scrollAnimation">
+      <div class="content-wrapper col">
         <h2 class="main-title">{{ $t('ProjectCommon.ProjectTitle02') }}</h2>
         <ul class="list-wrapper">
-          <li class="list">{{ $t('Character.PM') }} * 1</li>
-          <li class="list">{{ $t('Character.UIUXDesigner') }} * 1</li>
+          <li class="list">{{ $t('Character.PM') }} * 2</li>
+          <li class="list">{{ $t('Character.UIUXDesigner') }} * 2</li>
+          <li class="list">{{ $t('Character.FEDeveloper') }} * 2</li>
           <li class="list">{{ $t('Character.BDDeveloper') }} * 2</li>
         </ul>
       </div>

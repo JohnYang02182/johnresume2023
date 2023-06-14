@@ -61,7 +61,8 @@
     "Sketch": "Sketch",
     "Figma": "Figma",
     "AI": "Illustrator",
-    "PS": "Photoshop"
+    "PS": "Photoshop",
+    "UNOCSS": "UNOCSS"
   },
   "Nav": {
     "HomePageTag": "Home",
@@ -75,7 +76,8 @@
     "AnimePlateFormTitle": "動畫瘋改版",
     "BahaWallTitle": "巴哈動態牆",
     "BShoppingMallTitle": "巴哈商城改版",
-    "HuanShunTitle": "環盛APP"
+    "HuanShunTitle": "環盛APP",
+    "ShinchiEC": "新騎網站客製化服務"
   },
   "SidePorject": {
     "ChatingWithChatGPT": "與擅長安慰人的 ChatGPT 聊聊天吧"
@@ -115,7 +117,8 @@
     "ProjectTitle01": "背景",
     "ProjectTitle02": "參與人員",
     "ProjectTitle03": "待解問題",
-    "ProjectTitle04": "執行專案"
+    "ProjectTitle04": "執行專案",
+    "ProjectTitle05": "專案需求"
   },
   "ProjectAnime": {
     "Reason": "舊版動畫播放網頁服務未更新時間過長，隨時間推移使用者在 2020 年末急速上漲 、以及過去的 UX 現在已有落差，在需求會議與UX部門的討論後，決定這次的改版。",
@@ -147,5 +150,11 @@
     "Process04ListContent04": "重新依據功能進行分類，簡化頁面複雜度。",
     "Process04ListTitle0501": "<p>PV 超過原本預期的 <strong class='heighLight'>800萬</strong> 至 <strong class='heighLight'>900萬</strong>。</p>",
     "Process04ListTitle0502": "<p>半年內付費會員成長率從 <strong class='heighLight'>4%</strong> 到 <strong class='heighLight'>8%</strong>。</p>"
+  },
+  "SideProjectChatGPT": {
+    "Reason": "チャットGPTの仕組みを掘り下げるために、Open AIのドキュメントを勉強し、パラメータを再調整してチャットGPTをポートフォリオウェアで再現します。",
+    "Point01": "入力フォームは必要です、もし入力内容を書わなくまま送信ボタンを押しれば、エラーメッセージは出てきます。",
+    "Point02": "TypeScriptでエイシンクでAPIのやり取りを処理する",
+    "Point03": "メッセージのパラメータを再調整する"
   }
 }
