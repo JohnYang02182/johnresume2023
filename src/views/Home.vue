@@ -35,7 +35,7 @@
 					</div>
 				</router-link>
 			</div>
-			<div class="divid-line"></div>
+			<!-- <div class="divid-line"></div>
 			<div class="section section-codepratice">
 				<h2 class="section-main-title home-title">前端實作練習</h2>
 				<a href="https://github.com/JohnYang02182/vueproject" target="_blank" class="profile_card code_card">
@@ -82,7 +82,7 @@
 						</div>
 					</div>
 				</a>
-			</div>
+			</div> -->
 			<div class="divid-line" />
 		</div>
 	</div>

@@ -118,7 +118,8 @@
     "ProjectTitle02": "參與人員",
     "ProjectTitle03": "待解問題",
     "ProjectTitle04": "執行專案",
-    "ProjectTitle05": "專案需求"
+    "ProjectTitle05": "專案需求",
+    "ProjectTitle06": "專案要點"
   },
   "ProjectAnime": {
     "Reason": "舊版動畫播放網頁服務未更新時間過長，隨時間推移使用者在 2020 年末急速上漲 、以及過去的 UX 現在已有落差，在需求會議與UX部門的討論後，決定這次的改版。",
@@ -150,6 +151,23 @@
     "Process04ListContent04": "重新依據功能進行分類，簡化頁面複雜度。",
     "Process04ListTitle0501": "<p>PV 超過原本預期的 <strong class='heighLight'>800萬</strong> 至 <strong class='heighLight'>900萬</strong>。</p>",
     "Process04ListTitle0502": "<p>半年內付費會員成長率從 <strong class='heighLight'>4%</strong> 到 <strong class='heighLight'>8%</strong>。</p>"
+  },
+  "ProjectShinChiEC": {
+    "Reason": "新しい市場を開拓するために、会社はウェブサイトのテンプレートを販売する btob サービスのプロジェクトを定めた。今回のサービス開発について、クライアントが自由にテンプレートを設定するように拡張性が高い、メンテナンスし優しい構造を作ることを決めた。",
+    "Point01": "UNOCSSを導入し、Atomic CSS エンジンの特性を活かしてTailwind CSSよりもっと読みやすいコードを作る。",
+    "Point02": "レイアウトを効率的に切り替えるために、コンポーネントの策定ルールはしっかり定義する。",
+    "Point03": "カスタマイゼーションの自由さとサービスの安定性の中でバランスを取るために、デーサイナーチームとPMチームやり取りし、方針を定める。",
+    "Process01ListTitle01": "レイアウトを切り替える速さを確保する：",
+    "Process01ListContent01": "Themeのパラメーターの個数、ルールなどを一致するため、デーサイナチームとUIデザインガイドラインを策定することは不可欠です。",
+    "Process01ListTitle02": "コンポーネントをしっかり分類する：",
+    "Process01ListContent02": "ウェブサービスの UI は動的で、時間に応じて変化することができるようにする。",
+    "Process02": "構造を作成する",
+    "Process02ListTitle01": "このプロジェクトについて",
+    "Process02ListContent01": "TypeScript で Vue3 を使用し、フックとコンポーネントを分かれてメンテナンスし易い構造を作る。",
+    "Process02ListContent02": "SCSSで style を作ることの代わりに、UNOCSSで shortcut と rule の機能を利用して style を管理する。",
+    "Process02ListContent03": "全てのコンポーネントを再利用できるようになる。",
+    "Process04ListTitle0501": "<p>Vue3のコンポーネントの特性を利用し、定期的なメンテナンスの予想時間を<strong class='heighLight'> 50% </strong>に短縮した。</p>",
+    "Process04ListTitle0502": "<div class='list-content row'>UNOCSSを導入したおかげで、以前より<strong class='heighLight'> 25% </strong>の時間を短縮し、CSSのメンテナンス性や作業の効率化をあげました。</div>"
   },
   "SideProjectChatGPT": {
     "Reason": "チャットGPTの仕組みを掘り下げるために、Open AIのドキュメントを勉強し、パラメータを再調整してチャットGPTをポートフォリオウェアで再現します。",

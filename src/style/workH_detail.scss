@@ -119,6 +119,12 @@
     flex: 1.2;
     color: rgba(255,255,255,.8);
   }
+  .img-side-project {
+    transform: scale(-1, 1);
+  }
+  .title-side-project {
+    color: rgb(235,210,177);
+  }
 }
 .tips {
   font-size: 14px;
@@ -184,6 +190,7 @@
   }
   .dot-primary {
     &:before {
+      flex-shrink: 0;
       margin: 8px 6px 0;
       width: 6px;
       height: 6px;
@@ -193,6 +200,7 @@
   }
   .dot-secondary {
     &:before {
+      flex-shrink: 0;
       margin: 8px 8px 0;
       width: 8px;
       height: 8px;
@@ -203,6 +211,7 @@
 }
 .number-style {
   .num {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -263,7 +272,7 @@
 }
 .card-group {
   display: grid;
-  gap: clamp(1.75rem, 4.5vw, 42px);
+  gap: clamp(1.75rem, 6.4vw, 72px);
 }
 .card {
   .shadow-main {
@@ -281,7 +290,7 @@
         align-items: start;
         flex-direction: column;
         gap: 4px;
-        &:not(.shadow-main) {
+        &:not(.shadow-main, .regular-style) {
           padding: 4px 16px;
           margin-left: 10px;
           border-left: 3px solid var(--secondary);
@@ -309,6 +318,12 @@
           }
         }
       }
+      .regular-style {
+        padding: 16px 0;
+        .list-title {
+          margin-bottom: 12px;
+        }
+      }
     }
     .gap-in-card_list {
       margin-top: 1em;
@@ -318,8 +333,8 @@
 }
 .container-wrapper {
   position: relative;
-  row-gap: clamp(2.5rem, 4vw, 84px);
-  margin: 4vw auto;
+  row-gap: clamp(2.5rem, 7.5vw, 104px);
+  margin: clamp(2.5rem, 7.5vw, 104px) auto;
   max-width: 1280px;
   width: 75%;
   .content-text {
@@ -345,6 +360,9 @@
   display: block;
   margin: clamp(0px, 1vw, 16px) 0;
   width: 80%;
+  &.img-middle {
+    width: 60%;
+  }
   .content-img-body {
     object-fit: contain;
     width: 100%;

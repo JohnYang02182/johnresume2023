@@ -41,6 +41,7 @@
     <AnimeDetail v-if="$route.params.id === '3'"  />
     <ECWebsite v-else-if="$route.params.id === '2'" />
     <ChatWithChatGPT v-else-if="$route.params.id === '1'" />
+    <BahaWorld v-else-if="$route.params.id === '5'" />
     <PortfolioRecord v-else />
   </div>
 </template>
@@ -51,6 +52,7 @@ import PortfolioRecord from './components/PortfolioRecord.vue'
 import AnimeDetail from './components/AnimeDetail.vue'
 import ChatWithChatGPT from './components/ChatWithChatGPT.vue'
 import ECWebsite from './components/ECWebsite.vue'
+import BahaWorld from './components/BahaWorld.vue'
 import { CardInfoDetail } from '/@/setting/profolioCard'
 import router from '/@/router'
 // const profolioCard = defineAsyncComponent(() => 

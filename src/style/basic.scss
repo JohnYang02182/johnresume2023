@@ -3,7 +3,7 @@ html,body {
 	background-color: #fff;
 	@font-face {
 		font-family: 'NotoSanJP',Helvetica,Arial,sans-serif, "Microsoft JhengHei", "微軟正黑體", sans-serif;
-		src: url('../../assets/fonts/NotoSansJP-VariableFont_wght.ttf');
+		src: url('../../assets/fonts/NotoSansJP-VariableFont_wght.ttf') format("truetype"), url('../../assets/fonts/Android101-El3e.ttf') format("truetype");
 	}
 }
 

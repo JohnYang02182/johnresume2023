@@ -4,8 +4,6 @@ import { defineConfig } from 'vite'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import vue from '@vitejs/plugin-vue'
 
-const rootDir = path.resolve(__dirname, '..');
-
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
@@ -26,5 +24,6 @@ export default defineConfig({
       { find: '/@', replacement: fileURLToPath(new URL('./src', import.meta.url)) },
       { find: '/IMG', replacement: fileURLToPath(new URL('./src/assets/images/', import.meta.url)) },
     ]
-  }
+  },
+  base: '/'
 })

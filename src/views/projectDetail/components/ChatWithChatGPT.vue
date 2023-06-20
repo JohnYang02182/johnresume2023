@@ -3,8 +3,9 @@
     <div class="banner-wrapper">
       <div class="banner-content-wrapper">
         <div class="banner-content-item">
-          <img class="banner-content-img" src="/IMG/banner_sample.png" alt=""/>
+          <img class="banner-content-img img-side-project" style="transform: scale(-1, 1);" src="/IMG/banner_sample.png" alt=""/>
         </div>
+        <p class="banner-content-title title-side-project">Side Project</p>
       </div>
     </div>
     <div class="container-wrapper col">

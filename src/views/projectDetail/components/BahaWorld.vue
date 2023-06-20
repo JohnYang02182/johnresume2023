@@ -11,7 +11,7 @@
     <div class="container-wrapper col">
       <div class="content-wrapper col scrollAnimation">
         <h2 class="main-title">{{ $t('ProjectCommon.ProjectTitle01') }}</h2>
-        <p class="content-text">{{ $t('ProjectAnime.Reason') }}</p>
+        <p class="content-text">用戶發文的頻率明顯逐年下降，公司希望打造一個類似 Facebook 的平台，讓用戶可以使用比較輕鬆的方式發文，降低用戶發文的門檻。</p>
       </div>
       <div class="content-wrapper col scrollAnimation">
         <h2 class="main-title">{{ $t('ProjectCommon.ProjectTitle02') }}</h2>
@@ -24,9 +24,8 @@
       <div class="content-wrapper col scrollAnimation">
         <h2 class="main-title">{{ $t('ProjectCommon.ProjectTitle03') }}</h2>
         <ul class="list-wrapper dot-style">
-          <li class="list dot dot-secondary">{{ $t('ProjectAnime.Problem01') }}</li>
-          <li class="list dot dot-secondary">{{ $t('ProjectAnime.Problem02') }}</li>
-          <li class="list dot dot-secondary">{{ $t('ProjectAnime.Problem03') }}</li>
+          <li class="list dot dot-secondary">簡化用戶發文的步驟流程。</li>
+          <li class="list dot dot-secondary">Android 與 iOS 的 UI 盡量統一。</li>
         </ul>
       </div>
       <div class="content-wrapper col">

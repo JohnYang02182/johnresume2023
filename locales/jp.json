@@ -118,7 +118,8 @@
     "ProjectTitle02": "人員",
     "ProjectTitle03": "未解決issue",
     "ProjectTitle04": "プロジェクトのプロセス",
-    "ProjectTitle05": "機能について"
+    "ProjectTitle05": "機能について",
+    "ProjectTitle06": "要点について"
   },
   "ProjectAnime": {
     "Reason": "旧バージョンのアニメ再生ウェブサービスは長い間更新されていなかったため、時間の経過とともに2020年末に急速にユーザー数が増加し、過去のUXとのギャップが生じました。要件会議とUX部門との議論の後、今回の改版が決定されました。",
@@ -150,6 +151,23 @@
     "Process04ListContent04": "機能に基づいて再分類し、ページの複雑さを簡素化します。",
     "Process04ListTitle0501": "<p>PV数も予想の<strong class='heighLight'> 800万人 </strong>から<strong class='heighLight'> 900万人 </strong>以上になりました。</p>",
     "Process04ListTitle0502": "<div class='list-content row'>サービスの再構成を行い、半年で有料会員の割合は<strong class='heighLight'> 2% </strong>上がリました。</div>"
+  },
+  "ProjectShinChiEC": {
+    "Reason": "新しい市場を開拓するために、会社はウェブサイトのテンプレートを販売する btob サービスのプロジェクトを定めた。今回のサービス開発について、クライアントが自由にテンプレートを設定するように拡張性が高い、メンテナンスし優しい構造を作ることを決めた。",
+    "Point01": "UNOCSSを導入し、Atomic CSS エンジンの特性を活かしてTailwind CSSよりもっと読みやすいコードを作る。",
+    "Point02": "レイアウトを効率的に切り替えるために、コンポーネントの策定ルールはしっかり定義する。",
+    "Point03": "カスタマイゼーションの自由さとサービスの安定性の中でバランスを取るために、デーサイナーチームとPMチームやり取りし、方針を定める。",
+    "Process01ListTitle01": "レイアウトを切り替える速さを確保する：",
+    "Process01ListContent01": "Themeのパラメーターの個数、ルールなどを一致するため、デーサイナチームとUIデザインガイドラインを策定することは不可欠です。",
+    "Process01ListTitle02": "コンポーネントをしっかり分類する：",
+    "Process01ListContent02": "ウェブサービスの UI は動的で、時間に応じて変化することができるようにする。",
+    "Process02": "構造を作成する",
+    "Process02ListTitle01": "このプロジェクトについて",
+    "Process02ListContent01": "TypeScript で Vue3 を使用し、フックとコンポーネントを分かれてメンテナンスし易い構造を作る。",
+    "Process02ListContent02": "SCSSで style を作ることの代わりに、UNOCSSで shortcut と rule の機能を利用して style を管理する。",
+    "Process02ListContent03": "全てのコンポーネントを再利用できるようになる。",
+    "Process04ListTitle0501": "<p>Vue3のコンポーネントの特性を利用し、定期的なメンテナンスの予想時間を<strong class='heighLight'> 50% </strong>に短縮した。</p>",
+    "Process04ListTitle0502": "<div class='list-content row'>UNOCSSを導入したおかげで、以前より<strong class='heighLight'> 25% </strong>の時間を短縮し、CSSのメンテナンス性や作業の効率化をあげました。</div>"
   },
   "SideProjectChatGPT": {
     "Reason": "チャットGPTの仕組みを掘り下げるために、Open AIのドキュメントを勉強し、パラメータを再調整してチャットGPTをポートフォリオウェアで再現します。",
