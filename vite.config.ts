@@ -25,6 +25,5 @@ export default defineConfig({
       { find: '/IMG', replacement: fileURLToPath(new URL('./src/assets/images/', import.meta.url)) },
     ],
     extensions: ['.js','.ts','.json','.jsx','.mjs','.tsx','.vue']
-  },
-  base: './'
+  }
 })
