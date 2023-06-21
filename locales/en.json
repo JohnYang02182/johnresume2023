@@ -139,7 +139,7 @@
     "Process02ListContent01": "Clarify the overall service flow and page structure. Create a User Flow diagram and optimize the process with the Project Manager (PM).",
     "Process03ListContent01":"Define components for both light and dark themes and establish a UI library to expedite mockup creation.",
     "Process04ListTitle01": "Animation Arrangement:",
-    "Process04ListContent01": "Change the arrangement from left-to-right to enhance dynamic interactive effects and guide the user flow.",
+    "Process04ListContent01": "Change the arrangement from left-to-right so that the newest anime videos are in the top left and get progressive older as you scroll down and to the right. This way, the oldest anime video will be in the bottom right. This will enhance dynamic interactive effects and guide the user flow.",
     "Process04ListTitle02": "Add a anime shows' schedule:",
     "Process04ListPointTitle": "The points of the schedule",
     "Process04ListPointContent01": "Mark the position of today.",
