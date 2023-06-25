@@ -8,7 +8,7 @@
 <script lang="ts" setup>
 </script>
 <style lang="scss" scoped>
-@keyframes loadingFullAnime {
+@keyframes loadingFullAnimation {
   0% {
     max-height: .75vw;
     background: linear-gradient(45deg, var(--secondary) 0%, var(--primary) 100%);
@@ -50,7 +50,7 @@
     transition: all 3s linear;
     transform-origin: bottom center;
     transition: max-height;
-    animation-name: loadingFullAnime;
+    animation-name: loadingFullAnimation;
     animation-duration: 400ms;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
