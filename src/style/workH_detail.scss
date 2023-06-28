@@ -7,9 +7,27 @@
     opacity: 1;
   }
 }
+@keyframes animationLoading {
+  to {
+    background-position-x: -20%;
+  }
+}
 .scrollAnimation {
   animation: opacityShowUp 1s ease-in 0.4s;
   opacity: 0;
+}
+.imaginationLoading {
+  background-color: var(--gradient_20);
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, .5) 50%,
+    rgba(255, 255, 255, 0) 60%
+  ) var(--gradient_20);
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  opacity: .8;
+  animation: 1s animationLoading ease-in-out infinite;
 }
 .scrolled {
   opacity: 1;

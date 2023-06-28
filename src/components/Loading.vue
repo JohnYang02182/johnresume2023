@@ -27,7 +27,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100dvw;
+  width: calc(100dvw - (100dvw - 100%));
   height: 100dvh;
   background-color: var(--bg_primary);
   overflow: hidden;

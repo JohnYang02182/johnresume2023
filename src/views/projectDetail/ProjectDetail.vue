@@ -39,16 +39,17 @@
       </div>
     </section>
     <AnimeDetail v-if="$route.params.id === '3'"  />
-    <ECWebsite v-else-if="$route.params.id === '2'" />
+    <!-- <ECWebsite v-else-if="$route.params.id === '2'" /> -->
     <ChatWithChatGPT v-else-if="$route.params.id === '1'" />
-    <BahaWorld v-else-if="$route.params.id === '5'" />
-    <PortfolioRecord v-else />
+    <!-- <BahaWorld v-else-if="$route.params.id === '5'" /> -->
+    <Maintainance v-else />
   </div>
 </template>
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import { Ref, ref } from 'vue'
-import PortfolioRecord from './components/PortfolioRecord.vue'
+import Maintainance from '/@/components/Maintainance.vue'
+// import PortfolioRecord from './components/PortfolioRecord.vue'
 import AnimeDetail from './components/AnimeDetail.vue'
 import ChatWithChatGPT from './components/ChatWithChatGPT.vue'
 import ECWebsite from './components/ECWebsite.vue'
