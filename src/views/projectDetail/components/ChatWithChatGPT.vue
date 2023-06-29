@@ -92,6 +92,10 @@ const onSubmit = async () => {
     loading.value = true
     contentForSending.value = sendingContent(value.value)
     res.value = await ChatGPTLink(contentForSending.value.messageParam)
+    if(res.value.message) {
+      console.log('resin', res.value)
+      return
+    }
     console.log('res',res)
     console.log('loading', loading.value)
   } finally {

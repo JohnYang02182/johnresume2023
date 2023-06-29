@@ -16,6 +16,7 @@ axios.defaults.timeout = 10000
 // Add request Interceptor
 axios.interceptors.request.use((config: InternalAxiosRequestConfig) => {
   config.headers!.Authorization = 'Bearer ' + import.meta.env.VITE_OPENAI_API_KEY
+  console.log('openai',import.meta.env.VITE_OPENAI_API_KEY);
   return config
 }, (error: any) => {
   return Promise.reject(error)
@@ -69,8 +70,11 @@ export async function get<T>(url: string){
 export async function post<T>(url: string, data: object){
   try {
     const response = await axios.post<T>(url,data)
+    console.log('response ',response)
     return detectStatusCode(response)
   } catch(error) {
+    console.log('error', error)
+    return error
     throw new Error(`Error data when require post ${url}`)
   }
 }
