@@ -8,6 +8,9 @@
   }
 }
 @keyframes animationLoading {
+  from {
+    background-position-x: 180%;
+  }
   to {
     background-position-x: -20%;
   }
