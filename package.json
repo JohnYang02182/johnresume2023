@@ -8,8 +8,8 @@
     "doc:dev": "vitepress dev docs",
     "doc:build": "vitepress build docs",
     "doc:preview": "vitepress preview docs",
-    "dev": "VITE_OPENAI_API_KEY=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 vite",
-    "build": "vue-tsc && vite build VITE_OPENAI_API_KEY=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",
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
