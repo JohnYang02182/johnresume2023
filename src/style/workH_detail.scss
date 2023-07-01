@@ -130,7 +130,7 @@
       height: 100%;
       overflow: hidden;
       &.img-loading {
-        background-color: #fff;
+        visibility: hidden;
       }
     }
   }

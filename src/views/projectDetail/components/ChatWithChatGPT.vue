@@ -96,7 +96,6 @@ const onSubmit = async () => {
       console.log('resin', res.value)
       return
     }
-    console.log('res',res)
     console.log('loading', loading.value)
   } finally {
     responseContent.value = res.value.choices[0].message.content

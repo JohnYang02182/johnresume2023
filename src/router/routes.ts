@@ -1,5 +1,6 @@
 import { defineAsyncComponent } from 'vue'
 import { RouteRecordRaw } from 'vue-router'
+
 const Home = () => import('../views/Home.vue')
 const Personal = () => import('../views/Personal.vue')
 const Project = () => import('../views/Project.vue')
@@ -8,7 +9,8 @@ const ErrorPage = () => import('../components/Error.vue')
 
 const routesParams: Array<RouteRecordRaw> = [
   {
-    path: '/', name: 'Home', component: Home,
+    path: '/', name: 'Home', 
+    component: Home,
     meta: {
       layout: true
     }

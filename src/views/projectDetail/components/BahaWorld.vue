@@ -2,8 +2,8 @@
   <section class="section-body">
     <div class="banner-wrapper">
       <div class="banner-content-wrapper row">
-        <div class="banner-content-item">
-          <img class="banner-content-img" src="/IMG/banner_work_character.png" alt="" @load="onImage" :class="{'imaginationLoading': isImgLoading}"/>
+        <div class="banner-content-item" :class="{'imaginationLoading': isImgLoadingNow.value}">
+          <img class="banner-content-img img-loading" src="/IMG/banner_work_character.png" alt="" ref="imgContent" />
         </div>
         <p class="banner-content-title">My Work</p>
       </div>
@@ -41,12 +41,12 @@
               <p class="content-text">{{ $t('ProjectAnime.Process01MainTitle') }}</p>
               <ul class="list-wrapper row-2">
                 <li class="list col shadow-main">
-                  <p class="list-title">{{ $t('ProjectAnime.Process01ListTitle01') }}</p>
-                  <p class="list-content">{{ $t('ProjectAnime.Process01ListContent01') }}</p>
+                  <p class="list-title"></p>
+                  <p class="list-content"></p>
                 </li>
                 <li class="list col shadow-main">
-                  <p class="list-title">{{ $t('ProjectAnime.Process01ListTitle02') }}</p>
-                  <p class="list-content">{{ $t('ProjectAnime.Process01ListContent02') }}</p>
+                  <p class="list-title"></p>
+                  <p class="list-content"></p>
                 </li>
               </ul>
             </div>
@@ -174,19 +174,23 @@
   <!-- <Loading v-else-if="isLoading === true" /> -->
 </template>
 <script lang="ts" setup>
-import { defineAsyncComponent, onMounted, ref, onUnmounted, onBeforeMount, nextTick } from 'vue';
+import { defineAsyncComponent, onMounted, ref, Ref, onUnmounted, onBeforeMount, nextTick, computed, HtmlHTMLAttributes } from 'vue';
 import { observeScroll } from '../../../../util/lazyLoad'
 const isLoading = ref(true)
 const Loading = defineAsyncComponent(() => 
   import ('/@/components/Loading.vue')
 )
+const imgContent = ref()
 const isImgLoading = ref(true)
-const onImage = ((ele: any)=> {
-  console.log('getImage',ele.currentTarget)
-  isImgLoading.value = false
-})
+const isImgLoadingNow = computed(() => {return isImgLoading})
+
 onMounted( async () => {
   await nextTick()
+  if(imgContent.value !== null){
+    console.log('img', imgContent.value)
+    imgContent.value.classList.remove('imgs-loading')
+    isImgLoading.value = false
+  }
   const scrollDOM = ref(document.querySelectorAll('.scrollAnimation'))
   for (let i=0; i < scrollDOM.value.length; i++) {
     const elements = ref(scrollDOM.value[i])
