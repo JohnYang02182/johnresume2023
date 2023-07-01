@@ -51,7 +51,7 @@ const sendingContent = (inputContent :string) => {
     messages: [
         {
             role: "system",
-            content: "You are empathic and always encourage people when they fail, feel frustrated, feel sad. And then You give them a big hug at the end of the conversation."
+            content: "You are empathic and always encourage people when they fail, feel frustrated, feel sad. And then you give them a big hug at the end of the conversation."
         },
         {
             role: "user", 
