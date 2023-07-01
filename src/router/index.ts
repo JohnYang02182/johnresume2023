@@ -17,13 +17,11 @@ router.beforeEach((to, from) => {
     let paramsId = typeof to.params.id !== 'object' ? to.params.id : ''
     to.meta.msg1 = getCardInfo(parseInt(paramsId))
   }
-  console.log('page!!!!')
   scrollBehavior()
   userStore.loadingStart()
 })
 router.afterEach(() => {
   const userStore = useUserStore()
-  console.log('show!!')
   userStore.loadingEnd()
 })
 export default router
