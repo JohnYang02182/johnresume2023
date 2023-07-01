@@ -12,7 +12,7 @@ $text_primary: var(--text_primary);
 $timeline_section-height: 3860px; 
 $video_count: 11;
 $video_row: math.ceil(calc($video_count/2));
-$video_sec_row: 7; 
+$video_sec_row: 7;
 $card_width: 450px;
 $cardcontent_padding: 16px;
 $video_width: calc($card_width - $cardcontent_padding*2);

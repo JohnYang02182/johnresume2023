@@ -35,21 +35,9 @@
       </div>
     </div>
   </section>
-  <!-- <div class="section-wrapper">
-    <p class="section-title headline_02">Try to chat with it!</p>
-    <form class="form-content content-text" @submit.prevent="onSubmit">
-      <div class="input-wrapper" :class="{'active' : inputFocus}">
-        <input class="input-content" type="text" name="chatContent" v-model="inputContent" @focus="inputFocus = true" @blur="inputFocus = false">
-      </div>
-      <button class="btn btn-submit">{{ $t('CommonActivity.Submit') }}</button>
-    </form>
-    <div class="show-content-wrapper">
-      <p class="show-content">{{ responseContent }}</p>
-    </div>
-  </div> -->
 </template>
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 import { ChatGPTLink } from '/@/api/ChatGPTAPI'
 import { useField } from 'vee-validate';
 const inputFocus = ref(false)
@@ -63,7 +51,7 @@ const sendingContent = (inputContent :string) => {
     messages: [
         {
             role: "system",
-            content: "You are empathic and always encourage people when they fail, feel frustrated, feel sad."
+            content: "You are empathic and always encourage people when they fail, feel frustrated, feel sad. And then You give them a big hug at the end of the conversation."
         },
         {
             role: "user", 
@@ -105,7 +93,6 @@ const onSubmit = async () => {
   // resposneContent.value = await completion(inputContent.value)
   // console.log('test',resposneContent.value)
   // console.log('input-content',inputContent.value)
-  // console.log(responseContent.value)
 }
 // onMounted(()=>{
 //   console.log('env',import.meta.env.VITE_OPENAI_API_KEY)
