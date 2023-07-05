@@ -10,19 +10,21 @@ export interface CardInfoDetail {
   tags: string[]
   sideProject: boolean
 }
-export const designCardInfo: CardInfoDetail[] = [{
+export const designCardInfo: CardInfoDetail[] = [
+//   {
+//   params: '1',
+//   name: 'ChatWithChatGPT',
+//   bannerImg: 'pic_vue.png',
+//   title: 'SidePorject.ChatingWithChatGPT',
+//   link: '',
+//   team: 'Team.Myself',
+//   character: 'Character.FEDeveloper',
+//   period: '202304',
+//   tags: ['Skill.UIAndUX', 'Skill.TypeScript', 'Skill.JavaScript', 'Skill.Vue3', 'Skill.Vite', 'Skill.PS'],
+//   sideProject: false
+// },
+{
   params: '1',
-  name: 'ChatWithChatGPT',
-  bannerImg: 'pic_vue.png',
-  title: 'SidePorject.ChatingWithChatGPT',
-  link: '',
-  team: 'Team.Myself',
-  character: 'Character.FEDeveloper',
-  period: '202304',
-  tags: ['Skill.UIAndUX', 'Skill.TypeScript', 'Skill.JavaScript', 'Skill.Vue3', 'Skill.Vite', 'Skill.PS'],
-  sideProject: false
-},{
-  params: '2',
   name: 'ShinchiECWebsite',
   bannerImg: 'pic_vue.png',
   title: 'HomeProfolio.ShinchiEC',
@@ -33,7 +35,7 @@ export const designCardInfo: CardInfoDetail[] = [{
   tags: ['Skill.UIAndUX', 'Skill.TypeScript', 'Skill.JavaScript', 'Skill.Vue3', 'Skill.Vite', 'Skill.UNOCSS'],
   sideProject: false
 },{ 
-  params: '3',
+  params: '2',
   name: 'AnimeDetail',
   bannerImg: 'anime_banner.png',
   title: 'HomeProfolio.AnimePlateFormTitle',
@@ -45,7 +47,7 @@ export const designCardInfo: CardInfoDetail[] = [{
   sideProject: false
 },{
   // params: 'https://www.behance.net/gallery/125095859/_',
-  params: '4',
+  params: '3',
   name: 'ECDetail',
   bannerImg: 'shopping_banner.png',
   title: 'HomeProfolio.BShoppingMallTitle',
@@ -56,7 +58,7 @@ export const designCardInfo: CardInfoDetail[] = [{
   tags: ['Skill.WebDesign', 'Skill.RWD', 'Skill.HTML5', 'Skill.SCSS', 'Skill.jQuery'],
   sideProject: false
 }, {
-  params: '5',
+  params: '4',
   name: 'BahawallDetail',
   bannerImg: 'braver_banner.png',
   title: 'HomeProfolio.BahaWallTitle',
@@ -68,7 +70,7 @@ export const designCardInfo: CardInfoDetail[] = [{
   sideProject: false
 }, {
   // params: 'https://www.behance.net/gallery/56143553/APP_Project',
-  params: '6',
+  params: '5',
   name: 'HuanShunDetail',
   bannerImg: 'https://mir-s3-cdn-cf.behance.net/projects/404/d6a21a56143553.Y3JvcCwyMjkyLDE3OTQsOTAsNjc.png',
   title: 'HomeProfolio.HuanShunTitle',

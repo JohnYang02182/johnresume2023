@@ -6,7 +6,7 @@
 					<div class="banner_intro">
 						<h2 class="section-main-title home-title">{{ $t('HeaderIntroduce') }}</h2>
 						<p class="headline_03" v-html="$t('Home.MainSelfIntro')" />
-						<a href="https://johnyang02182.github.io/johnyang705202108/my-profile_page.html" class="button primary-button">{{ $t('Nav.InfoPageTag') }}</a>
+						<a href="javascript:void(0)" @click="router.push('/personal')" class="button primary-button">{{ $t('Nav.InfoPageTag') }}</a>
 					</div>
 					<div class="banner_image">
 						<img src="/IMG/me_banner.png" alt="banner">
@@ -94,6 +94,7 @@ import { onBeforeRouteUpdate } from 'vue-router'
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { onBeforeRouteUpdate } from 'vue-router'
+import router from '/@/router/index'
 // import { GloSrc } from '../../util/globalSrc'
 import { designCardInfo } from '/@/setting/profolioCard'
 const userData = ref()

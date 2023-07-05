@@ -10,11 +10,11 @@
 <style lang="scss" scoped>
 @keyframes loadingFullAnimation {
   0% {
-    max-height: .75vw;
+    max-width: 1vw;
     background: linear-gradient(45deg, var(--secondary) 0%, var(--primary) 100%);
   }
   100% {
-    max-height: 8vw;
+    max-width: 10vw;
     background: linear-gradient(45deg, var(--tertiary) 0%, var(--primary) 100%);
   }
 }
@@ -32,6 +32,7 @@
   background-color: var(--bg_primary);
   overflow: hidden;
   z-index: 999;
+  transition: all .6s linear;
 }
 .loading-container {
   position: relative;

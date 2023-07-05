@@ -86,7 +86,7 @@
             </div>
             <div class="card-body">
               <ul class="list-wrapper gap-in-card_list">
-                <li class="list">
+                <li class="list col">
                   <p class="list-title">{{ $t('ProjectAnime.Process04ListTitle01') }}</p>
                   <p class="list-content">{{ $t('ProjectAnime.Process04ListContent01') }}</p>
                   <div class="img-group">
@@ -104,7 +104,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="list dot-style">
+                <li class="list col dot-style">
                   <p class="list-title">{{ $t('ProjectAnime.Process04ListTitle02') }}</p>
                   <p class="list-content main-point">{{ $t('ProjectAnime.Process04ListPointTitle') }}</p>
                   <p class="list-content dot dot-primary">{{ $t('ProjectAnime.Process04ListPointContent01') }}</p>
@@ -116,7 +116,7 @@
                   </div>
                   <p class="list-content">{{ $t('ProjectAnime.Process04ListContent02') }}</p>
                 </li>
-                <li class="list">
+                <li class="list col">
                   <p class="list-title">{{ $t('ProjectAnime.Process04ListTitle03') }}</p>
                   <p class="list-content">{{ $t('ProjectAnime.Process04ListContent03') }}</p>
                   <div class="img-group">
@@ -134,7 +134,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="list">
+                <li class="list col">
                   <p class="list-title">{{ $t('ProjectAnime.Process04ListTitle04') }}</p>
                   <p class="list-content">{{ $t('ProjectAnime.Process04ListContent04') }}</p>
                   <div class="img-group">
@@ -165,6 +165,7 @@
               <ul class="list-wrapper">
                 <li class="list shadow-main" v-html="$t('ProjectAnime.Process04ListTitle0501')" />
                 <li class="list shadow-main" v-html="$t('ProjectAnime.Process04ListTitle0502')" />
+                <li class="list shadow-main row">{{ $t('ProjectCommon.ProjectContent01') }}<a class="link" :href="LinkOfAnime" target="_blank">{{ $t('ProjectCommon.ProjectName01') }}</a></li>
               </ul> 
             </div>
           </div>
@@ -175,9 +176,10 @@
   <!-- <Loading v-else-if="isLoading === true" /> -->
 </template>
 <script lang="ts" setup>
-import { defineAsyncComponent, onMounted, ref, onUnmounted, onBeforeMount, nextTick } from 'vue';
+import { defineAsyncComponent, onMounted, ref, onUnmounted, nextTick } from 'vue';
 import { observeScroll } from '../../../../util/lazyLoad'
 const isLoading = ref(true)
+const LinkOfAnime = 'https://ani.gamer.com.tw/'
 const Loading = defineAsyncComponent(() => 
   import ('/@/components/Loading.vue')
 )

@@ -5,13 +5,13 @@
         <div class="logo">
           <img src="/IMG/logo.png" alt="logo">
         </div>
-        <div class="menu-list-wrapper">
-          <div v-for="(items, index) in navList" :key="index" class="menu-list" @click="router.push(items.path)">
+        <div class="menu-list-wrapper" :class="{'nav-list-open': Isopenasync}">
+          <div v-for="(items, index) in navList" :key="index" class="menu-list" @click="router.push(items.path); toggle()">
             <a href="javascript:void(0)" class="menu-list-items" :class="{ 'nav-list-active': $route.name === items.name }">{{ $t(items.transName) }}</a>
           </div>
           <Languageselector />
         </div>
-        <div class="menu-buttom">
+        <div class="menu-buttom" @click="toggle()">
           <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="60">
             <path
                   class="line top"
@@ -29,8 +29,10 @@
   </header>
 </template>
 <script setup lang="ts">
+
 import router from '/@/router/index'
 import Languageselector from '/@/components/modal/LanguageSelector.vue'
+import { computed, ref } from 'vue';
 interface NavList {
   name: string
   path: string
@@ -47,4 +49,11 @@ const navList: Array<NavList> = [{
   path: '/personal',
   transName: 'Nav.InfoPageTag'
 }]
+const Isopen = ref(false)
+const Isopenasync = computed(() => {
+  return Isopen.value
+})
+const toggle = () => {
+  Isopen.value = !Isopen.value
+}
 </script>

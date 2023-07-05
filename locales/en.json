@@ -27,8 +27,11 @@
     "PM": "Project Manager"
   },
   "CommonActivity": {
-    "BackTo": "Back To",
+    "BackTo": "Back To HomePage",
     "Submit": "Submit"
+  },
+  "Footer": {
+    "ContectMe": "Contect me"
   },
   "Team": {
     "ShinchiDevelope": "Stackcore Development Department",
@@ -119,7 +122,9 @@
     "ProjectTitle03": "Issue",
     "ProjectTitle04": "Project Process",
     "ProjectTitle05": "About this project",
-    "ProjectTitle06": "About the points"
+    "ProjectTitle06": "About the points",
+    "ProjectContent01": "Linked to the website service: ",
+    "ProjectName01": "動畫瘋(donhoufun)"
   },
   "ProjectAnime": {
     "Reason": "The old version of the anime platform named '動畫瘋' has not been updated for a long time. Over time, the number of users increased rapidly at the end of 2020, and there was a gap in the user experience. After discussions with the UX department, it has been decided to revamp the service.",
@@ -162,12 +167,28 @@
     "Process01ListTitle02": "Thoroughly categorize components:",
     "Process01ListContent02": "Make the UI of the web service dynamic and capable of changing over time.",
     "Process02": "For this project:",
-    "Process02ListTitle01": "このプロジェクトについて",
+    "Process02ListTitle01": "About this project",
     "Process02ListContent01": "Use Vue3 with TypeScript to create a structure that separates hooks and components for easier maintenance.",
     "Process02ListContent02": "Manage styles using the shortcut and rule features of UNOCSS instead of creating styles with SCSS.",
     "Process02ListContent03": "Make all components reusable.",
     "Process04ListTitle0501": "<p>Utilizing the characteristics of Vue3 components, the estimated maintenance time has been reduced by<strong class='heighLight'> 50% </strong></p>",
     "Process04ListTitle0502": "<div class='list-content row'>By introducing UNOCSS, we have reduced the time by<strong class='heighLight'> 25% </strong>compared to before and improved CSS maintainability and work efficiency.</div>"
+  },
+  "ProjectBahaworld": {
+    "Reason": "Due to the noticeable decline in user-generated posts over the years, the company aims to build a platform similar to Facebook, where users can easily post content and increase community engagement by reducing the barriers to posting.",
+    "Point01": "Simplify the process of user posting.",
+    "Point02": "Strive for unified UI design between Android and iOS platforms.",
+    "Process02": "Creating a Prototype",
+    "Process03": "Creating design guidelines for the product",
+    "Process01ListTitle01": "Maintaining a consistent user experience for iOS and Android:",
+    "Process01ListContent01": "While building the prototype, reference the Material Design Guidelines and iOS Human Interface Guidelines to ensure consistency in the user experience across both versions.",
+    "Process01ListTitle02": "Customized Post Page:",
+    "Process01ListContent02": "Customize the types of posts on the dynamic feed according to user preferences, with the aim to replace the static homepage of the original app within one year.",
+    "Process02ListContent01": "During the initial phase of defining functionalities, create a product architecture to facilitate discussions with the Product Manager (PM) and Research and Development (RD) team regarding product flow and support for existing data fields.",
+    "Process03ListContent01": "Once the prototype is confirmed, simultaneously create mockups and establish design guidelines for the Bahaworld app.",
+    "Process03ListContent02": "Next, begin breaking down the structure and categorize UI into components and elements, using Sketch to build a UI library for a systematic UI development process.",
+    "Process04ListTitle0501": "<p>After the release, the Daily Active Users (DAU) of the Bahaworld App grew to<strong class='heighLight'> 70k </strong>within<strong class='heighLight'> two months </strong>.</p>",
+    "Process04ListTitle0502": "<p>After the UI library was established, the time required for tasks such as adding new pages or modifying components decreased by<strong class='heighLight'> 20% </strong>.</p>"
   },
   "SideProjectChatGPT": {
     "Reason": "チャットGPTの仕組みを掘り下げるために、Open AIのドキュメントを勉強し、パラメータを再調整してチャットGPTをポートフォリオウェアで再現します。",

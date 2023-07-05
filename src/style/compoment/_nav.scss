@@ -215,6 +215,8 @@
 @media screen and (max-width: 576px) {
   .nav-outer {
     height: unset;
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .08);
+    border: 1px none #000;
     .nav {
       grid-auto-flow: unset;
       grid-template-columns: repeat(1, 1fr);
@@ -222,10 +224,23 @@
     .menu-list-wrapper {
       display: none;
     }
+    .menu-list {
+      .menu-list-items.nav-list-active {
+        color: var(--primary);
+        &:after {
+          display: none;
+        }
+      }
+    }
     .nav-list-open {
       &.menu-list-wrapper {
         display: flex;
+        position: relative;
+        left: 50%;
         flex-direction: column;
+        transition: all .2s ease-out;
+        transform: translateX(-50%);
+        transform-origin: top center;
         li {
           margin: 0;
           padding: 16px 0;

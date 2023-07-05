@@ -30,6 +30,9 @@
     "BackTo": "回到上一頁",
     "Submit": "送出"
   },
+  "Footer": {
+    "ContectMe": "Contect me"
+  },
   "Team": {
     "ShinchiDevelope": "新騎開發部",
     "ShinchiDesign": "新騎設計部",
@@ -119,7 +122,9 @@
     "ProjectTitle03": "待解問題",
     "ProjectTitle04": "執行專案",
     "ProjectTitle05": "專案需求",
-    "ProjectTitle06": "專案要點"
+    "ProjectTitle06": "專案要點",
+    "ProjectContent01": "產品連結：",
+    "ProjectName01": "動畫瘋"
   },
   "ProjectAnime": {
     "Reason": "舊版動畫播放網頁服務未更新時間過長，隨時間推移使用者在 2020 年末急速上漲 、以及過去的 UX 現在已有落差，在需求會議與UX部門的討論後，決定這次的改版。",
@@ -149,7 +154,7 @@
     "Process04ListContent03": "將功能相似的元件進行分類，並在視覺上進行統一。",
     "Process04ListTitle04": "將動線優化：",
     "Process04ListContent04": "重新依據功能進行分類，簡化頁面複雜度。",
-    "Process04ListTitle0501": "<p>PV 超過原本預期的 <strong class='heighLight'>800萬</strong> 至 <strong class='heighLight'>900萬</strong>。</p>",
+    "Process04ListTitle0501": "<p>PV 超過原本預期的 <strong class='heighLight'>　800萬</strong> 至 <strong class='heighLight'>900萬</strong>。</p>",
     "Process04ListTitle0502": "<p>半年內付費會員成長率從 <strong class='heighLight'>4%</strong> 到 <strong class='heighLight'>8%</strong>。</p>"
   },
   "ProjectShinChiEC": {
@@ -168,6 +173,22 @@
     "Process02ListContent03": "全てのコンポーネントを再利用できるようになる。",
     "Process04ListTitle0501": "<p>Vue3のコンポーネントの特性を利用し、定期的なメンテナンスの予想時間を<strong class='heighLight'> 50% </strong>に短縮した。</p>",
     "Process04ListTitle0502": "<div class='list-content row'>UNOCSSを導入したおかげで、以前より<strong class='heighLight'> 25% </strong>の時間を短縮し、CSSのメンテナンス性や作業の効率化をあげました。</div>"
+  },
+  "ProjectBahaworld": {
+    "Reason": "用戶發文的頻率明顯逐年下降，公司希望打造一個類似 Facebook 的平台，讓用戶可以使用比較輕鬆的方式發文，降低用戶發文的門檻。",
+    "Point01": "簡化用戶發文的步驟流程。",
+    "Point02": "Android 與 iOS 的 UI 盡量統一。",
+    "Process02": "製作 Prototype",
+    "Process03": "製作 Design guidelines",
+    "Process01ListTitle01": "維持 iOS 與 Android 使用者的 UX:",
+    "Process01ListContent01": "參考 Material Design GuideLines 與 iOS Human Interface Guidelines 打造 Prototype 的同時，保持兩個版本的 UX 的一致性。",
+    "Process01ListTitle02": "客製化貼文頁面:",
+    "Process01ListContent02": "依照使用者喜好客製化動態牆的貼文種類，並預計在一年內取代原本 APP 的靜態首頁。",
+    "Process02ListContent01": "在功能定義初期繪製出產品架構，便於與 PM 、 RD 確認產品流程、現存資料欄位支不支援等議題。",
+    "Process03ListContent01": "Prototype 確認完畢後，同時繪製 Mockup 與 制定 bahaworld app 的 design guidelines。",
+    "Process03ListContent02": "接下來，開始拆分結構，將 UI 分類成 components 與 elements 用 sketch 建立 UI library 系統化 UI 製作流程。",
+    "Process04ListTitle0501": "<p>Bahaworld App 的 DAU 在 release 後的<strong class='heighLight'> 兩個月 </strong>成長到<strong class='heighLight'> 70k </strong>。</p>",
+    "Process04ListTitle0502": "<p>UI library 建立完畢後，接到新增頁面或修改元件的需求，作業時間減短<strong class='heighLight'> 20% </strong></p>"
   },
   "SideProjectChatGPT": {
     "Reason": "チャットGPTの仕組みを掘り下げるために、Open AIのドキュメントを勉強し、パラメータを再調整してチャットGPTをポートフォリオウェアで再現します。",

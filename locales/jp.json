@@ -30,6 +30,9 @@
     "BackTo": "ホームページに戻る",
     "Submit": "送信する"
   },
+  "Footer": {
+    "ContectMe": "Contect Me"
+  },
   "Team": {
     "ShinchiDevelope": "シンチー開発部",
     "ShinchiDesign": "シンチーデザイン部",
@@ -119,7 +122,9 @@
     "ProjectTitle03": "未解決issue",
     "ProjectTitle04": "プロジェクトのプロセス",
     "ProjectTitle05": "機能について",
-    "ProjectTitle06": "要点について"
+    "ProjectTitle06": "要点について",
+    "ProjectContent01": "ウェブサービスURL： ",
+    "ProjectName01": "動畫瘋(ドンワフォン)"
   },
   "ProjectAnime": {
     "Reason": "旧バージョンのアニメ再生ウェブサービスは長い間更新されていなかったため、時間の経過とともに2020年末に急速にユーザー数が増加し、過去のUXとのギャップが生じました。要件会議とUX部門との議論の後、今回の改版が決定されました。",
@@ -168,6 +173,22 @@
     "Process02ListContent03": "全てのコンポーネントを再利用できるようになる。",
     "Process04ListTitle0501": "<p>Vue3のコンポーネントの特性を利用し、定期的なメンテナンスの予想時間を<strong class='heighLight'> 50% </strong>に短縮した。</p>",
     "Process04ListTitle0502": "<div class='list-content row'>UNOCSSを導入したおかげで、以前より<strong class='heighLight'> 25% </strong>の時間を短縮し、CSSのメンテナンス性や作業の効率化をあげました。</div>"
+  },
+  "ProjectBahaworld": {
+    "Reason": "ユーザーの投稿頻度が年々明らかに減少しているため、会社はFacebookのようなプラットフォームを作りたいと考えています。ユーザーがより簡単な方法で投稿できるようにし、投稿のハードルを下げ、コミュニティの交流量を増やしたいと思った。",
+    "Point01": "ユーザーの投稿手順を簡略化する。",
+    "Point02": "AndroidとiOSのユーザーインターフェース（UI）を可能な限り統一する。",
+    "Process02": "プロトタイプの作成",
+    "Process03": "製品のデザインガイドラインの作成",
+    "Process01ListTitle01": "iOSとAndroidのユーザーのUXの維持：",
+    "Process01ListContent01": "Material Design GuideLines とi OS Human Interface Guidelines を参考にしながら、プロトタイプの作成を行い、両バージョンのUXの一貫性を保ちます。",
+    "Process01ListTitle02": "カスタマイズ可能な投稿ページ：",
+    "Process01ListContent02": "ユーザーの好みに基づいてダイナミックな投稿タイプをカスタマイズし、1年以内に既存のアプリの静的なホームページを置き換える予定です。",
+    "Process02ListContent01": "機能の定義初期段階でプロダクトの構造を描き、PMやRDと製品のフロー、既存のデータフィールドのサポートなどを確認するための議論を行います。",
+    "Process03ListContent01": "プロトタイプが確認された後、同時に　Mockup　を作成し、bahaworld　アプリのデザインガイドラインを策定します。",
+    "Process03ListContent02": "その後、構造を分割し、UIをコンポーネントと要素に分類し、スケッチを使用してUIライブラリを構築し、システマティックなUI制作プロセスを確立します。",
+    "Process04ListTitle0501": "<p>BahaworldアプリのDAUはリリース後<strong class='heighLight'> 2ヶ月 </strong>成長到<strong class='heighLight'> 70k </strong>に成長しました。</p>",
+    "Process04ListTitle0502": "<p>UIライブラリの作成が完了した後、新しいページの追加やコンポーネントの変更の要求があり、作業時間が<strong class='heighLight'> 20% </strong>短縮されました。</p>"
   },
   "SideProjectChatGPT": {
     "Reason": "チャットGPTの仕組みを掘り下げるために、Open AIのドキュメントを勉強し、パラメータを再調整してチャットGPTをポートフォリオウェアで再現します。",

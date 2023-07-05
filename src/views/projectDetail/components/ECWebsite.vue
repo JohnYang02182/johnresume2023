@@ -60,7 +60,7 @@
             </div>
             <div class="card-body">
               <ul class="list-wrapper">
-                <li class="list dot-style regular-style">
+                <li class="list col dot-style regular-style">
                   <p class="list-title">{{ $t('ProjectShinChiEC.Process02ListTitle01') }}</p>
                   <p class="list-content dot dot-primary">{{ $t('ProjectShinChiEC.Process02ListContent01') }}</p>
                   <p class="list-content dot dot-primary">{{ $t('ProjectShinChiEC.Process02ListContent02') }}</p>
