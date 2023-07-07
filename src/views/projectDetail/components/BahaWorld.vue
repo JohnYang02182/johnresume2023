@@ -57,7 +57,7 @@
               </div>
             </div>
             <div class="card-body">
-              <p class="content-text">{{ $t('Projectbahaworld.Process02ListContent01') }}</p>
+              <p class="content-text">{{ $t('ProjectBahaworld.Process02ListContent01') }}</p>
               <div class="content-img-wrapper maginationLoading">
                 <img class="content-img-body img-loading" src="/IMG/pic_bahaworld_prototype.png" alt="guideLine" :ref="isImgLoading2">
               </div>
