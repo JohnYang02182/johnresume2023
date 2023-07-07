@@ -9,8 +9,9 @@
           <div v-for="(items, index) in navList" :key="index" class="menu-list" @click="router.push(items.path); toggle()">
             <a href="javascript:void(0)" class="menu-list-items" :class="{ 'nav-list-active': $route.name === items.name }">{{ $t(items.transName) }}</a>
           </div>
-          <Languageselector />
+          <Languageselector v-if="isMobile !== true" />
         </div>
+        <Languageselector v-if="isMobile === true" />
         <div class="menu-buttom" @click="toggle()">
           <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="60">
             <path
@@ -32,7 +33,7 @@
 
 import router from '/@/router/index'
 import Languageselector from '/@/components/modal/LanguageSelector.vue'
-import { computed, ref } from 'vue';
+import { computed, ref, onMounted, onUnmounted } from 'vue';
 interface NavList {
   name: string
   path: string
@@ -49,6 +50,24 @@ const navList: Array<NavList> = [{
   path: '/personal',
   transName: 'Nav.InfoPageTag'
 }]
+const isMobile = ref(false)
+const deviceWitch = ref(0)
+const watchWindowWidth = () => {
+  deviceWitch.value = window.screen.width
+  if(deviceWitch.value > 576){
+    isMobile.value = false
+  } else if(deviceWitch.value <= 576){
+    isMobile.value = true
+  }
+}
+onMounted(() => {
+  window.addEventListener('resize', watchWindowWidth);
+  watchWindowWidth()
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', watchWindowWidth);
+})
 const Isopen = ref(false)
 const Isopenasync = computed(() => {
   return Isopen.value
