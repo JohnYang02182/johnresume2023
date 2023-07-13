@@ -87,7 +87,7 @@
   },
   "PersonalPage": {
     "SectionOneTitle": "Hi，I'm John, a front-end developer & a web designer",
-    "SectionOneContent": " I write JavaScript, TypeScript, and Vue3 mainly. I have UI designer and front-end developer experience, which allows me to think outside of the box and adapt to new projects. My expertise is writing code that Because I enjoy promoting open source development that helps other developers improve.",
+    "SectionOneContent": " I am familiar with JavaScript, TypeScript, and Vue3( Composition API ) mainly. I have UI designer and front-end developer experience, which allows me to think outside of the box and adapt to new projects. My expertise is writing code that Because I enjoy promoting open source development that helps other developers improve.",
     "SubTitleSkill": "I'm good at",
     "SkillRankExpertise": "{num} years+ experience",
     "SkillRange": "From {nums} years to {nume} years",

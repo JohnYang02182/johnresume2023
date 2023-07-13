@@ -68,16 +68,18 @@ export const designCardInfo: CardInfoDetail[] = [
   period: '2019',
   tags: ['Skill.UIAndUX', 'Skill.Sketch', 'Skill.iOS', 'Skill.Andriod', 'Skill.AI', 'Skill.PS'],
   sideProject: false
-}, {
-  // params: 'https://www.behance.net/gallery/56143553/APP_Project',
-  params: '5',
-  name: 'HuanShunDetail',
-  bannerImg: 'https://mir-s3-cdn-cf.behance.net/projects/404/d6a21a56143553.Y3JvcCwyMjkyLDE3OTQsOTAsNjc.png',
-  title: 'HomeProfolio.HuanShunTitle',
-  link: '',
-  team: 'Team.HuanShunDevelope',
-  character: 'Character.UIUXDesigner',
-  period: '2018',
-  tags: ['Skill.UIAndUX', 'Skill.Sketch', 'Skill.iOS', 'Skill.Andriod', 'Skill.AI', 'Skill.PS'],
-  sideProject: false
-}]
+}
+// , {
+//   // params: 'https://www.behance.net/gallery/56143553/APP_Project',
+//   params: '5',
+//   name: 'HuanShunDetail',
+//   bannerImg: 'https://mir-s3-cdn-cf.behance.net/projects/404/d6a21a56143553.Y3JvcCwyMjkyLDE3OTQsOTAsNjc.png',
+//   title: 'HomeProfolio.HuanShunTitle',
+//   link: '',
+//   team: 'Team.HuanShunDevelope',
+//   character: 'Character.UIUXDesigner',
+//   period: '2018',
+//   tags: ['Skill.UIAndUX', 'Skill.Sketch', 'Skill.iOS', 'Skill.Andriod', 'Skill.AI', 'Skill.PS'],
+//   sideProject: false
+// }
+]
