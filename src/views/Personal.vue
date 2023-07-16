@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="section section-intro-myself">
 				<div class="intro-myself-image">
-					<img src="/IMG/pic_myself.png" alt="mypic">
+					<img src="/IMG/pic_myself.png" alt="mypic" :ref="isImgLoading">
 				</div>
 				<div class="intro-myself-content">
 					<p class="headline_02">{{ $t('PersonalPage.SectionOneTitle') }}</p>
@@ -127,4 +127,8 @@
 </template>
 <script lang="ts" setup>
 import { GloSrc } from '../../util/globalSrc'
+import { observeScroll, imageLazuLoad } from '../../util/lazyLoad'
+const isImgLoading = (imgContents: any) => {
+	console.log('personal trigger')
+}
 </script>

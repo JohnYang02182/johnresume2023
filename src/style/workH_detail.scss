@@ -16,10 +16,9 @@
   }
 }
 .scrollAnimation {
-  animation: opacityShowUp 1s ease-in 0.4s;
-  opacity: 0;
+  animation: animationLoading 1s ease-in 0.4s;
 }
-.imaginationLoading {
+.img-loading-wrapper {
   background-color: var(--gradient_20);
   background: linear-gradient(
     100deg,
@@ -29,6 +28,7 @@
   ) var(--gradient_20);
   background-size: 200% 100%;
   background-position-x: 180%;
+  transition: all .3s linear;
   opacity: .8;
   animation: 1s animationLoading ease-in-out infinite;
 }

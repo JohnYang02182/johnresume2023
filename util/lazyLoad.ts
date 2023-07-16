@@ -9,6 +9,8 @@ export const observeScroll = new IntersectionObserver((scrollHTML: IntersectionO
 })
 
 export const imageLazuLoad = (e: any) => {
-  e.classList.remove('img-loading')
-  e.parentElement.classList.remove('imaginationLoading')
+  e.classList.remove('img-loading-wrapper')
+  if(e.querySelector('img') !== null){
+    e.querySelector('img')!.classList.remove('img-loading')
+  }
 }

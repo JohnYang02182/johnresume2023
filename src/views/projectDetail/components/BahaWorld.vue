@@ -2,8 +2,8 @@
   <section class="section-body">
     <div class="banner-wrapper">
       <div class="banner-content-wrapper row">
-        <div class="banner-content-item maginationLoading">
-          <img class="banner-content-img img-loading" src="/IMG/banner_work_character.png" alt="" :ref="isImgLoading2" />
+        <div class="banner-content-item img-loading-wrapper" :ref="isImgLoading">
+          <img class="banner-content-img img-loading" src="/IMG/banner_work_character.png" alt="" />
         </div>
         <p class="banner-content-title">My Work</p>
       </div>
@@ -59,7 +59,7 @@
             <div class="card-body">
               <p class="content-text">{{ $t('ProjectBahaworld.Process02ListContent01') }}</p>
               <div class="content-img-wrapper maginationLoading">
-                <img class="content-img-body img-loading" src="/IMG/pic_bahaworld_prototype.png" alt="guideLine" :ref="isImgLoading2">
+                <img class="content-img-body img-loading" src="/IMG/pic_bahaworld_prototype.png" alt="guideLine" :ref="isImgLoading">
               </div>
             </div>  
           </div>
@@ -72,11 +72,11 @@
             <div class="card-body">
               <div class="content-text">{{ $t('ProjectBahaworld.Process03ListContent01') }}</div>
               <div class="content-img-wrapper maginationLoading">
-                <img class="content-img-body img-loading" src="/IMG/pic_bahaworld_guideline.png" :ref="isImgLoading2" alt="guideLine">
+                <img class="content-img-body img-loading" src="/IMG/pic_bahaworld_guideline.png" :ref="isImgLoading" alt="guideLine">
               </div>
               <div class="content-text">{{ $t('ProjectBahaworld.Process03ListContent02') }}</div>
               <div class="content-img-wrapper maginationLoading">
-                <img class="content-img-body img-loading" src="/IMG/pic_bahaworld_components.png" :ref="isImgLoading2" alt="guideLine">
+                <img class="content-img-body img-loading" src="/IMG/pic_bahaworld_components.png" :ref="isImgLoading" alt="guideLine">
               </div>
             </div>
           </div>
@@ -107,8 +107,11 @@ const isLoading = ref(true)
 // const imgContent = ref<ComponentPublicInstance | null | HTMLElement>(null)
 // const isImgLoading = ref(true)
 // const isImgLoadingNow = computed(() => {return isImgLoading})
-const isImgLoading2 = (imgContents: any) => {
-  imageLazuLoad(imgContents)
+const isImgLoading = async (imgContents: any) => {
+  if(imgContents !== null) {
+    await imageLazuLoad(imgContents)
+  }
+  console.log('bahaworld trigger')
 }
 onMounted( async () => {
   await nextTick()

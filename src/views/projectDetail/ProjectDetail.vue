@@ -65,8 +65,8 @@ const props = defineProps ({
 })
 const route = useRoute()
 const personalData: Ref<CardInfoDetail> = ref(route.meta.msg1 as CardInfoDetail)
-function getImageUrl(name: string) {
-  return new URL(`../../assets/images/${name}`, import.meta.url).href
-}
+// function getImageUrl(name: string) {
+//   return new URL(`../../assets/images/${name}`, import.meta.url).href
+// }
 console.log(router)
 </script>

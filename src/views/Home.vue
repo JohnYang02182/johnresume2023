@@ -1,18 +1,21 @@
 <template>
   <div class="container-outer">
 		<div class="container">
-			<div class="section-outer">
+			<div class="section-outer" ref="bannerWrapper">
 				<div class="section section-banner">
 					<div class="banner_intro">
 						<h2 class="section-main-title home-title">{{ $t('HeaderIntroduce') }}</h2>
 						<p class="headline_03" v-html="$t('Home.MainSelfIntro')" />
 						<a href="javascript:void(0)" @click="router.push('/personal')" class="button primary-button">{{ $t('Nav.InfoPageTag') }}</a>
 					</div>
+					<!-- <p class="headline_03" style="color: black; width: 100%;">{{ x }}</p>
+					<p class="headline_03" style="color: black">{{ y }}</p>
+					<p class="headline_03" style="color: black">{{ sourceType }}</p> -->
 					<div class="banner_image">
-						<img src="/IMG/me_banner.png" alt="banner">
+						<img :style="{ 'transform': `translate(${x/60}px, ${-y/80}px)`}" src="/IMG/me_banner.png" alt="banner">
 					</div>
 					<div v-for="item in 4" :key="item" class="banner_background" :class="`banner-0${item}`">
-						<img src="/IMG/pic_banner_bg.png" alt="">
+						<img :style="{'transform':`translate(${-x/(30*item)}px, ${y/(30*item)}px)`}" src="/IMG/pic_banner_bg.png" alt="">
 					</div>
 				</div>
 			</div>
@@ -22,9 +25,9 @@
 					<font-awesome-icon class="icon-home-title" icon="fa-solid fa-flag" />
 					<h2>{{ $t('CommonTitle.MyWork') }}</h2>
 				</div>
-				<router-link class="profile_card" v-for="(item, index) in designCardInfo" :key="index" :to="{name: 'ProjectDetail', params: { id: item.params }}" @click="getElement(item.params)">
-					<div class="profile_card-pic">
-						<img :src="`${ httpDetect.test(item.bannerImg) ? item.bannerImg : getImageUrl(item.bannerImg)}`" alt="profile">
+				<router-link class="profile_card" v-for="(item, index) in designCardInfo" :key="index" :to="{name: 'ProjectDetail', params: { id: item.params }}">
+					<div class="profile_card-pic img-loading-wrapper">
+						<img class="img-loading" :src="`${ httpDetect.test(item.bannerImg) ? item.bannerImg : getImageUrl(item.bannerImg)}`" alt="profile" />
 					</div>
 					<div class="profile_card-text">
 						<p class="headline_02">{{ $t(item.title) }}</p>
@@ -92,18 +95,46 @@ import { onBeforeRouteUpdate } from 'vue-router'
 
 </script> -->
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, reactive, onMounted } from 'vue'
 import { onBeforeRouteUpdate } from 'vue-router'
+import { useMouse } from '@vueuse/core'
+import type { UseMouseEventExtractor } from '@vueuse/core'
 import router from '/@/router/index'
 // import { GloSrc } from '../../util/globalSrc'
+import { observeScroll, imageLazuLoad } from '../../util/lazyLoad'
 import { designCardInfo } from '/@/setting/profolioCard'
 const userData = ref()
+const el = ref<HTMLElement | null>(null)
+const bannerWrapper = ref<HTMLElement | null>(null)
+const extractor: UseMouseEventExtractor = event => (
+  event instanceof Touch ? null : [event.offsetX, event.offsetY]
+)
+	const { x, y } = useMouse({target: bannerWrapper, touch: false, type: extractor})
+onMounted(() => {
+// 	const extractor: UseMouseEventExtractor = event => (
+//   event instanceof Touch
+//     ? null
+//     : [event.offsetX, event.offsetY]
+// )
+const bannerTarget =ref(document.querySelector('.section-banner'))
+console.log('home',bannerTarget.value)
+// const { x, y, sourceType } = useMouse({target: bannerWrapper, touch: false,type: extractor})
+})
+
+
 onBeforeRouteUpdate(async (to, from) => {
 	// only fetch the user if the id changed as maybe only the query or the hash changed
 	if (to.params.id !== from.params.id) {
 		userData.value = designCardInfo.find((element => element.params === to.params.id))
 	}
+	console.log('beforeupdate trigger')
 })
+// const isImgLoading = (imgContents: any) => {
+// 	if(imgContents !== null && imgContents !== undefined) {
+// 		console.log('content', imgContents.activeClass)
+// 		imageLazuLoad(imgContents)
+// 	}
+// }
 const httpDetect = new RegExp(/http/g)
 function getImageUrl(name: string) {
   return new URL(`../assets/images/${name}`, import.meta.url).href

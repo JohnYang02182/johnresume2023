@@ -3,7 +3,7 @@
     <div class="banner-wrapper">
       <div class="banner-content-wrapper row">
         <div class="banner-content-item">
-          <img class="banner-content-img" src="/IMG/banner_work_character.png" alt="" @load="onImage" :class="{'imaginationLoading': isImgLoading}"/>
+          <img class="banner-content-img" src="/IMG/banner_work_character.png" alt="" @load="onImage" :class="{'img-loading-wrapper': isImgLoading}"/>
         </div>
         <p class="banner-content-title">My Work</p>
       </div>
