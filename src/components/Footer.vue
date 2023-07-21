@@ -5,7 +5,7 @@
 				<p class="footer-title">{{ $t('Footer.ContectMe') }}</p>
 				<ul class="footer_list">
 					<li>
-						<a href="https://github.com/JohnYang02182/johnyang705202108/tree/main/main_page">
+						<a href="https://github.com/JohnYang02182">
 							<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github">
 						</a>
 					</li>

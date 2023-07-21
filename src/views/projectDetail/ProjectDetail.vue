@@ -38,11 +38,18 @@
         </ul>
       </div>
     </section>
-    <AnimeDetail v-if="$route.params.id === '2'"  />
-    <ECWebsite v-else-if="$route.params.id === '1'" />
-    <!-- <ChatWithChatGPT v-else-if="$route.params.id === '1'" /> -->
-    <BahaWorld v-else-if="$route.params.id === '4'" />
-    <Maintainance v-else />
+    <Suspense>
+      <template #default>
+        <AnimeDetail v-if="$route.params.id === '2'"  />
+        <ECWebsite v-else-if="$route.params.id === '1'" />
+        <!-- <ChatWithChatGPT v-else-if="$route.params.id === '1'" /> -->
+        <BahaWorld v-else-if="$route.params.id === '4'" />
+        <Maintainance v-else /> 
+      </template>
+      <template #fallback>
+        <Loading />
+      </template>
+    </Suspense>
   </div>
 </template>
 <script setup lang="ts">
@@ -54,6 +61,7 @@ import AnimeDetail from './components/AnimeDetail.vue'
 import ChatWithChatGPT from './components/ChatWithChatGPT.vue'
 import ECWebsite from './components/ECWebsite.vue'
 import BahaWorld from './components/BahaWorld.vue'
+import Loading from '/@/components/Loading.vue'
 import { CardInfoDetail } from '/@/setting/profolioCard'
 import router from '/@/router'
 // const profolioCard = defineAsyncComponent(() => 

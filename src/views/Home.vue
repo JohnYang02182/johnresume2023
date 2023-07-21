@@ -12,7 +12,7 @@
 					<p class="headline_03" style="color: black">{{ y }}</p>
 					<p class="headline_03" style="color: black">{{ sourceType }}</p> -->
 					<div class="banner_image">
-						<img :style="{ 'transform': `translate(${x/60}px, ${-y/80}px)`}" src="/IMG/me_banner.png" alt="banner">
+						<img :style="{ 'transform': `translate(${ Math.abs((x-(windowWidth/2))/10) }px, ${-y/60}px)`}" src="/IMG/me_banner.png" alt="banner">
 					</div>
 					<div v-for="item in 4" :key="item" class="banner_background" :class="`banner-0${item}`">
 						<img :style="{'transform':`translate(${-x/(30*item)}px, ${y/(30*item)}px)`}" src="/IMG/pic_banner_bg.png" alt="">
@@ -109,15 +109,14 @@ const bannerWrapper = ref<HTMLElement | null>(null)
 const extractor: UseMouseEventExtractor = event => (
   event instanceof Touch ? null : [event.offsetX, event.offsetY]
 )
-	const { x, y } = useMouse({target: bannerWrapper, touch: false, type: extractor})
+const windowWidth = ref(window.innerWidth)
+const { x, y } = useMouse({target: bannerWrapper, touch: false, type: extractor})
 onMounted(() => {
 // 	const extractor: UseMouseEventExtractor = event => (
 //   event instanceof Touch
 //     ? null
 //     : [event.offsetX, event.offsetY]
 // )
-const bannerTarget =ref(document.querySelector('.section-banner'))
-console.log('home',bannerTarget.value)
 // const { x, y, sourceType } = useMouse({target: bannerWrapper, touch: false,type: extractor})
 })
 
@@ -139,8 +138,5 @@ const httpDetect = new RegExp(/http/g)
 function getImageUrl(name: string) {
   return new URL(`../assets/images/${name}`, import.meta.url).href
 }
-function getElement(params: string){
-	const getE = ref(designCardInfo.find((element => element.params === params)))
-	console.log('getvalue',getE.value)
-}
+
 </script>
