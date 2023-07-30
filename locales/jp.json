@@ -124,7 +124,9 @@
     "ProjectTitle05": "機能について",
     "ProjectTitle06": "要点について",
     "ProjectContent01": "ウェブサービスURL： ",
-    "ProjectName01": "動畫瘋(ドンワフォン)"
+    "ProjectName01": "動畫瘋(ドンワフォン)",
+    "ProjectName02": "巴哈商城（バハネットショップ）",
+    "ProjectName03": "BahaWorld App(ゲームミテアサービス)"
   },
   "ProjectAnime": {
     "Reason": "旧バージョンのアニメ再生ウェブサービスは長い時間更新されていませんでした、しかし、時間の経過とともに2020年末に急速にユーザー数が増加し、過去のUXとのギャップが生じました。要件会議とUX部門との議論の後、今回の改版が決定されました。",
@@ -189,6 +191,27 @@
     "Process03ListContent02": "その後、構造を分割し、UIをコンポーネントと要素に分類し、スケッチを使用してUIライブラリを構築し、システマティックなUI制作プロセスを確立します。",
     "Process04ListTitle0501": "<p>BahaworldアプリのDAUはリリース後<strong class='heighLight'> 2ヶ月 </strong>成長到<strong class='heighLight'> 70k </strong>に成長しました。</p>",
     "Process04ListTitle0502": "<p>UIライブラリの作成が完了した後、新しいページの追加やコンポーネントの変更の要求があり、作業時間が<strong class='heighLight'> 20% </strong>短縮されました。</p>"
+  },
+  "ProjectBahashopping": {
+    "Reason": "ユーザー調査によれば、旧バージョンのネットショップのユーザー動線は、現在のモバイル環境に合致していないことが分かりました。そのため、商品部は新しいサードパーティの決済プロセスを導入し、ネットショップを再開発することを決定しました。",
+    "PointTitle01": "ユーザーエクスペリエンスの複雑さを削減し、複数のデバイスをサポートするインターフェースを作成：",
+    "Problem01": "ユーザーがモバイル端末、タブレット、パソコンなどで自由に操作できるようにする。",
+    "Problem02": "'購買'から'結帳完了'までのプロセスを簡略化する。",
+    "Process02": "フローを定義",
+    "Process03": "既存デザインを最適化",
+    "Process04": "結帳プロセスを確認：",
+    "Process05": "ショッピングカートプロセスを確認：",
+    "Process01ListTitle01": "情報の簡素化：",
+    "Process01ListContent01": "旧バージョンのネットショップから不必要な情報を取り除き、ユーザーが円滑に操作できるように改善する。",
+    "Process02ListTitle01": "結帳プロセスを短縮",
+    "Process02ListContent01": "旧バージョンの複雑な結帳手順を簡素化する。",
+    "Process03ListTitle01": "ブロックを定義：",
+    "Process03ListContent01": "デザインスタイルを一貫させるために、コンポーネントと要件などを再設計する。",
+    "Process03ListTitle02": "RWD（レスポンシブウェブデザイン）を追加：",
+    "Process03ListContent02": "モバイル端末、タブレット、パーソナルコンピュータなど、異なるデバイスでサービスがスムーズに機サービスを提供するようにする。",
+    "Process03ListTitle03": "ユーザーフローを最適化：",
+    "Process03ListContent03": "ユーザーの目的に基づいて効率的なルートを提供する。",
+    "Process04ListTitle0501": "<p>RWDの導入後、<strong class='heighLight'> 1か月以内 </strong>にページビュー（PV）が<strong class='heighLight'> 30％ </strong>増加し、売上高が<strong class='heighLight'> 5% </strong>増加した。</p>"
   },
   "SideProjectChatGPT": {
     "Reason": "チャットGPTの仕組みを掘り下げるために、Open AIのドキュメントを勉強し、パラメータを再調整してチャットGPTをポートフォリオウェアで再現します。",

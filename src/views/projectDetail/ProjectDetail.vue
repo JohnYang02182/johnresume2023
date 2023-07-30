@@ -42,6 +42,7 @@
       <template #default>
         <AnimeDetail v-if="$route.params.id === '2'"  />
         <ECWebsite v-else-if="$route.params.id === '1'" />
+        <BahaECShop v-else-if="$route.params.id === '3'" />
         <!-- <ChatWithChatGPT v-else-if="$route.params.id === '1'" /> -->
         <BahaWorld v-else-if="$route.params.id === '4'" />
         <Maintainance v-else /> 
@@ -59,6 +60,7 @@ import Maintainance from '/@/components/Maintainance.vue'
 // import PortfolioRecord from './components/PortfolioRecord.vue'
 import AnimeDetail from './components/AnimeDetail.vue'
 import ChatWithChatGPT from './components/ChatWithChatGPT.vue'
+import BahaECShop from './components/BahaECShop.vue'
 import ECWebsite from './components/ECWebsite.vue'
 import BahaWorld from './components/BahaWorld.vue'
 import Loading from '/@/components/Loading.vue'

@@ -124,7 +124,9 @@
     "ProjectTitle05": "專案需求",
     "ProjectTitle06": "專案要點",
     "ProjectContent01": "產品連結：",
-    "ProjectName01": "動畫瘋"
+    "ProjectName01": "動畫瘋",
+    "ProjectName02": "巴哈商城",
+    "ProjectName03": "勇者動態牆 APP"
   },
   "ProjectAnime": {
     "Reason": "舊版動畫播放網頁服務未更新時間過長，隨時間推移使用者在 2020 年末急速上漲 、以及過去的 UX 現在已有落差，在需求會議與UX部門的討論後，決定這次的改版。",
@@ -159,7 +161,7 @@
   },
   "ProjectShinChiEC": {
     "Reason": "為了開拓新的客群，公司決定開發新的 btob 向服務，利用至今累積的版型當作樣板，讓使用者可以選擇自己想要的版型並客製化元件與組件。",
-    "Point01": "倒用UNOCSS並發揮 Atomic CSS 特性開發出利於維護、重複利用性高的 code。",
+    "Point01": "導入 UNOCSS 並發揮 Atomic CSS 特性開發出利於維護、重複利用性高的 code。",
     "Point02": "為了能夠增加開發新版型的速度，與設計部門定義 design guideliens。",
     "Point03": "在高度客製化與系統安定性中取得平衡，與 PM 部門合作制定出詳細規格書。",
     "Process01ListTitle01": "確保不同 layout 之間的切換速度：",
@@ -189,6 +191,27 @@
     "Process03ListContent02": "接下來，開始拆分結構，將 UI 分類成 components 與 elements 用 sketch 建立 UI library 系統化 UI 製作流程。",
     "Process04ListTitle0501": "<p>Bahaworld App 的 DAU 在 release 後的<strong class='heighLight'> 兩個月 </strong>成長到<strong class='heighLight'> 70k </strong>。</p>",
     "Process04ListTitle0502": "<p>UI library 建立完畢後，接到新增頁面或修改元件的需求，作業時間減短<strong class='heighLight'> 20% </strong></p>"
+  },
+  "ProjectBahashopping": {
+    "Reason": "經過用戶調查顯示舊版的商城的使用者動線已不符合當下的手機版的情境、導入新的第三方金流付費流程，商城部門決定重新設計巴哈商城的頁面。",
+    "PointTitle01": "打造一個減低ux複雜度，支援多裝置的介面：",
+    "Problem01": "讓使用者在手機、平板電腦上也能自由操作。",
+    "Problem02": "簡短“購買”到“結帳完畢”之間的流程。",
+    "Process02": "定義流程",
+    "Process03": "優化既有設計",
+    "Process04": "確認結帳流程",
+    "Process05": "確認購物車流程",
+    "Process01ListTitle01": "資訊簡潔化：",
+    "Process01ListContent01": "將舊版頁面的雜訊過濾，不讓非必要訊息干擾使用者操作。",
+    "Process02ListTitle01": "精簡結帳流程：",
+    "Process02ListContent01": "簡化舊版複雜的結帳步驟。",
+    "Process03ListTitle01": "區塊定義：",
+    "Process03ListContent01": "重新設計組件與要件，保持設計風格一致。",
+    "Process03ListTitle02": "新增 RWD：",
+    "Process03ListContent02": "讓服務能完整顯示在手機、平板、個人電腦等不同裝置。",
+    "Process03ListTitle03": "動線優化：",
+    "Process03ListContent03": "重新依據功能進行分類，簡化頁面複雜度。",
+    "Process04ListTitle0501": "<p>RWD導入後，在<strong class='heighLight'> 一個月內 </strong>PV 增加<strong class='heighLight'> 30% </strong>，銷售額增加<strong class='heighLight'> 5% </strong>。</p>"
   },
   "SideProjectChatGPT": {
     "Reason": "チャットGPTの仕組みを掘り下げるために、Open AIのドキュメントを勉強し、パラメータを再調整してチャットGPTをポートフォリオウェアで再現します。",

@@ -124,7 +124,9 @@
     "ProjectTitle05": "About this project",
     "ProjectTitle06": "About the points",
     "ProjectContent01": "Linked to the website service: ",
-    "ProjectName01": "動畫瘋(donhoufun)"
+    "ProjectName01": "動畫瘋(Donhoufun)",
+    "ProjectName02": "巴哈商城（BahaECshop）",
+    "ProjectName03": "BahaWorld App service"
   },
   "ProjectAnime": {
     "Reason": "The old version of the anime platform named '動畫瘋' has not been updated for a long time. Over time, the number of users increased rapidly at the end of 2020, and there was a gap in the user experience. After discussions with the UX department, it has been decided to revamp the service.",
@@ -189,6 +191,27 @@
     "Process03ListContent02": "Next, begin breaking down the structure and categorize UI into components and elements, using Sketch to build a UI library for a systematic UI development process.",
     "Process04ListTitle0501": "<p>After the release, the Daily Active Users (DAU) of the Bahaworld App grew to<strong class='heighLight'> 70k </strong>within<strong class='heighLight'> two months </strong>.</p>",
     "Process04ListTitle0502": "<p>After the UI library was established, the time required for tasks such as adding new pages or modifying components decreased by<strong class='heighLight'> 20% </strong>.</p>"
+  },
+  "ProjectBahashopping": {
+    "Reason": "User surveys have shown that the user flow of the old version of the online store does not align with the current mobile environment. Therefore, the e-commerce department has decided to redesign the Bahamut Store pages by introducing a new third-party payment process.",
+    "PointTitle01": "Our goals：",
+    "Problem01": "Create a user interface that reduces UX complexity and supports multiple devices, allowing users to navigate freely on mobile phones and tablets.",
+    "Problem02": "Simplify the process from 'Start to purchase' to 'Checkout completion.'",
+    "Process02": "Defined Process",
+    "Process03": "Optimize the old UI design layput",
+    "Process04": "Confirm Checkout Process",
+    "Process05": "Confirm Shopping Cart Process",
+    "Process01ListTitle01": "Simplification of Information：",
+    "Process01ListContent01": "Filter out unnecessary clutter from the old version's pages to avoid disturbing user interactions with non-essential information.",
+    "Process02ListTitle01": "Streamlined Checkout Process: ",
+    "Process02ListContent01": "Simplify the complex checkout steps of the old version.",
+    "Process03ListTitle01": "Block Definition:",
+    "Process03ListContent01": "Redesign components and requirements to maintain a consistent design style.",
+    "Process03ListTitle02": "Import Responsive Web Design (RWD)",
+    "Process03ListContent02": "Ensure that the service functions seamlessly on different devices such as mobile phones, tablets, and personal computers.",
+    "Process03ListTitle03": "Optimization of User Flow:",
+    "Process03ListContent03": "Based on user research of the online store, plan the shortest paths for users.",
+    "Process04ListTitle0501": "<p>After implementing RWD, within <strong class='heighLight'> one month </strong>there was a<strong class='heighLight'> 30% </strong>increase in page views (PV) and a<strong class='heighLight'> 5% </strong>increase in sales.</p>"
   },
   "SideProjectChatGPT": {
     "Reason": "チャットGPTの仕組みを掘り下げるために、Open AIのドキュメントを勉強し、パラメータを再調整してチャットGPTをポートフォリオウェアで再現します。",

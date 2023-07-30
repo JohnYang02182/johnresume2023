@@ -11,7 +11,7 @@
     <div class="container-wrapper col">
       <div class="content-wrapper col scrollAnimation">
         <h2 class="main-title">{{ $t('ProjectCommon.ProjectTitle01') }}</h2>
-        <p class="content-text">{{ $t('ProjectAnime.Reason') }}</p>
+        <p class="content-text">{{ $t('ProjectBahashopping.Reason') }}</p>
       </div>
       <div class="content-wrapper col scrollAnimation">
         <h2 class="main-title">{{ $t('ProjectCommon.ProjectTitle02') }}</h2>
@@ -24,9 +24,8 @@
       <div class="content-wrapper col scrollAnimation">
         <h2 class="main-title">{{ $t('ProjectCommon.ProjectTitle03') }}</h2>
         <ul class="list-wrapper dot-style">
-          <li class="list dot dot-secondary">{{ $t('ProjectAnime.Problem01') }}</li>
-          <li class="list dot dot-secondary">{{ $t('ProjectAnime.Problem02') }}</li>
-          <li class="list dot dot-secondary">{{ $t('ProjectAnime.Problem03') }}</li>
+          <li class="list dot dot-secondary">{{ $t('ProjectBahashopping.Problem01') }}</li>
+          <li class="list dot dot-secondary">{{ $t('ProjectBahashopping.Problem02') }}</li>
         </ul>
       </div>
       <div class="content-wrapper col">
@@ -39,15 +38,14 @@
               </div>
             </div>
             <div class="card-body">
-              <p class="content-text">{{ $t('ProjectAnime.Process01MainTitle') }}</p>
               <ul class="list-wrapper row-2">
                 <li class="list col shadow-main">
-                  <p class="list-title">{{ $t('ProjectAnime.Process01ListTitle01') }}</p>
-                  <p class="list-content">{{ $t('ProjectAnime.Process01ListContent01') }}</p>
+                  <p class="list-title">{{ $t('ProjectBahashopping.Process01ListTitle01') }}</p>
+                  <p class="list-content">{{ $t('ProjectBahashopping.Process01ListContent01') }}</p>
                 </li>
                 <li class="list col shadow-main">
-                  <p class="list-title">{{ $t('ProjectAnime.Process01ListTitle02') }}</p>
-                  <p class="list-content">{{ $t('ProjectAnime.Process01ListContent02') }}</p>
+                  <p class="list-title">{{ $t('ProjectBahashopping.Process02ListTitle01') }}</p>
+                  <p class="list-content">{{ $t('ProjectBahashopping.Process02ListContent01') }}</p>
                 </li>
               </ul>
             </div>
@@ -55,99 +53,85 @@
           <div class="card scrollAnimation">
             <div class="card-head">
               <div class="sub-title number-style">
-                <span class="num">2</span>{{ $t('ProjectAnime.Process02') }}
+                <span class="num">2</span>{{ $t('ProjectBahashopping.Process02') }}
               </div>
             </div>
             <div class="card-body">
+              <p class="content-text">{{ $t('ProjectBahashopping.Process04') }}</p>
               <div class="content-img-wrapper">
-                <img class="content-img-body" src="/IMG/anime_flow.png" alt="guideLine">
+                <img class="content-img-body" src="/IMG/shopping_payment.png" alt="shoppingflow">
               </div>
-              <p class="content-text">{{ $t('ProjectAnime.Process02ListContent01') }}</p>
+              <p class="content-text">{{ $t('ProjectBahashopping.Process05') }}</p>
+              <div class="content-img-wrapper">
+                <img class="content-img-body" src="/IMG/shopping_shopping_cart.png" alt="shoppingcart">
+              </div>
             </div>  
           </div>
           <div class="card scrollAnimation">
             <div class="card-head">
               <div class="sub-title number-style">
-                <span class="num">3</span>{{ $t('ProjectAnime.Process03') }}
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="content-img-wrapper">
-                <img class="content-img-body" src="/IMG/anime_guideLine.png" alt="guideLine">
-              </div>
-              <div class="content-text">{{ $t('ProjectAnime.Process03ListContent01') }}</div>
-            </div>
-          </div>
-          <div class="card scrollAnimation">
-            <div class="card-head">
-              <div class="sub-title number-style">
-                <span class="num">4</span>{{ $t('ProjectAnime.Process04') }}
+                <span class="num">3</span>{{ $t('ProjectAnime.Process04') }}
               </div>
             </div>
             <div class="card-body">
               <ul class="list-wrapper gap-in-card_list">
                 <li class="list col">
-                  <p class="list-title">{{ $t('ProjectAnime.Process04ListTitle01') }}</p>
-                  <p class="list-content">{{ $t('ProjectAnime.Process04ListContent01') }}</p>
+                  <p class="list-title">{{ $t('ProjectBahashopping.Process03ListTitle01') }}</p>
+                  <p class="list-content">{{ $t('ProjectBahashopping.Process03ListContent01') }}</p>
                   <div class="img-group">
                     <div class="img-content">
                       <span class="img-def">before</span>
                       <div class="img-wrapper">
-                        <img class="img" src="/IMG/pic_videoList_before.png" alt="" />
+                        <img class="img" src="/IMG/shopping_home_before.png" alt="" />
                       </div>
                     </div>
                     <div class="img-content">
                       <span class="img-def">after</span>
                       <div class="img-wrapper">
-                        <img class="img" src="/IMG/pic_videoList_after.png" alt="" />
+                        <img class="img" src="/IMG/shopping_home_after.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="img-content">
+                      <span class="img-def">before</span>
+                      <div class="img-wrapper">
+                        <img class="img" src="/IMG/shopping_products_before.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="img-content">
+                      <span class="img-def">after</span>
+                      <div class="img-wrapper">
+                        <img class="img" src="/IMG/shopping_product_after.png" alt="" />
                       </div>
                     </div>
                   </div>
                 </li>
                 <li class="list col dot-style">
-                  <p class="list-title">{{ $t('ProjectAnime.Process04ListTitle02') }}</p>
-                  <p class="list-content main-point">{{ $t('ProjectAnime.Process04ListPointTitle') }}</p>
-                  <p class="list-content dot dot-primary">{{ $t('ProjectAnime.Process04ListPointContent01') }}</p>
-                  <p class="list-content dot dot-primary">{{ $t('ProjectAnime.Process04ListPointContent02') }}</p>
+                  <p class="list-title">{{ $t('ProjectBahashopping.Process02ListTitle01') }}</p>
+                  <p class="list-content">{{ $t('ProjectBahashopping.Process02ListContent01') }}</p>
                   <div class="img-content">
                     <div class="img-wrapper">
-                      <img class="img" src="/IMG/pic_schedule.png" alt="" />
+                      <img class="img" src="/IMG/shoppingcart_digital.png" alt="" />
+                    </div>
+                    <div class="img-wrapper">
+                      <img class="img" src="/IMG/shopping_checklist.png" alt="" />
                     </div>
                   </div>
-                  <p class="list-content">{{ $t('ProjectAnime.Process04ListContent02') }}</p>
+                  <!-- <p class="list-content">{{ $t('ProjectAnime.Process04ListContent02') }}</p> -->
                 </li>
                 <li class="list col">
-                  <p class="list-title">{{ $t('ProjectAnime.Process04ListTitle03') }}</p>
-                  <p class="list-content">{{ $t('ProjectAnime.Process04ListContent03') }}</p>
+                  <p class="list-title">{{ $t('ProjectBahashopping.Process03ListTitle02') }}</p>
+                  <p class="list-content">{{ $t('ProjectBahashopping.Process03ListContent02') }}</p>
                   <div class="img-group">
                     <div class="img-content">
-                      <span class="img-def">before</span>
+                      <span class="img-def">PC</span>
                       <div class="img-wrapper">
-                        <img class="img" src="/IMG/pic_cardList_before.png" alt="" />
+                        <img class="img" src="/IMG/shopping_product_pc.png" alt="" />
                       </div>
                     </div>
                     <div class="img-content">
-                      <span class="img-def">after</span>
+                      <span class="img-def">Mobile</span>
                       <div class="img-wrapper">
-                        <img class="img" src="/IMG/pic_cardList_after.png" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="list col">
-                  <p class="list-title">{{ $t('ProjectAnime.Process04ListTitle04') }}</p>
-                  <p class="list-content">{{ $t('ProjectAnime.Process04ListContent04') }}</p>
-                  <div class="img-group">
-                    <div class="img-content">
-                      <span class="img-def">before</span>
-                      <div class="img-wrapper">
-                        <img class="img" src="/IMG/pic_info_before.png" alt="" />
-                      </div>
-                    </div>
-                    <div class="img-content">
-                      <span class="img-def">after</span>
-                      <div class="img-wrapper">
-                        <img class="img" src="/IMG/pic_info_after.png" alt="" />
+                        <img class="img" src="/IMG/shopping_product_mobile.png" alt="" />
                       </div>
                     </div>
                   </div>
@@ -163,9 +147,8 @@
             </div>
             <div class="card-body">
               <ul class="list-wrapper">
-                <li class="list shadow-main" v-html="$t('ProjectAnime.Process04ListTitle0501')" />
-                <li class="list shadow-main" v-html="$t('ProjectAnime.Process04ListTitle0502')" />
-                <li class="list shadow-main row">{{ $t('ProjectCommon.ProjectContent01') }}<a class="link" :href="LinkOfAnime" target="_blank">{{ $t('ProjectCommon.ProjectName01') }}</a></li>
+                <li class="list shadow-main" v-html="$t('ProjectBahashopping.Process04ListTitle0501')" />
+                <li class="list shadow-main row">{{ $t('ProjectCommon.ProjectContent01') }}<a class="link" :href="LinkOfBahaShop" target="_blank">{{ $t('ProjectCommon.ProjectName02') }}</a></li>
               </ul> 
             </div>
           </div>
@@ -179,7 +162,7 @@
 import { defineAsyncComponent, onMounted, ref, onUnmounted, nextTick } from 'vue';
 import { observeScroll } from '../../../../util/lazyLoad'
 const isLoading = ref(true)
-const LinkOfAnime = 'https://ani.gamer.com.tw/'
+const LinkOfBahaShop = 'https://buy.gamer.com.tw/'
 const Loading = defineAsyncComponent(() => 
   import ('/@/components/Loading.vue')
 )

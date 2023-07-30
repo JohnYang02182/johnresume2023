@@ -90,6 +90,7 @@
               <ul class="list-wrapper">
                 <li class="list shadow-main" v-html="$t('ProjectBahaworld.Process04ListTitle0501')" />
                 <li class="list shadow-main" v-html="$t('ProjectBahaworld.Process04ListTitle0502')" />
+                <li class="list shadow-main row">{{ $t('ProjectCommon.ProjectContent01') }}<a class="link" :href="linktoBahaApp" target="_blank">{{ $t('ProjectCommon.ProjectName03') }}</a></li>
               </ul> 
             </div>
           </div>
@@ -103,7 +104,7 @@
 import { onMounted, ref, Ref, ComponentPublicInstance, onUnmounted, nextTick, computed, ImgHTMLAttributes, VNodeRef } from 'vue';
 import { observeScroll, imageLazuLoad } from '../../../../util/lazyLoad'
 const isLoading = ref(true)
-
+const linktoBahaApp = 'https://prj.gamer.com.tw/app2u/bahaapp.html'
 // const imgContent = ref<ComponentPublicInstance | null | HTMLElement>(null)
 // const isImgLoading = ref(true)
 // const isImgLoadingNow = computed(() => {return isImgLoading})
