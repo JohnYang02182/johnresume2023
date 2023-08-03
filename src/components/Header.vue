@@ -27,6 +27,7 @@
         </div>
       </div>
     </div>
+    <div class="menu-close-trigger" v-if="Isopenasync" @click="toggle()"></div>
   </header>
 </template>
 <script setup lang="ts">

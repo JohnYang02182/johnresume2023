@@ -78,9 +78,6 @@
     left: 50%;
     transform: translateX(-50%);
     display: grid;
-    max-width: 900px;
-    width: 100%;
-    padding: 0px;
     justify-content: center;
     align-items: center;
     align-content: start;
@@ -91,6 +88,9 @@
     grid-row-gap: 16px;
     grid-template-columns: 1fr max-content;
     grid-template-rows: auto;
+    max-width: 900px;
+    width: 100%;
+    padding: 0px;
   }
   .logo {
     display: flex;
@@ -213,10 +213,20 @@
     
 }
 @media screen and (max-width: 576px) {
+  .menu-close-trigger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    z-index: 0;
+  }
   .nav-outer {
+    position: relative;
     height: unset;
     box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .08);
     border: 1px none #000;
+    z-index: 1;
     .nav {
       grid-auto-flow: unset;
       grid-template-columns: repeat(1, 1fr 85px 60px);
@@ -235,15 +245,17 @@
     .nav-list-open {
       &.menu-list-wrapper {
         display: flex;
-        position: relative;
-        left: 50%;
+        position: absolute;
+        top: 44px;
+        gap: 0;
+        right: 0;
         flex-direction: column;
         transition: all .2s ease-out;
-        transform: translateX(-50%);
         transform-origin: top center;
-        li {
-          margin: 0;
-          padding: 16px 0;
+        transform: scaleY(100%);
+        background-color: var(--gradient_100);
+        .menu-list {
+          padding: 12px 10px;
         }
       }
     }

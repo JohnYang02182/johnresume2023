@@ -86,4 +86,17 @@
     gap: 1vw;
   }
 }
+@media screen and (max-width: 576px) {
+  .maintain-wrapper {
+    .maintain-content {
+      flex-direction: column;
+    }
+    .maintain-title {
+      text-align: center;
+    }
+    .maintain-text {
+      text-align: center;
+    }
+  }
+}
 </style>

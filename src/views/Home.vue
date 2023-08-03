@@ -8,7 +8,7 @@
 						<p class="headline_03" v-html="$t('Home.MainSelfIntro')" />
 						<a href="javascript:void(0)" @click="router.push('/personal')" class="button primary-button">{{ $t('Nav.InfoPageTag') }}</a>
 					</div>
-					<!-- <p class="headline_03" style="color: black; width: 100%;">{{ x }}</p> -->
+					<p class="headline_03" style="position: absolute; top: -10px; color: #ebebeb; width: 100%;">{{ x }}</p>
 					<div class="banner_image">
 						<img :style="{ 'transform': `translate(${ Math.abs((x-(windowWidth/2))/10) }px, ${-y/60}px)`}" src="/IMG/me_banner.png" alt="banner">
 					</div>
@@ -93,7 +93,7 @@ import { onBeforeRouteUpdate } from 'vue-router'
 
 </script> -->
 <script lang="ts" setup>
-import { ref, reactive, onMounted } from 'vue'
+import { ref, reactive, onMounted, computed } from 'vue'
 import { onBeforeRouteUpdate } from 'vue-router'
 import { useMouse } from '@vueuse/core'
 import type { UseMouseEventExtractor } from '@vueuse/core'
@@ -108,6 +108,7 @@ const extractor: UseMouseEventExtractor = event => (
   event instanceof Touch ? null : [event.clientX, event.offsetY]
 )
 const windowWidth = ref(window.innerWidth)
+console.log('windowwidth ', windowWidth.value)
 const { x, y } = useMouse({ target: bannerWrapper, touch: false, type: extractor })
 onMounted(() => {
 // 	const extractor: UseMouseEventExtractor = event => (
@@ -124,7 +125,6 @@ onBeforeRouteUpdate(async (to, from) => {
 	if (to.params.id !== from.params.id) {
 		userData.value = designCardInfo.find((element => element.params === to.params.id))
 	}
-	console.log('beforeupdate trigger')
 })
 // const isImgLoading = (imgContents: any) => {
 // 	if(imgContents !== null && imgContents !== undefined) {
