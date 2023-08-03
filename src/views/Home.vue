@@ -8,9 +8,9 @@
 						<p class="headline_03" v-html="$t('Home.MainSelfIntro')" />
 						<a href="javascript:void(0)" @click="router.push('/personal')" class="button primary-button">{{ $t('Nav.InfoPageTag') }}</a>
 					</div>
-					<p class="headline_03" style="position: absolute; top: -10px; color: #ebebeb; width: 100%;">{{ Math.abs((x-(windowWidth/2))/10) }}</p>
+					<p class="headline_03" style="position: absolute; top: -10px; color: #ebebeb; width: 100%;">{{ x/30 }}</p>
 					<div class="banner_image">
-						<img :style="{ 'transform': `translate(${ Math.abs((x-(windowWidth/2))/10) }px, ${-y/60}px)`}" src="/IMG/me_banner.png" alt="banner">
+						<img :style="{ 'transform': `translate(${ Math.abs((x/30)) }px, ${-y/60}px)`}" src="/IMG/me_banner.png" alt="banner">
 					</div>
 					<div v-for="item in 4" :key="item" class="banner_background" :class="`banner-0${item}`">
 						<img :style="{'transform':`translate(${-x/(30*item)}px, ${y/(30*item)}px)`}" src="/IMG/pic_banner_bg.png" alt="">
