@@ -2,6 +2,7 @@ import { fileURLToPath, URL } from 'url'
 import path from 'path'
 import { defineConfig } from 'vite'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
+import pluginRewriteAll from 'vite-plugin-rewrite-all';
 import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
@@ -13,7 +14,8 @@ export default defineConfig({
     vue(),
     VueI18nPlugin({
       include: [path.resolve(__dirname, './locales/**')],
-    })
+    }),
+    pluginRewriteAll()
   ],
   resolve: {
     alias: [
