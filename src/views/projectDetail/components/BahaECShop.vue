@@ -3,7 +3,7 @@
     <div class="banner-wrapper">
       <div class="banner-content-wrapper row">
         <div class="banner-content-item" :class="{'img-loading-wrapper': isImgLoading}">
-          <img class="banner-content-img" src="/IMG/banner_work_character.png" alt="" @load="onImage"/>
+          <img class="banner-content-img" src="/IMG/banner_work_character.png" alt="" @load="onImage" v-show="!isImgLoading"/>
         </div>
         <p class="banner-content-title">My Work</p>
       </div>

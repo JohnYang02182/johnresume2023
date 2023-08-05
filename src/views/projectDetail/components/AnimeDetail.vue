@@ -2,8 +2,8 @@
   <section class="section-body">
     <div class="banner-wrapper">
       <div class="banner-content-wrapper row">
-        <div class="banner-content-item">
-          <img class="banner-content-img" src="/IMG/banner_work_character.png" alt="" @load="onImage" :class="{'img-loading-wrapper': isImgLoading}"/>
+        <div class="banner-content-item" :class="{'img-loading-wrapper': isImgLoading}">
+          <img class="banner-content-img" src="/IMG/banner_work_character.png" alt="" @load="onImage" v-show="!isImgLoading"/>
         </div>
         <p class="banner-content-title">My Work</p>
       </div>
@@ -185,7 +185,6 @@ const Loading = defineAsyncComponent(() =>
 )
 const isImgLoading = ref(true)
 const onImage = ((ele: any)=> {
-  console.log('getImage',ele.currentTarget)
   isImgLoading.value = false
 })
 onMounted( async () => {

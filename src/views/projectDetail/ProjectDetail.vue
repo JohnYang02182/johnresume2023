@@ -44,7 +44,7 @@
         <ECWebsite v-else-if="$route.params.id === '1'" />
         <BahaECShop v-else-if="$route.params.id === '3'" />
         <!-- <ChatWithChatGPT v-else-if="$route.params.id === '1'" /> -->
-        <!-- <BahaWorld v-else-if="$route.params.id === '4'" /> -->
+        <BahaWorld v-else-if="$route.params.id === '4'" />
         <Maintainance v-else /> 
       </template>
       <template #fallback>

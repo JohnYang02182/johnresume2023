@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import routesParams from './routes'
 import { getCardInfo } from '/@/hooks/useProtfolioCard'
 import { useUserStore } from '../../store/user'
@@ -7,7 +7,7 @@ function scrollBehavior() {
   document.getElementById('app')!.scrollIntoView({ behavior: 'smooth' });
 }
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: routesParams
 })
 
