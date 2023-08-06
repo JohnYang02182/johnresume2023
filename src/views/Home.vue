@@ -105,7 +105,7 @@ const userData = ref()
 
 const bannerWrapper = ref<HTMLElement | null>(null)
 const extractor: UseMouseEventExtractor = event => (
-  event instanceof Touch ? null : [event.clientX, event.offsetY]
+  event instanceof Touch ? null : [event.x, event.offsetY]
 )
 const windowWidth = ref(window.innerWidth)
 console.log('windowwidth ', windowWidth.value)
