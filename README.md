@@ -1,44 +1,40 @@
 # [GitHub] コミットの記録
 
-:::info
 :bulb:　もしGitHub Actionsについて詳しく知りたい場合は、以下のリンクをクリックしてください。
 
 **[GitHub Actions Link](https://github.com/JohnYang02182/johnresume2023/actions/workflows/deploy.yml)**
 
-:::
 
 ## :page_facing_up: コミットルール
 
 | String | Action |
 | -------- | -------- |
-| feat     | New the functions / methods / components.  |
+| feat     | New the functions/methods/components.  |
 | fix     | Fix the bugs or issues.     |
 | docs     | Change the documents.     |
-| style     | Change the format of the code (e.g. Use code beautifier or code formatter ).    |
+| style     | Change the format of the code (e.g., Use code beautifier or code formatter ).    |
 | refactor     | Refactor the codes.     |
 | perf     | Enhance the performance.     |
 | test     | Update testing code.     |
-| build     | Change the structure of the project (e.g. scopes: webpack, gulp, npm ...).     |
+| build     | Change the structure of the project (e.g., scopes: webpack, gulp, npm ...).     |
 | ci     | Change the command in the package or way to deploy.     |
 | chore     | Change the assistant tools or the routines.     |
 | revert     |  Undo the Commits   |
-| art     | Change the files which located in 'assets'.     
+| art     | Change the files located in 'assets'.     
 
-:::info 
 コミットルールについて：
 
 [String]: Describe the purpose of the process.
 
 e.g. [ci]: Update the CNAME file to customize the workflow.
 
-:::
 
 
 
 
 ## :gear: ワークフロー
 
-To deploy Vue3 project to GitHub page. I used the workplace refered to the Vue3 official website.
+To deploy the Vue3 project to the GitHub page. I used the workplace referred to on the Vue3 official website.
 
 ```lang=yal
 # Simple workflow for deploying static content to GitHub Pages
