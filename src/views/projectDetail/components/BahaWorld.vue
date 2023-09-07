@@ -2,8 +2,8 @@
   <section class="section-body">
     <div class="banner-wrapper">
       <div class="banner-content-wrapper row">
-        <div class="banner-content-item img-loading-wrapper" :ref="isImgLoading">
-          <img class="banner-content-img img-loading" src="/IMG/banner_work_character.png" alt="" />
+        <div class="banner-content-item" :class="{'img-loading-wrapper img-loading-dark' : isImgLoading}">
+          <img class="banner-content-img" src="/IMG/banner_work_character.png" @load="onImage" v-show="!isImgLoading" />
         </div>
         <p class="banner-content-title">My Work</p>
       </div>
@@ -108,12 +108,16 @@ const linktoBahaApp = 'https://prj.gamer.com.tw/app2u/bahaapp.html'
 // const imgContent = ref<ComponentPublicInstance | null | HTMLElement>(null)
 // const isImgLoading = ref(true)
 // const isImgLoadingNow = computed(() => {return isImgLoading})
-const isImgLoading = async (imgContents: any) => {
-  if(imgContents !== null) {
-    await imageLazuLoad(imgContents)
-  }
-  console.log('bahaworld trigger')
-}
+// const isImgLoading = async (imgContents: any) => {
+//   if(imgContents !== null) {
+//     await imageLazuLoad(imgContents)
+//   }
+//   console.log('bahaworld trigger')
+// }
+const isImgLoading = ref(true)
+const onImage = ((ele: any)=> {
+  isImgLoading.value = false
+})
 onMounted( async () => {
   await nextTick()
   const scrollDOM = ref(document.querySelectorAll('.scrollAnimation'))

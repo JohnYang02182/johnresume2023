@@ -23,7 +23,7 @@
 					<h2>{{ $t('CommonTitle.MyWork') }}</h2>
 				</div>
 				<router-link class="profile_card" v-for="(item, index) in designCardInfo" :key="index" :to="{name: 'ProjectDetail', params: { id: item.params }}">
-					<div class="profile_card-pic img-loading-wrapper">
+					<div class="profile_card-pic img-loading-wrapper img-loading-light">
 						<img class="img-loading" :src="`${ httpDetect.test(item.bannerImg) ? item.bannerImg : getImageUrl(item.bannerImg)}`" alt="profile" />
 					</div>
 					<div class="profile_card-text">
