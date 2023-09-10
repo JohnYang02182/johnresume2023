@@ -1,3 +1,4 @@
+@import "components/_banner.scss";
 
 @keyframes opacityShowUp {
   0% {
@@ -115,49 +116,7 @@
     white-space: break-spaces;
   }
 }
-.banner-wrapper {
-  position: relative;
-  width: 100%;
-  background-color: #353855;
-  .banner-content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4vw; 
-    width: 100%;
-    padding: 7.5vw 0;
-    min-height: 360px;
-    height: 50vw;
-  }
-  .banner-content-item {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    height: 30vw;
-    min-height: 360px;
-    flex: 0.9;
-    .banner-content-img {
-      object-fit: contain;
-      height: 100%;
-      overflow: hidden;
-      &.img-loading {
-        visibility: hidden;
-      }
-    }
-  }
-  .banner-content-title {
-    font-family: 'Android 101';
-    font-size: clamp(72px, 8vw, 144px);
-    flex: 1.2;
-    color: rgba(255,255,255,.8);
-  }
-  .img-side-project {
-    transform: scale(-1, 1);
-  }
-  .title-side-project {
-    color: rgb(235,210,177);
-  }
-}
+
 .tips {
   font-size: 14px;
   line-height: 1.5;

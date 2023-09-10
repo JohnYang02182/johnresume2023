@@ -189,7 +189,7 @@
     "Process02ListContent01": "機能の定義初期段階でプロダクトの構造を描き、PMやRDと製品のフロー、既存のデータフィールドのサポートなどを確認するための議論を行います。",
     "Process03ListContent01": "プロトタイプが確認された後、同時に　Mockup　を作成し、bahaworld　アプリのデザインガイドラインを策定します。",
     "Process03ListContent02": "その後、構造を分割し、UIをコンポーネントと要素に分類し、スケッチを使用してUIライブラリを構築し、システマティックなUI制作プロセスを確立します。",
-    "Process04ListTitle0501": "<p>BahaworldアプリのDAUはリリース後<strong class='heighLight'> 2ヶ月 </strong>成長到<strong class='heighLight'> 70k </strong>に成長しました。</p>",
+    "Process04ListTitle0501": "<p>BahaworldアプリのDAUはリリース後<strong class='heighLight'> 2ヶ月 </strong>で<strong class='heighLight'> 70k </strong>に成長しました。</p>",
     "Process04ListTitle0502": "<p>UIライブラリの作成が完了した後、新しいページの追加やコンポーネントの変更の要求があり、作業時間が<strong class='heighLight'> 20% </strong>短縮されました。</p>"
   },
   "ProjectBahashopping": {

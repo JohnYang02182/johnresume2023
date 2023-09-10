@@ -2,8 +2,8 @@
   <section class="section-body">
     <div class="banner-wrapper">
       <div class="banner-content-wrapper row">
-        <div class="banner-content-item" :class="{'img-loading-wrapper img-loading-dark': isImgLoading}">
-          <img class="banner-content-img" src="/IMG/banner_work_character.png" alt="" @load="onImage" v-show="!isImgLoading"/>
+        <div class="banner-content-item" :class="{'img-loading-wrapper img-loading-dark': isImgLoading[count]}">
+          <img class="banner-content-img" src="/IMG/banner_work_character.png" alt="" @load="onImage" v-show="!isImgLoading[count]"/>
         </div>
         <p class="banner-content-title">My Work</p>
       </div>
@@ -166,11 +166,15 @@ const LinkOfBahaShop = 'https://buy.gamer.com.tw/'
 const Loading = defineAsyncComponent(() => 
   import ('/@/components/Loading.vue')
 )
-const isImgLoading = ref(true)
+const isImgLoading = [ref(true)]
+const count = ref(0)
 const onImage = ((ele: any)=> {
   console.log('getImage',ele.currentTarget)
-  isImgLoading.value = false
+  isImgLoading[count.value].value = false
+  console.log('isImgLoad', isImgLoading[count.value].value)
+  count.value++;
 })
+
 onMounted( async () => {
   await nextTick()
   const scrollDOM = ref(document.querySelectorAll('.scrollAnimation'))

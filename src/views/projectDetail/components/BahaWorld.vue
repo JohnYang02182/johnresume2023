@@ -2,9 +2,7 @@
   <section class="section-body">
     <div class="banner-wrapper">
       <div class="banner-content-wrapper row">
-        <div class="banner-content-item" :class="{'img-loading-wrapper img-loading-dark' : isImgLoading}">
-          <img class="banner-content-img" src="/IMG/banner_work_character.png" @load="onImage" v-show="!isImgLoading" />
-        </div>
+        <LoadingImg :ImageUrl="DetailBanner" :IsLight="false" :IsBanner="true" />
         <p class="banner-content-title">My Work</p>
       </div>
     </div>
@@ -59,7 +57,7 @@
             <div class="card-body">
               <p class="content-text">{{ $t('ProjectBahaworld.Process02ListContent01') }}</p>
               <div class="content-img-wrapper maginationLoading">
-                <img class="content-img-body img-loading" src="/IMG/pic_bahaworld_prototype.png" alt="guideLine" :ref="isImgLoading">
+                <img class="content-img-body img-loading" src="/IMG/pic_bahaworld_prototype.png" alt="guideLine">
               </div>
             </div>  
           </div>
@@ -72,11 +70,11 @@
             <div class="card-body">
               <div class="content-text">{{ $t('ProjectBahaworld.Process03ListContent01') }}</div>
               <div class="content-img-wrapper maginationLoading">
-                <img class="content-img-body img-loading" src="/IMG/pic_bahaworld_guideline.png" :ref="isImgLoading" alt="guideLine">
+                <img class="content-img-body img-loading" src="/IMG/pic_bahaworld_guideline.png" alt="guideLine">
               </div>
               <div class="content-text">{{ $t('ProjectBahaworld.Process03ListContent02') }}</div>
               <div class="content-img-wrapper maginationLoading">
-                <img class="content-img-body img-loading" src="/IMG/pic_bahaworld_components.png" :ref="isImgLoading" alt="guideLine">
+                <img class="content-img-body img-loading" src="/IMG/pic_bahaworld_components.png" alt="guideLine">
               </div>
             </div>
           </div>
@@ -103,8 +101,10 @@
 <script lang="ts" setup>
 import { onMounted, ref, Ref, ComponentPublicInstance, onUnmounted, nextTick, computed, ImgHTMLAttributes, VNodeRef } from 'vue';
 import { observeScroll, imageLazuLoad } from '../../../../util/lazyLoad'
+import LoadingImg from '/@/components/LoadingImg.vue'
 const isLoading = ref(true)
 const linktoBahaApp = 'https://prj.gamer.com.tw/app2u/bahaapp.html'
+const DetailBanner = 'banner_work_character.png' 
 // const imgContent = ref<ComponentPublicInstance | null | HTMLElement>(null)
 // const isImgLoading = ref(true)
 // const isImgLoadingNow = computed(() => {return isImgLoading})

@@ -65,18 +65,9 @@ import ECWebsite from './components/ECWebsite.vue'
 import BahaWorld from './components/BahaWorld.vue'
 import Loading from '/@/components/Loading.vue'
 import { CardInfoDetail } from '/@/setting/profolioCard'
-import router from '/@/router'
-// const profolioCard = defineAsyncComponent(() => 
-//   import('/@/setting/profolioCard')
-// ) 
-// const { CardInfoDetail } = profolioCard()
 const props = defineProps ({
   projectTitle: String,
 })
 const route = useRoute()
 const personalData: Ref<CardInfoDetail> = ref(route.meta.msg1 as CardInfoDetail)
-// function getImageUrl(name: string) {
-//   return new URL(`../../assets/images/${name}`, import.meta.url).href
-// }
-console.log(router)
 </script>

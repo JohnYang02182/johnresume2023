@@ -101,6 +101,7 @@ const isLoading = ref(true)
 const isImgLoading = ref(true)
 const onImage = ((ele: any)=> {
   console.log('getImage',ele.currentTarget)
+  console.log('ele: ',ele.target)
   isImgLoading.value = false
 })
 onMounted( async () => {
