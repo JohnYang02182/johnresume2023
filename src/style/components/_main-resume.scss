@@ -710,6 +710,7 @@ html, body {
 			grid-template-columns: repeat(1, 1fr);
 			.banner_intro {
 				.home-title {
+					display: inherit;
 					margin-bottom: 32px; 
 					text-align: center;
 				}
