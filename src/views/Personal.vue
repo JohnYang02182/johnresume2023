@@ -126,7 +126,7 @@
 	</div>
 </template>
 <script lang="ts" setup>
-import { GloSrc } from '../../util/globalSrc'
+import { getImgUrl } from '../../util/globalSrc'
 import { observeScroll, imageLazuLoad } from '../../util/lazyLoad'
 const isImgLoading = (imgContents: any) => {
 	console.log('personal trigger')

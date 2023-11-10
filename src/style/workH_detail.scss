@@ -16,6 +16,116 @@
     background-position-x: -20%;
   }
 }
+
+@keyframes cardback{
+  from{
+    transform: rotateY(0);
+  }
+  to{
+    transform: rotateY(180deg);
+  }
+}
+@keyframes cardfront{
+  from{
+    transform: rotateY(180deg);
+  }
+  to{
+    transform: rotateY(0);
+  }
+}
+.transCardBack {
+  animation-duration: .6s;
+  animation-name: cardback;
+  animation-timing-function: ease-in-out;
+}
+.transCardFront {
+  animation-duration: .6s;
+  animation-name: cardfront;
+  animation-timing-function: ease-in-out;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+  width: calc(100% - 2vw);
+  color: var(--text_primary);
+}
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 2vw 16px; 
+  .header-title {
+    text-align: center;
+    color: var(--text_primary);
+    font-size: var(--font_title_large);
+  }
+  .header-content {
+    text-align: center;
+    color: var(--text_secondary);
+    font-size: var(--font_body_small);
+  }
+}
+.card-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(32px ,4vw, 120px) 0;
+  max-width: 1200px;
+  width: 100%;
+  max-height: 800px;
+  height: auto;
+  background-color: var(--gradient_10);
+  box-shadow: 0 0 10px 2px #bcbcbc;
+  border-radius: 12px;
+  overflow: hidden;
+  .card {
+    position: relative;
+    width: clamp(180px,18vw,320px);
+    aspect-ratio: 9/16;
+    transition: all 1s ease-out;
+    cursor: pointer;
+    .card-front {
+      transform: rotateY(0deg);
+    }
+    .card-back {
+      transform: rotateY(180deg);
+    }
+    .card-content {
+      position: absolute;
+      width: 100%;
+      border-radius: 32px;
+      overflow: hidden;
+      backface-visibility: hidden;
+      >img{
+        object-fit: contain;
+        width: 100%;
+      } 
+    }
+  }
+}
+.btn-group {
+  position: relative;
+  margin: auto;
+}
+.btn-primary {
+  padding: 12px clamp(90px, 8vw, 240px);
+  color: var(--gradient_100);
+  background-color: var(--primary);
+  border-radius: 8px;
+  border: none;
+  font-size: clamp(16px, 2vw, 24px);
+  overflow: hidden;
+  transition: all 1s ease-out;
+  &:hover {
+    background-color: var(--secondary);
+  }
+}
+
 .scrollAnimation {
   animation: animationLoading 1s ease-in 0.4s;
 }
@@ -167,6 +277,7 @@
 .col {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .row {
   display: flex;

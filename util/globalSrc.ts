@@ -1,4 +1,6 @@
-export function GloSrc(imgPath:string){
-  // const path = new URL(`/src/assets/images`,import.meta.url).href
-  return new URL(`../assets/images/${imgPath}`, import.meta.url).href
+export const getImgUrl = (url: string):string => {
+  let urlNow = `../assets/images/${url}`
+  let currentUrl = import.meta.glob('../assets/images/*', { eager: true })
+  let mod = currentUrl[urlNow] as { default: string}
+  return mod.default
 }

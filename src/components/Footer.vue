@@ -31,5 +31,5 @@
   </footer>
 </template>
 <script setup lang="ts">
-import { GloSrc } from '../../util/globalSrc'
+import { getImgUrl } from '../../util/globalSrc'
 </script>

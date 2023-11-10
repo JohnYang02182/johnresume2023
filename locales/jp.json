@@ -80,7 +80,8 @@
     "BahaWallTitle": "ACGNのソーシャルソフトウェアアプリー動態牆",
     "BShoppingMallTitle": "ACGN商品を販売するネットショップー巴哈商城",
     "HuanShunTitle": "ネットショップアプリー環盛",
-    "ShinchiEC": "ウェブサイトのテンプレート販売サービスー新騎"
+    "ShinchiEC": "ウェブサイトのテンプレート販売サービスー新騎",
+    "FortuneSeeking": "おみくじ"
   },
   "SidePorject": {
     "ChatingWithChatGPT": "ChatGPTと喋りましょう"
@@ -215,8 +216,15 @@
   },
   "SideProjectChatGPT": {
     "Reason": "チャットGPTの仕組みを掘り下げるために、Open AIのドキュメントを勉強し、パラメータを再調整してチャットGPTをポートフォリオウェアで再現します。",
-    "Point01": "入力フォームは必要です、もし入力内容を書わなくまま送信ボタンを押しれば、エラーメッセージは出てきます。",
+    "Point01": "入力フォームは必要です、もし入力内容を書わなくまま送信ボタンを押しれば、エラーメッセージは出てきった。",
     "Point02": "TypeScriptでエイシンクでAPIのやり取りを処理する。",
     "Point03": "メッセージのパラメータを再調整する。"
+  },
+  "SideProjectFortune": {
+    "Reason": "コーディングの能力を維持するために、typescript、Vue3でおみくじの機能を作った。",
+    "PointTitle01": "機能説明",
+    "Point01": "このおみくじには”大吉、吉、末吉、大凶”の合計四種類がある。",
+    "Point02": "アニメション実行中の場合は、クリックイベントなどが無効になる。",
+    "Process01Title": "おみくじ"
   }
 }

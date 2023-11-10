@@ -45,6 +45,7 @@
         <BahaECShop v-else-if="$route.params.id === '3'" />
         <!-- <ChatWithChatGPT v-else-if="$route.params.id === '1'" /> -->
         <BahaWorld v-else-if="$route.params.id === '4'" />
+        <FortuneSeeking v-else-if="$route.params.id === '5'" />
         <Maintainance v-else /> 
       </template>
       <template #fallback>
@@ -64,6 +65,7 @@ import BahaECShop from './components/BahaECShop.vue'
 import ECWebsite from './components/ECWebsite.vue'
 import BahaWorld from './components/BahaWorld.vue'
 import Loading from '/@/components/Loading.vue'
+import FortuneSeeking from './components/FortuneSeeking.vue'
 import { CardInfoDetail } from '/@/setting/profolioCard'
 const props = defineProps ({
   projectTitle: String,

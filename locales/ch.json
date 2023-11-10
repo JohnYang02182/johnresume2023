@@ -80,7 +80,8 @@
     "BahaWallTitle": "巴哈動態牆",
     "BShoppingMallTitle": "巴哈商城改版",
     "HuanShunTitle": "環盛APP",
-    "ShinchiEC": "新騎網站客製化服務"
+    "ShinchiEC": "新騎網站客製化服務",
+    "FortuneSeeking": "日式占卜"
   },
   "SidePorject": {
     "ChatingWithChatGPT": "與擅長安慰人的 ChatGPT 聊聊天吧"
@@ -218,5 +219,12 @@
     "Point01": "入力フォームは必要です、もし入力内容を書わなくまま送信ボタンを押しれば、エラーメッセージは出てきます。",
     "Point02": "TypeScriptでエイシンクでAPIのやり取りを処理する",
     "Point03": "メッセージのパラメータを再調整する"
+  },
+  "SideProjectFortune": {
+    "Reason": "為了保持手感做的小型功能，利用 vue3 與 typescript 簡單的做出一個日式占卜。",
+    "PointTitle01": "要點說明：",
+    "Point01": "總共有四種簽，分別是 ’大吉‘、‘吉’、’末吉‘、’大凶‘。",
+    "Point02": "在翻牌動畫進行時點擊按鈕將不會觸發任何事件。",
+    "Process01Title": "日式抽籤"
   }
 }

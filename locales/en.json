@@ -80,7 +80,8 @@
     "BahaWallTitle": "Social Software Appー動態牆",
     "BShoppingMallTitle": "Anime Shopping Mallー巴哈商城",
     "HuanShunTitle": "Shopping Mall Appー環盛",
-    "ShinchiEC": "Website customization servicesー新騎"
+    "ShinchiEC": "Website customization servicesー新騎",
+    "FortuneSeeking": "Fortune-seeking"
   },
   "SidePorject": {
     "ChatingWithChatGPT": "Have a bad mood? Try having a talk with ChatGPT"
@@ -218,5 +219,12 @@
     "Point01": "入力フォームは必要です、もし入力内容を書わなくまま送信ボタンを押しれば、エラーメッセージは出てきます。",
     "Point02": "TypeScriptでエイシンクでAPIのやり取りを処理する",
     "Point03": "メッセージのパラメータを再調整する"
+  },
+  "SideProjectFortune": {
+    "Reason": "To maintain my coding skills, I built a small fortune-seeking function using TypeScript and Vue 3.",
+    "PointTitle01": "Point：",
+    "Point01": "There are four kinds of omikuji: '大吉' (daikiji), '吉' (kiji), '末吉' (suekiji), and '大凶' (daikyou).",
+    "Point02": "The click event won't be activated while the animation is in progress.",
+    "Process01Title": "Fortune-seeking"
   }
 }
