@@ -34,7 +34,7 @@ const routesParams: Array<RouteRecordRaw> = [
     },
     children: [
       {
-        path: 'detail:id', name: 'ProjectDetail', component: ProjectDetail, 
+        path: 'detail/:id', name: 'ProjectDetail', component: ProjectDetail, 
         meta: {
           layout: false
         }

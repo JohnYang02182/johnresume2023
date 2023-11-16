@@ -79,7 +79,7 @@
   width: 100%;
   max-height: 800px;
   height: auto;
-  background-color: var(--gradient_10);
+  background: linear-gradient(30deg, var(--gradient_10) 0%, var(--neutral) 100%);
   box-shadow: 0 0 10px 2px #bcbcbc;
   border-radius: 12px;
   overflow: hidden;
@@ -87,8 +87,12 @@
     position: relative;
     width: clamp(180px,18vw,320px);
     aspect-ratio: 9/16;
-    transition: all 1s ease-out;
+    transition: all .5s ease-out;
+    transform: scale(1);
     cursor: pointer;
+    &:hover {
+      transform: scale(1.08);
+    }
     .card-front {
       transform: rotateY(0deg);
     }

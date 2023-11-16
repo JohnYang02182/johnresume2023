@@ -13,6 +13,7 @@ $secondary: #90b4ce;
 $tertiary: #ef4565;
 $text_primary: #5f6c7b;
 $text_secondary: #094067;
+$neutral: #353855;
 :root {
 	--font_label-small: 12px;
 	--font_body_small: 14px;
@@ -29,6 +30,7 @@ $text_secondary: #094067;
 	--primary_50: #{rgba($primary, 50%)};
 	--secondary: #90b4ce;
 	--tertiary: #ef4565;
+	--neutral: #{$neutral};
 	--tertiary_30: #{rgba($tertiary, 30%)};
 	--text_primary: #{$text_primary};
 	--text_primary_70: #{rgba($text_primary, 70%)};

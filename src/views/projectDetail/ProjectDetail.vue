@@ -40,13 +40,14 @@
     </section>
     <Suspense>
       <template #default>
-        <AnimeDetail v-if="$route.params.id === '2'"  />
+        <!-- <AnimeDetail v-if="$route.params.id === '2'"  />
         <ECWebsite v-else-if="$route.params.id === '1'" />
         <BahaECShop v-else-if="$route.params.id === '3'" />
-        <!-- <ChatWithChatGPT v-else-if="$route.params.id === '1'" /> -->
+        <ChatWithChatGPT v-else-if="$route.params.id === '1'" />
         <BahaWorld v-else-if="$route.params.id === '4'" />
         <FortuneSeeking v-else-if="$route.params.id === '5'" />
-        <Maintainance v-else /> 
+        <Maintainance v-else />  -->
+        <component :is="mapComponents" />
       </template>
       <template #fallback>
         <Loading />
@@ -55,21 +56,36 @@
   </div>
 </template>
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
-import { Ref, ref } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { Ref, ref, computed } from 'vue'
 import Maintainance from '/@/components/Maintainance.vue'
 // import PortfolioRecord from './components/PortfolioRecord.vue'
 import AnimeDetail from './components/AnimeDetail.vue'
-import ChatWithChatGPT from './components/ChatWithChatGPT.vue'
+// import ChatWithChatGPT from './components/ChatWithChatGPT.vue'
 import BahaECShop from './components/BahaECShop.vue'
 import ECWebsite from './components/ECWebsite.vue'
 import BahaWorld from './components/BahaWorld.vue'
 import Loading from '/@/components/Loading.vue'
 import FortuneSeeking from './components/FortuneSeeking.vue'
-import { CardInfoDetail } from '/@/setting/profolioCard'
+import { CardInfoDetail, designCardInfo } from '/@/setting/profolioCard'
 const props = defineProps ({
   projectTitle: String,
 })
 const route = useRoute()
+const router = useRouter()
 const personalData: Ref<CardInfoDetail> = ref(route.meta.msg1 as CardInfoDetail)
+const currentIDName = ref()
+const currentComponent = ref()
+const currentID = ref()
+currentComponent.value = [ FortuneSeeking, ECWebsite, AnimeDetail, BahaECShop , BahaWorld ]
+
+
+currentID.value = typeof route.params.id === 'string' ? parseInt(route.params.id) : 0
+currentIDName.value = designCardInfo[currentID.value-1].name
+
+const mapComponents = computed(() => {
+  let current = currentComponent.value[currentID.value-1]
+  return currentComponent.value[currentID.value-1] || Maintainance
+})
+
 </script>

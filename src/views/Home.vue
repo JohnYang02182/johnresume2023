@@ -22,7 +22,7 @@
 					<font-awesome-icon class="icon-home-title" icon="fa-solid fa-flag" />
 					<h2>{{ $t('CommonTitle.MyWork') }}</h2>
 				</div>
-				<router-link class="profile_card" v-for="(item, index) in cardInfoList" :key="index" :to="{name: 'ProjectDetail', params: { id: item.params }}">
+				<router-link class="profile_card" v-for="(item, index) in designCardInfo" :key="index" :to="{name: 'ProjectDetail', params: { id: (index+1).toString() }}">
 					<LoadingImg class="profile_card-pic img-loading-wrapper img-loading-light" :IsBanner="false" :IsLight="true" :ImageUrl="item.bannerImg" />
 					<!-- <div class="profile_card-pic img-loading-wrapper img-loading-light">
 						<img class="img-loading" :src="`${ getImgUrl(item.bannerImg) ? item.bannerImg : getImgUrl(item.bannerImg)}`" alt="profile" />
@@ -93,7 +93,7 @@ import { onBeforeRouteUpdate } from 'vue-router'
 
 </script> -->
 <script lang="ts" setup>
-import { ref, reactive, onMounted, computed } from 'vue'
+import { ref, onMounted } from 'vue'
 import LoadingImg from '/@/components/LoadingImg.vue'
 import { onBeforeRouteUpdate } from 'vue-router'
 import { useMouse } from '@vueuse/core'
@@ -104,30 +104,20 @@ import router from '/@/router/index'
 import { designCardInfo } from '/@/setting/profolioCard'
 
 const userData = ref()
-
 const bannerWrapper = ref<HTMLElement | null>(null)
 const extractor: UseMouseEventExtractor = event => (
   event instanceof Touch ? null : [event.x, event.offsetY]
 )
-const cardInfoList = ref(designCardInfo.reverse())
+
 const windowWidth = ref(window.innerWidth)
 console.log('windowwidth ', windowWidth.value)
 const { x, y } = useMouse({ target: bannerWrapper, touch: false, type: extractor })
-
-onMounted(() => {
-// 	const extractor: UseMouseEventExtractor = event => (
-//   event instanceof Touch
-//     ? null
-//     : [event.offsetX, event.offsetY]
-// )
-// const { x, y, sourceType } = useMouse({target: bannerWrapper, touch: false,type: extractor})
-})
 
 
 onBeforeRouteUpdate(async (to, from) => {
 	// only fetch the user if the id changed as maybe only the query or the hash changed
 	if (to.params.id !== from.params.id) {
-		userData.value = designCardInfo.find((element => element.params === to.params.id))
+		userData.value = designCardInfo.find((element,index) => (index+1).toString() === to.params.id)
 	}
 })
 
