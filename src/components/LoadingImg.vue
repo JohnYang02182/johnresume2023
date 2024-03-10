@@ -1,9 +1,9 @@
 <template>
   <div v-if="!IsBanner" v-bind="$attrs" :class="{'img-loading-wrapper img-loading-dark': isImgLoading}">
-    <img :src="getImageUrl(ImageUrl!)" @load="onImage" v-show="!isImgLoading" />
+    <img :src="getImageUrl(ImageUrl!)" @load="onImage" />
   </div>
   <div v-else-if="IsBanner" class="banner-content-item" :class="{'img-loading-wrapper img-loading-dark': isImgLoading}">
-    <img class="banner-content-img" :src="getImageUrl(ImageUrl!)" @load="onImage" v-show="!isImgLoading" />
+    <img class="banner-content-img" :src="getImageUrl(ImageUrl!)" @load="onImage" />
   </div>
 </template>
 <script lang="ts" setup>

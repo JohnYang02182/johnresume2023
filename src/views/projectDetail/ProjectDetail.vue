@@ -56,7 +56,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 import { Ref, ref, computed } from 'vue'
 import Maintainance from '/@/components/Maintainance.vue'
 // import PortfolioRecord from './components/PortfolioRecord.vue'
@@ -72,7 +72,6 @@ const props = defineProps ({
   projectTitle: String,
 })
 const route = useRoute()
-const router = useRouter()
 const personalData: Ref<CardInfoDetail> = ref(route.meta.msg1 as CardInfoDetail)
 const currentIDName = ref()
 const currentComponent = ref()
@@ -84,7 +83,6 @@ currentID.value = typeof route.params.id === 'string' ? parseInt(route.params.id
 currentIDName.value = designCardInfo[currentID.value-1].name
 
 const mapComponents = computed(() => {
-  let current = currentComponent.value[currentID.value-1]
   return currentComponent.value[currentID.value-1] || Maintainance
 })
 

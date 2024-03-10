@@ -47,6 +47,9 @@ const DetailBanner = ref('banner_sample.png')
 const isClick = computed(() => {
   return clickOrNot.value
 })
+onMounted(() => {
+  drawCard()
+})
 function getRandom(num: number){
   return Math.floor(Math.random()*num)
 }
@@ -59,15 +62,8 @@ function delayThetrigger(time: number) {
     loading.value = false
   }, time);
 }
-const clickCard = async() => {
-  if(loading.value === true){
-    return console.log('loading!!')
-  } 
+async function drawCard(){
   let rateNumber = getRandom(100)
-  loading.value = true
-  clickOrNot.value = !clickOrNot.value
-  delayThetrigger(600)
-  if(clickOrNot.value === false) return
   try {
     item.value = await getCardInfo()
   } finally {
@@ -79,6 +75,18 @@ const clickCard = async() => {
     }
     currentItem.value = item.value[i-1]
   }
+}
+const clickCard = async() => {
+  if(loading.value === true){
+    return
+  } 
+  loading.value = true
+  clickOrNot.value = !clickOrNot.value
+  delayThetrigger(600)
+  if(clickOrNot.value === true) return
+  setTimeout(async () => {
+    await drawCard()
+  },200)
 }
 const isLoading = ref(true)
 const Loading = defineAsyncComponent(() => 
