@@ -57,7 +57,7 @@ async function getCardInfo(): Promise<Array<CardContent>> {
   let cardIn = cardInfo
   return cardIn
 }
-function delayThetrigger(time: number) {
+function delayTheTrigger(time: number) {
   setTimeout(() => {
     loading.value = false
   }, time);
@@ -82,11 +82,11 @@ const clickCard = async() => {
   } 
   loading.value = true
   clickOrNot.value = !clickOrNot.value
-  delayThetrigger(600)
+  delayTheTrigger(600)
   if(clickOrNot.value === true) return
   setTimeout(async () => {
     await drawCard()
-  },200)
+  },300)
 }
 const isLoading = ref(true)
 const Loading = defineAsyncComponent(() => 
