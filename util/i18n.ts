@@ -1,6 +1,5 @@
 import { createI18n } from 'vue-i18n'
 import messages from '@intlify/unplugin-vue-i18n/messages'
-import { app } from '/@/main'
 export const SUPPORT_LOCALES = [
   {
     langOption: 'en',
@@ -24,10 +23,9 @@ export function setupI18n() {
     messages
   })
   try {
-    console.log('setmes', localStorage.getItem('lang') )
-    // console.log('setops', options )
+    // console.log('setmes', localStorage.getItem('lang') )
     i18n.global.locale.value = localStorage.getItem('lang') ? localStorage.getItem('lang')! : 'en'
-    console.log('global',i18n.global.locale.value)
+    // console.log('global',i18n.global.locale.value)
   } finally {
       document.querySelector('html')!.setAttribute('lang', localStorage.getItem('lang') ?? 'en')
       return i18n
