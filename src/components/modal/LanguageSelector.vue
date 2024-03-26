@@ -1,62 +1,108 @@
 <template>
   <div class="selector-wrapper" @click="switchList()" v-if="watchWidth < 568">
-    <label class='selector-label'>
+    <label class="selector-label">
       <font-awesome-icon class="icon-home-title" icon="fa-solid fa-globe" />
       {{ $t(`Common.${i18n.locale.value.toUpperCase()}`) }}
-      <font-awesome-icon icon="fa-solid fa-chevron-down" class="icon-arrow" :class="{'active': listIsOpen, 'close': !listIsOpen}" />
+      <font-awesome-icon
+        icon="fa-solid fa-chevron-down"
+        class="icon-arrow"
+        :class="{ active: listIsOpen, close: !listIsOpen }"
+      />
     </label>
-    <ul class="selector-list" :class="{'active': listIsOpen, 'close': !listIsOpen}" @click="switchList()">
-      <li v-for='(item, index) in SUPPORT_LOCALES' :key='index' class="selector-list-n-content">
-        <a class="list-items" href="javascript:void(0)" @click="switchLanguage(item.langOption);switchList();">{{ item.langName }}</a>
+    <ul
+      class="selector-list"
+      :class="{ active: listIsOpen, close: !listIsOpen }"
+      @click="switchList()"
+    >
+      <li
+        v-for="(item, index) in SUPPORT_LOCALES"
+        :key="index"
+        class="selector-list-n-content"
+      >
+        <a
+          class="list-items"
+          href="javascript:void(0)"
+          @click="
+            switchLanguage(item.langOption);
+            switchList();
+          "
+          >{{ item.langName }}</a
+        >
       </li>
     </ul>
   </div>
-  <div class="selector-wrapper" @mouseover="switchLanListOn()" @mouseleave="switchLanListOff()" v-else>
-    <label class='selector-label'>
+  <div
+    class="selector-wrapper"
+    @mouseover="switchLanListOn()"
+    @mouseleave="switchLanListOff()"
+    v-else
+  >
+    <label class="selector-label">
       <font-awesome-icon class="icon-home-title" icon="fa-solid fa-globe" />
       {{ $t(`Common.${i18n.locale.value.toUpperCase()}`) }}
-      <font-awesome-icon icon="fa-solid fa-chevron-down" class="icon-arrow" :class="{'active': listIsOpen, 'close': !listIsOpen}" />
+      <font-awesome-icon
+        icon="fa-solid fa-chevron-down"
+        class="icon-arrow"
+        :class="{ active: listIsOpen, close: !listIsOpen }"
+      />
     </label>
-    <ul class="selector-list" :class="{'active': listIsOpen, 'close': !listIsOpen}" @mouseenter="switchLanListOn()" @mouseleave="switchLanListOff()">
-      <li v-for='(item, index) in SUPPORT_LOCALES' :key='index' class="selector-list-n-content">
-        <a class="list-items" href="javascript:void(0)" @click="switchLanguage(item.langOption);switchLanListOff();">{{ item.langName }}</a>
+    <ul
+      class="selector-list"
+      :class="{ active: listIsOpen, close: !listIsOpen }"
+      @mouseenter="switchLanListOn()"
+      @mouseleave="switchLanListOff()"
+    >
+      <li
+        v-for="(item, index) in SUPPORT_LOCALES"
+        :key="index"
+        class="selector-list-n-content"
+      >
+        <a
+          class="list-items"
+          href="javascript:void(0)"
+          @click="
+            switchLanguage(item.langOption);
+            switchLanListOff();
+          "
+          >{{ item.langName }}</a
+        >
       </li>
     </ul>
   </div>
 </template>
-<script lang='ts' setup>
-import { computed, onMounted, ref } from 'vue';
-import { useI18n } from 'vue-i18n'
-import { useUserStore } from '../../../store/user'
-import { SUPPORT_LOCALES } from '../../../util/i18n'
-const userStore = useUserStore()
-const listIsOpen = ref(false)
-const i18n = useI18n()
-const windowWidth = ref()
+<script lang="ts" setup>
+import { computed, onMounted, ref } from "vue";
+import { useI18n } from "vue-i18n";
+import { useUserStore } from "../../../store/user";
+import { SUPPORT_LOCALES } from "../../../util/i18n";
+const userStore = useUserStore();
+const listIsOpen = ref(false);
+const i18n = useI18n();
+const windowWidth = ref();
 const watchWidth = computed(() => {
-  windowWidth.value = window.innerWidth
-  return windowWidth.value
-})
-console.log(watchWidth.value)
+  windowWidth.value = window.innerWidth;
+  return windowWidth.value;
+});
+
 onMounted(() => {
-  const windowWidth = ref(window.innerWidth)
-})
+  windowWidth.value = window.innerWidth;
+});
 const selectLanguage = computed({
   get: () => userStore.lang,
   set: (lang: string) => userStore.setLanguage(lang)
-})
+});
 const switchLanguage = (event: string) => {
-  selectLanguage.value = event
-  i18n.locale.value = selectLanguage.value
-}
+  selectLanguage.value = event;
+  i18n.locale.value = selectLanguage.value;
+};
 const switchLanListOn = () => {
-  listIsOpen.value = true
-}
+  listIsOpen.value = true;
+};
 const switchLanListOff = () => {
-  listIsOpen.value = false
-}
+  listIsOpen.value = false;
+};
 
 const switchList = () => {
-  listIsOpen.value = !listIsOpen.value
-}
+  listIsOpen.value = !listIsOpen.value;
+};
 </script>
