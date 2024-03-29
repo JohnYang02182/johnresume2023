@@ -22,7 +22,7 @@
     "@typescript-eslint"
   ],
   "rules": {
-    "prettier/prettier":["error",{ "semi": false }],
+    // "prettier/prettier":["error",{ "semi": false }],
     "indent": ["error", 2],
     "quotes": "off",
     "semi": "off",
