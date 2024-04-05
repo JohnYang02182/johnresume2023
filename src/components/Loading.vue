@@ -47,6 +47,7 @@
   gap: 1vw;
   .loading-line {
     max-height: 10vw;
+    height: 100%;
     width: clamp(0.75vw, 0.8vw, 1vw);
     border-radius: 120px;
     background: linear-gradient(
