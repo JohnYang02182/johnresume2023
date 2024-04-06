@@ -37,7 +37,7 @@
               transCardFront: !isClick && currentItem
             }"
           >
-            <img src="/IMG/foutune_cardbackground.png" alt="" />
+            <img src="/IMG/foutune_cardbackground.png" alt="cardbackground" />
           </div>
           <div
             class="card-content"
