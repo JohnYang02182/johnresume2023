@@ -14,13 +14,13 @@ axios.defaults.timeout = 10000
 //   }
 // })
 // Add request Interceptor
-axios.interceptors.request.use((config: InternalAxiosRequestConfig) => {
-  config.headers!.Authorization = 'Bearer ' + import.meta.env.VITE_OPENAI_API_KEY
-  console.log('openai',import.meta.env.VITE_OPENAI_API_KEY);
-  return config
-}, (error: any) => {
-  return Promise.reject(error)
-})
+// axios.interceptors.request.use((config: InternalAxiosRequestConfig) => {
+//   config.headers!.Authorization = 'Bearer ' + import.meta.env.VITE_OPENAI_API_KEY
+//   console.log('openai',import.meta.env.VITE_OPENAI_API_KEY);
+//   return config
+// }, (error: any) => {
+//   return Promise.reject(error)
+// })
 
 // Add response interceptor
 axios.interceptors.response.use((response: AxiosResponse) => {
@@ -74,7 +74,6 @@ export async function post<T>(url: string, data: object){
     return detectStatusCode(response)
   } catch(error) {
     console.log('error', error)
-    return error
     throw new Error(`Error data when require post ${url}`)
   }
 }

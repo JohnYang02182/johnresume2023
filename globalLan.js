@@ -16,7 +16,7 @@ const version = 'v4';
 // The range of cells to fetch from the sheet
 const range = 'myWebsite';
 
-async function extractSheets() {
+(async function extractSheets() {
   const client = new google.auth.JWT(
     credentials.client_email,
     undefined,
@@ -52,6 +52,4 @@ async function extractSheets() {
   } else {
     console.log('No data found.');
   }
-}
-
-extractSheets();
+})();
