@@ -127,14 +127,45 @@ html, body {
 			align-items: center;
 			gap: 12px;
 			margin-bottom: 32px;
-			&::after {
-				content: '';
+			&:not(.home-title) {
+				&::after {
+					content: '';
+					display: inline-block;
+					width: 4px;
+					height: 80%;
+					border-radius: 4px;
+					background-color: var(--text_secondary);
+					opacity: .6;
+				}
+			}
+		}
+		.option-list {
+			display: flex;
+			flex-wrap: nowrap;
+			gap: 12px;
+			align-items: center;
+			li {
+				position: relative;
 				display: inline-block;
-				width: 4px;
-				height: 80%;
-				border-radius: 4px;
-				background-color: var(--text_secondary);
-				opacity: .6;
+				padding: 8px 16px;
+				color: var(--text_primary);
+				font-size: var(--font_body_small);
+				font-weight: bold;
+				cursor: pointer;
+				&::after {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 0px;
+					height: 2px;
+					background: var(--primary);
+					transition: all 0.2s ease;
+				}
+				&:hover::after {
+					width: 20px;
+				}
 			}
 		}
 	}

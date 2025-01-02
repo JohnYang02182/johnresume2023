@@ -60,7 +60,7 @@ export const designCardInfo: CardInfoDetail[] = [
     character: 'Character.FEDeveloper',
     period: '2023',
     tags: ['Skill.TypeScript', 'Skill.JavaScript', 'Skill.Vue3', 'Skill.Vite', 'Skill.AI', 'Skill.PS'],
-    sideProject: false
+    sideProject: true
   }
 
   // , {
