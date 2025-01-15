@@ -2,6 +2,7 @@
   "compilerOptions": {
     "composite": true,
     "module": "ESNext",
+    "types": ["vite/client"],
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true
   },
