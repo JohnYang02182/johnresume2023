@@ -4,6 +4,10 @@
   "main": "index.js",
   "author": "John",
   "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "doc:dev": "vitepress dev docs",
     "doc:build": "vitepress build docs",
