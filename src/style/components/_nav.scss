@@ -2,9 +2,9 @@
   position: sticky;
   top: 0;
   height: 64px;
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .08);
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.08);
   border: 1px none #000;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
   z-index: 99;
 }
 .selector-wrapper {
@@ -20,10 +20,10 @@
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .08);
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.08);
     border: 1px none var(--text_primary);
     border-radius: 4px;
-    transition: all .2s ease-out;
+    transition: all 0.2s ease-out;
     transform: translateX(-50%);
     transform-origin: top center;
     overflow: hidden;
@@ -46,17 +46,17 @@
     }
     &.close {
       transform: scaleY(0) translateX(-50%);
-      transition-delay: .1s;
+      transition-delay: 0.1s;
     }
   }
   .icon-arrow {
-    transition: all .2s ease-out;
+    transition: all 0.2s ease-out;
     &.active {
       transform: rotate(180deg);
     }
     &.close {
       transform: rotate(0deg);
-      transition-delay: .1s;
+      transition-delay: 0.1s;
     }
   }
 }
@@ -162,8 +162,10 @@
   user-select: none;
 }
 .line {
-  fill:none;
-  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  fill: none;
+  transition:
+    stroke-dasharray 400ms,
+    stroke-dashoffset 400ms;
   stroke: #000;
   stroke-width: 5.5;
   stroke-linecap: round;
@@ -181,7 +183,9 @@
   .bottom {
     stroke-dasharray: 40 85;
     transform-origin: 50%;
-    transition: transform 400ms, stroke-dashoffset 400ms;
+    transition:
+      transform 400ms,
+      stroke-dashoffset 400ms;
   }
   &.menu-open {
     .top {
@@ -200,7 +204,7 @@
     transform: rotate(45deg);
   }
 }
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .nav-outer {
     .menu-list {
       .menu-list-items {
@@ -210,7 +214,6 @@
       }
     }
   }
-    
 }
 @media screen and (max-width: 576px) {
   .menu-close-trigger {
@@ -224,7 +227,7 @@
   .nav-outer {
     position: relative;
     height: unset;
-    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .08);
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.08);
     border: 1px none #000;
     z-index: 1;
     .nav {
@@ -253,7 +256,7 @@
         gap: 0;
         right: 0;
         flex-direction: column;
-        transition: all .2s ease-out;
+        transition: all 0.2s ease-out;
         transform-origin: top center;
         transform: scaleY(100%);
         background-color: var(--gradient_100);
@@ -266,5 +269,4 @@
       display: block;
     }
   }
-
 }

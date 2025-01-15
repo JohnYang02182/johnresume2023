@@ -28,7 +28,8 @@
     flex-direction: column;
     gap: 4px;
   }
-  .info-title, .list-title {
+  .info-title,
+  .list-title {
     font-size: 14px;
     color: var(--text_primary);
   }
@@ -105,7 +106,6 @@
       flex-direction: column;
     }
     .list {
-
     }
   }
 }

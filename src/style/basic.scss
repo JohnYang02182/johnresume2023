@@ -1,19 +1,24 @@
 @font-face {
-	font-family: 'NotoSanJP',Helvetica,Arial,sans-serif, "Microsoft JhengHei", "微軟正黑體", sans-serif;
-	src: url('../assets/fonts/noto-sans-jp_latin-300.woff2') format("woff2"),
-			 url('../assets/fonts/noto-sans-jp_latin-regular.ttf') format("truetype"),
+  font-family: "NotoSanJP", Helvetica, Arial, sans-serif, "Microsoft JhengHei",
+    "微軟正黑體", sans-serif;
+  src:
+    url("../assets/fonts/noto-sans-jp_latin-300.woff2") format("woff2"),
+    url("../assets/fonts/noto-sans-jp_latin-regular.ttf") format("truetype");
 }
 @font-face {
-	font-family: 'Android 101';
-	font-style: normal;
-	font-weight: 400;
-	src: url('/FONT/Android101-El3e.woff') format('woff'),
-			 url('/FONT/Android101-El3e.ttf') format("truetype");
+  font-family: "Android 101";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("/FONT/Android101-El3e.woff") format("woff"),
+    url("/FONT/Android101-El3e.ttf") format("truetype");
 }
 
-html,body {
-  font-family: 'NotoSanJP',Helvetica,Arial,sans-serif, "Microsoft JhengHei", "Android 101", "微軟正黑體";
-	background-color: #fff;
+html,
+body {
+  font-family: "NotoSanJP", Helvetica, Arial, sans-serif, "Microsoft JhengHei",
+    "Android 101", "微軟正黑體";
+  background-color: #fff;
 }
 
 .main-wrapper {
@@ -22,55 +27,55 @@ html,body {
 
 /*setting font start*/
 div {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 h2 {
-	font-size: clamp(1.6rem, 2.5vw,var(--font_headline_medium));
-	line-height: 36px;
-	color: var(--text_secondary);
+  font-size: clamp(1.6rem, 2.5vw, var(--font_headline_medium));
+  line-height: 36px;
+  color: var(--text_secondary);
 }
 .headline_01 {
-	font-size: 28px;
-	line-height: 32px;
+  font-size: 28px;
+  line-height: 32px;
 }
 .headline_02 {
-	font-size: 24px;
-	line-height: 28px;
+  font-size: 24px;
+  line-height: 28px;
 }
 
 .headline_03 {
-	font-size: 20px;
-	line-height: 24px;
+  font-size: 20px;
+  line-height: 24px;
 }
 .content-text {
-	font-size: var(--font_body_medium);
-	line-height: 24px;
+  font-size: var(--font_body_medium);
+  line-height: 24px;
 }
 .inline-text {
-	font-size: 14px;
-	line-height: 18px;
+  font-size: 14px;
+  line-height: 18px;
 }
 .tips-text {
-	font-size: 12px;
-	line-height: 14px;
+  font-size: 12px;
+  line-height: 14px;
 }
 .tips-alert {
-	font-size: 12px;
-	line-height: 14px;
-	color: var(--tertiary);
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--tertiary);
 }
 .link {
-	font-size: var(--font_body_medium);
-	color: var(--primary);
-	font-weight: 600;
-	&:hover {
-		color: var(--primary);
-	}
+  font-size: var(--font_body_medium);
+  color: var(--primary);
+  font-weight: 600;
+  &:hover {
+    color: var(--primary);
+  }
 }
 img {
-	transition: all .3s linear;
+  transition: all 0.3s linear;
 }
 /*setting font end*/

@@ -14,8 +14,10 @@ export default defineConfig({
     vue(),
     VueI18nPlugin({
       include: [path.resolve(__dirname, './locales/**')],
+      strictMessage: false, // Add this line
+      escapeHtml: false // Add this line
     }),
-    pluginRewriteAll()
+    // pluginRewriteAll()
   ],
   resolve: {
     alias: [

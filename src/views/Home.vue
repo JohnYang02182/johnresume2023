@@ -7,7 +7,9 @@
             <h2 class="section-main-title home-title">
               {{ $t("HeaderIntroduce") }}
             </h2>
-            <p class="headline_03" v-html="$t('Home.MainSelfIntro')" />
+            <div class="main-intro">
+              {{ $t("Home.MainSelfIntro") }}
+            </div>
             <a
               href="javascript:void(0)"
               @click="router.push('/personal')"

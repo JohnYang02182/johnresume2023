@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4vw; 
+    gap: 4vw;
     width: 100%;
     padding: 7.5vw 0;
     min-height: 360px;
@@ -21,16 +21,16 @@
     flex: 0.9;
   }
   .banner-content-title {
-    font-family: 'Android 101';
+    font-family: "Android 101";
     font-size: clamp(72px, 8vw, 144px);
     flex: 1.2;
-    color: rgba(255,255,255,.8);
+    color: rgba(255, 255, 255, 0.8);
   }
   .img-side-project {
     transform: scale(-1, 1);
   }
   .title-side-project {
-    color: rgb(235,210,177);
+    color: rgb(235, 210, 177);
   }
 }
 .banner-content-item {

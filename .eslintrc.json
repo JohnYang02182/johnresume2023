@@ -1,33 +1,54 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "es6": true
-  },
+  "root": true,
   "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
     "plugin:vue/vue3-recommended",
-    "plugin:css-modules/recommended",
-    "plugin:prettier/recommended"
+    "eslint:recommended",
+    "@vue/eslint-config-typescript",
+    "@vue/eslint-config-prettier/skip-formatting"
   ],
   "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "commonjs"
+    "ecmaVersion": "latest"
   },
-  "plugins": [
-    "vue",
-    "css-modules",
-    "@typescript-eslint"
-  ],
   "rules": {
-    // "prettier/prettier":["error",{ "semi": false }],
-    "indent": ["error", 2],
-    "quotes": "off",
-    "semi": "off",
-    "comma-dangle": ["error", "never"],
-    "@typescript-eslint/semi": ["error", "never"],
-    "@typescript-eslint/consistent-type-definitions": ["error", "type"]
+    "@typescript-eslint/consistent-type-imports": ["error", {
+      "prefer": "type-imports"
+    }],
+    "@typescript-eslint/explicit-function-return-type": "error",
+    "vue/script-setup-uses-vars": "error",
+    "vue/multi-word-component-names": "off"
   }
 }
+
+// {
+//   "env": {
+//     "browser": true,
+//     "es2021": true,
+//     "es6": true
+//   },
+//   "extends": [
+//     "eslint:recommended",
+//     "plugin:@typescript-eslint/recommended",
+//     "prettier",
+//     "plugin:vue/vue3-recommended",
+//     "plugin:css-modules/recommended",
+//     "plugin:prettier/recommended"
+//   ],
+//   "parserOptions": {
+//     "ecmaVersion": "latest",
+//     "sourceType": "commonjs"
+//   },
+//   "plugins": [
+//     "vue",
+//     "css-modules",
+//     "@typescript-eslint"
+//   ],
+//   "rules": {
+//     // "prettier/prettier":["error",{ "semi": false }],
+//     "indent": ["error", 2],
+//     "quotes": "off",
+//     "semi": "off",
+//     "comma-dangle": ["error", "never"],
+//     "@typescript-eslint/semi": ["error", "never"],
+//     "@typescript-eslint/consistent-type-definitions": ["error", "type"]
+//   }
+// }
