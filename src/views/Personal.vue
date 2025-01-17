@@ -211,7 +211,7 @@
 </template>
 <script lang="ts" setup>
 import { getImgUrl } from "../../util/globalSrc";
-import { observeScroll, imageLazuLoad } from "../../util/lazyLoad";
+import { observeScroll, imageLazyLoad } from "../../util/lazyLoad";
 const isImgLoading = (imgContents: any) => {
   console.log("personal trigger");
 };

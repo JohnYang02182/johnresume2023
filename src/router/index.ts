@@ -15,7 +15,6 @@ router.beforeEach((to, from) => {
   const userStore = useUserStore()
   if (to.params.id !== from.params.id && typeof to.params.id === 'string') {
     let paramsId = typeof to.params.id !== 'object' ? to.params.id : ''
-    console.log('paramsId ',typeof to.params.id)
     to.meta.msg1 = getCardInfo(parseInt(paramsId))
   }
   scrollBehavior()

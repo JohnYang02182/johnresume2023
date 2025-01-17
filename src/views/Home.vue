@@ -166,7 +166,7 @@ import { useMouse } from "@vueuse/core";
 import type { UseMouseEventExtractor } from "@vueuse/core";
 import router from "/@/router/index";
 // import { getImgUrl } from '../../util/globalSrc'
-// import { observeScroll, imageLazuLoad } from '../../util/lazyLoad'
+// import { observeScroll, imageLazyLoad } from '../../util/lazyLoad'
 import { designCardInfo } from "/@/setting/profolioCard";
 
 const userData = ref();
