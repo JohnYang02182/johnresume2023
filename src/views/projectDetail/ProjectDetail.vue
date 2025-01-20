@@ -65,16 +65,11 @@
 </template>
 <script setup lang="ts">
 import { useRoute } from "vue-router";
-import { Ref, ref, computed } from "vue";
+import { type Ref, ref, computed, markRaw, defineAsyncComponent } from "vue";
 import Maintainance from "/@/components/Maintainance.vue";
 // import PortfolioRecord from './components/PortfolioRecord.vue'
-import AnimeDetail from "./components/AnimeDetail.vue";
 // import ChatWithChatGPT from './components/ChatWithChatGPT.vue'
-import BahaECShop from "./components/BahaECShop.vue";
-import ECWebsite from "./components/ECWebsite.vue";
-import BahaWorld from "./components/BahaWorld.vue";
 import Loading from "/@/components/Loading.vue";
-import FortuneSeeking from "./components/FortuneSeeking.vue";
 import { CardInfoDetail, designCardInfo } from "/@/setting/profolioCard";
 const props = defineProps({
   projectTitle: String
@@ -83,22 +78,30 @@ const route = useRoute();
 const personalData: Ref<CardInfoDetail> = ref(
   route.meta.msg1 as CardInfoDetail
 );
-const currentIDName = ref();
+
 const currentComponent = ref();
 const currentID = ref();
-currentComponent.value = [
-  FortuneSeeking,
-  ECWebsite,
-  AnimeDetail,
-  BahaECShop,
-  BahaWorld
-];
+
+// define async components with markRaw
+
+const componentMap = {
+  1: markRaw(
+    defineAsyncComponent(() => import("./components/FortuneSeeking.vue"))
+  ),
+  2: markRaw(defineAsyncComponent(() => import("./components/ECWebsite.vue"))),
+  3: markRaw(
+    defineAsyncComponent(() => import("./components/AnimeDetail.vue"))
+  ),
+  4: markRaw(defineAsyncComponent(() => import("./components/BahaECShop.vue"))),
+  5: markRaw(defineAsyncComponent(() => import("./components/BahaWorld.vue")))
+};
 
 currentID.value =
   typeof route.params.id === "string" ? parseInt(route.params.id) : 0;
-currentIDName.value = designCardInfo[currentID.value - 1].name;
 
 const mapComponents = computed(() => {
-  return currentComponent.value[currentID.value - 1] || Maintainance;
+  return (
+    componentMap[currentID.value as keyof typeof componentMap] || Maintainance
+  );
 });
 </script>
