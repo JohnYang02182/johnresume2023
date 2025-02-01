@@ -1,8 +1,18 @@
-const { google } = require('googleapis');
-const fs = require('fs');
-const path = require('path');
-const credsJson = require('./google-generated-creds.json');
-const { json } = require('stream/consumers');
+import { google } from 'googleapis';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Read credentials using dynamic import
+const credsJson = await fs.promises.readFile(
+  path.join(__dirname, './google-generated-creds.json'),
+  'utf8'
+).then(JSON.parse);
+
 // Your credentials
 const credentials = {
   client_email: credsJson.client_email,

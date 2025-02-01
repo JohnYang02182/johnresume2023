@@ -44,7 +44,7 @@ export const designCardInfo: CardInfoDetail[] = [
   }, {
     name: 'ECWebsite',
     bannerImg: 'pic_vue.png',
-    title: 'HomeProfolio.ShinchiEC',
+    title: 'HomeProfolio.ShinchiECLayout',
     link: '',
     team: 'Team.ShinchiDevelope',
     character: 'Character.FEDeveloper',

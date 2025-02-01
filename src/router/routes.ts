@@ -14,7 +14,7 @@ const routesParams: Array<RouteRecordRaw> = [
     meta: {
       title: 'Index',
       describtion: 'Home page',
-      layout: true
+      layout: 'Base'
     }
   },
   {
@@ -22,7 +22,7 @@ const routesParams: Array<RouteRecordRaw> = [
     meta: {
       title: 'Error',
       describtion: 'Error page',
-      layout: false
+      layout: 'Base'
     }
   },
   {
@@ -30,7 +30,7 @@ const routesParams: Array<RouteRecordRaw> = [
     meta: {
       title: 'Personal',
       describtion: 'Personal page',
-      layout: true
+      layout: 'Base'
     }
   },
   {
@@ -38,7 +38,7 @@ const routesParams: Array<RouteRecordRaw> = [
     meta: {
       title: 'Project',
       describtion: 'Project page',
-      layout: true
+      layout: 'Base'
     },
     children: [
       {
@@ -46,7 +46,7 @@ const routesParams: Array<RouteRecordRaw> = [
         name: 'ProjectDetail',
         component: ProjectDetail, 
         meta: {
-          layout: false
+          layout: 'Blank'
         }
       }
     ]

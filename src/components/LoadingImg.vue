@@ -13,18 +13,6 @@
       alt="Banner"
     />
   </div>
-  <!-- <div
-    v-else-if="IsBanner"
-    class="banner-content-item"
-    :class="{ 'img-loading-wrapper img-loading-dark': isImgLoading }"
-  >
-    <img
-      class="banner-content-img"
-      :src="getImageUrl(ImageUrl!)"
-      @load="onImage"
-      alt="theContentOfImg"
-    />
-  </div> -->
 </template>
 <script lang="ts" setup>
 import { onMounted } from "vue";
