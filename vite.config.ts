@@ -5,8 +5,28 @@ import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import { dirname, resolve } from 'node:path'
 
 export default defineConfig({
+  build: {
+    emptyOutDir: true,
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
+        manualChunks: {
+          vendor: ['vue', 'vue-router', 'pinia']
+        }
+      }
+    }
+  },
   plugins: [
-    vue(),
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: () => false
+        }
+      }
+    }),
     VueI18nPlugin({
       include: resolve(dirname(fileURLToPath(import.meta.url)), './locales/**'),
       strictMessage: false,
