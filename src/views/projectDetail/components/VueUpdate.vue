@@ -13,25 +13,29 @@
     <div class="container-wrapper col">
       <div class="content-wrapper col">
         <h2 class="main-title">{{ $t("ProjectCommon.ProjectTitle01") }}</h2>
-        <p class="content-text">{{ $t("ProjectShinChiEC.Reason") }}</p>
+        <p class="content-text">
+          為了應對許多套件、資源漸漸不再對應 Vue2 的情況，前端團隊決定將 Vue2
+          Option API 更新至 Vue3 Composition API
+        </p>
       </div>
       <div class="content-wrapper col">
         <h2 class="main-title">{{ $t("ProjectCommon.ProjectTitle02") }}</h2>
         <ul class="list-wrapper">
-          <li class="list">{{ $t("Character.PM") }} * 2</li>
-          <li class="list">{{ $t("Character.UIUXDesigner") }} * 2</li>
-          <li class="list">{{ $t("Character.FEDeveloper") }} * 2</li>
-          <li class="list">{{ $t("Character.BDDeveloper") }} * 2</li>
+          <li class="list">{{ $t("Character.PM") }} * 1</li>
+          <li class="list">{{ $t("Character.UIUXDesigner") }} * 1</li>
+          <li class="list">{{ $t("Character.FEDeveloper") }} * 3</li>
         </ul>
       </div>
       <div class="content-wrapper col scrollAnimation">
         <h2 class="main-title">{{ $t("ProjectCommon.ProjectTitle06") }}</h2>
         <ul class="list-wrapper dot-style">
           <li class="list dot dot-secondary">
-            {{ $t("ProjectShinChiEC.Point01") }}
+            導入 setup() 重構 ViewModel 的部分，並將部分邏輯作為 Composable
+            抽出整理。
           </li>
           <li class="list dot dot-secondary">
-            {{ $t("ProjectShinChiEC.Point02") }}
+            將部分由狀態管理的資料，優化成透過 provide / inject
+            或其他方法進行管理。
           </li>
           <li class="list dot dot-secondary">
             {{ $t("ProjectShinChiEC.Point03") }}
