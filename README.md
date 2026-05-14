@@ -1,5 +1,9 @@
 # [GitHub] コミットの記録
 
+:globe_with_meridians: **Language / 語言切換：** **日本語** | [English](./README.en.md) | [繁體中文](./README.zh-TW.md)
+
+---
+
 :bulb:　もしGitHub Actionsについて詳しく知りたい場合は、以下のリンクをクリックしてください。
 
 **[GitHub Actions Link](https://github.com/JohnYang02182/johnresume2023/actions/workflows/deploy.yml)**
@@ -263,4 +267,85 @@ GitHubにデプロイすると時折 404 エラーが現れたので、暫くモ
 [Managing translations of an app, a web site… can be very painful.](https://morioh.com/a/4c5a331be380/manage-i18n-translations-from-google-sheet)<br>
 [i18n什麼的交給前端來處理吧](https://ithelp.ithome.com.tw/articles/10262354?sc=iThelpR)<br>
 [googleapis documents](https://www.npmjs.com/package/googleapis)
+
+-----
+
+**2025年2月15日**
+
+### Blog 内容を更新
+
+複数のテンプレートを効率的に管理するために、環境変数でテンプレートのパラメータを設定し、CI段階で対応なコマンドをインプットして特定的なテンプレートをコンパイルする方法をアップデートした。
+
+-----
+
+**2026年5月14日**
+
+### 全パッケージのバージョンをアップグレード
+
+プロジェクトのすべての dependencies と devDependencies を最新バージョンにアップグレードした。
+
+主なアップグレード：
+
+| パッケージ | 旧バージョン | 新バージョン |
+|-----------|------------|------------|
+| `vite` | ^5.1.6 | ^8.0.12 |
+| `vue` | ^3.4.21 | ^3.5.34 |
+| `pinia` | ^2.1.7 | ^3.0.4 |
+| `vue-i18n` | ^9.10.2 | ^11.4.2 |
+| `@vueuse/core` | ^10.9.0 | ^14.3.0 |
+| `@intlify/unplugin-vue-i18n` | ^2.0.0 | ^11.2.0 |
+| `openai` | ^3.2.1 | ^6.37.0 |
+| `typescript` | ~5.4.2 | ~6.0.3 |
+| `vue-tsc` | ^2.0.6 | ^3.2.9 |
+| `@vitejs/plugin-vue` | ^4.6.2 | ^6.0.6 |
+
+変更点：
+- `eslint-config-airbnb` を削除（未使用かつ ESLint v10 と非互換）
+- `@typescript-eslint/eslint-plugin` / `@typescript-eslint/parser` を削除（`@vue/eslint-config-typescript` に内包済み）
+- `eslint: ^10.3.0` を devDependency として追加
+
+-----
+
+### Vitest によるユニットテスト環境の構築
+
+[Vitest](https://vitest.dev/) をテストフレームワークとして導入し、`@vue/test-utils` と `jsdom` を組み合わせてテスト環境を整備した。
+
+テストカバレッジ（合計 32 テスト）：
+
+```
+src/__tests__/
+├── setup.ts                          # グローバル設定（IntersectionObserver mock、i18n、pinia）
+├── components/
+│   └── AnimeDetail.test.ts           # AnimeDetail.vue コンポーネントテスト（10項目）
+├── hooks/
+│   └── useProtfolioCard.test.ts      # useProtfolioCard hook テスト（8項目）
+├── store/
+│   └── user.test.ts                  # Pinia user store テスト（8項目）
+└── util/
+    └── i18n.test.ts                  # i18n util テスト（6項目）
+```
+
+追加した npm スクリプト：
+
+```bash
+npm run test          # インタラクティブな watch モード
+npm run test:run      # 全テストを一度だけ実行
+npm run test:coverage # カバレッジレポートを生成
+```
+
+-----
+
+### `vite.config.ts` と SCSS のバグを修正
+
+以下の3つの問題を修正した：
+
+1. **`manualChunks` の型エラー**：Rollup v4（Vite 8 内蔵）では Object 形式が廃止されたため、Function 形式に変更
+2. **Sass `@import` の非推奨警告**：`css.preprocessorOptions.scss` に `silenceDeprecations` を追加し、Dart Sass 3.x の非推奨警告を抑制
+3. **CSS カスタムプロパティの構文エラー**：`src/style/workH_detail.scss` の 277 行目で `var(font_body_medium)` に `--` プレフィックスが欠落しており、lightningcss の minify 時にエラーが発生していた
+
+-----
+
+### 多言語対応 README を追加
+
+英語版（`README.en.md`）と繁体字中国語版（`README.zh-TW.md`）の README を新規作成し、各言語版の冒頭に言語切替リンクを追加した。
 

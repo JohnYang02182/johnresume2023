@@ -13,8 +13,12 @@ export default defineConfig({
         entryFileNames: 'assets/[name].js',
         chunkFileNames: 'assets/[name].js',
         assetFileNames: 'assets/[name].[ext]',
-        manualChunks: {
-          vendor: ['vue', 'vue-router', 'pinia']
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            if (['vue', 'vue-router', 'pinia'].some((pkg) => id.includes(`/node_modules/${pkg}/`))) {
+              return 'vendor'
+            }
+          }
         }
       }
     }
@@ -38,6 +42,13 @@ export default defineConfig({
       '/@': fileURLToPath(new URL('./src', import.meta.url)),
       '/IMG': fileURLToPath(new URL('./src/assets/images', import.meta.url)),
       '/FONT': fileURLToPath(new URL('./src/assets/fonts', import.meta.url))
+    }
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        silenceDeprecations: ['import', 'legacy-js-api']
+      }
     }
   },
   base: '/'
