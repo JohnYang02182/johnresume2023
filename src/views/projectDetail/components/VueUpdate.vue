@@ -109,8 +109,8 @@
                   {{ $t("ProjectShinChiEC.Process03ListContent01") }}
                 </p>
                 <template
-                  v-for="layout of layoutSamples[0]"
-                  :key="`layout-${layout.key}`"
+                  v-for="(layout, key) of layoutSamples[0]"
+                  :key="`layout-${key}`"
                 >
                   <CodeView :code="layout ?? ''" language="javascript" />
                 </template>
