@@ -103,6 +103,7 @@ function delayTheTrigger(time: number) {
 async function drawCard() {
   let rateNumber = getRandom(100);
   try {
+    currentItem.value = null;
     item.value = await getCardInfo();
   } finally {
     let rate = 0;
@@ -130,12 +131,6 @@ const isLoading = ref(true);
 const Loading = defineAsyncComponent(() => import("/@/components/Loading.vue"));
 const isImgLoading = [ref(true)];
 const count = ref(0);
-const onImage = (ele: any) => {
-  console.log("getImage", ele.currentTarget);
-  isImgLoading[count.value].value = false;
-  console.log("isImgLoad", isImgLoading[count.value].value);
-  count.value++;
-};
 
 onMounted(async () => {
   await nextTick();

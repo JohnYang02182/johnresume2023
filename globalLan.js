@@ -27,12 +27,11 @@ const version = 'v4';
 const range = 'myWebsite';
 
 (async function extractSheets() {
-  const client = new google.auth.JWT(
-    credentials.client_email,
-    undefined,
-    credentials.private_key,
-    ['https://www.googleapis.com/auth/spreadsheets.readonly']
-  );
+  const client = new google.auth.JWT({
+    email: credentials.client_email,
+    key: credentials.private_key,
+    scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly']
+  });
 
   const sheets = google.sheets({ version, auth: client });
 
@@ -50,12 +49,12 @@ const range = 'myWebsite';
     rows.forEach((row) => {
       key.push(row[0]);
     });
-    for(let i = 1; i < rows[0].length; i++){
-      jsonArr = rows.map((row, index) => ({ 
-          [key[index]]: row[i]
+    for (let i = 1; i < rows[0].length; i++) {
+      jsonArr = rows.map((row, index) => ({
+        [key[index]]: row[i]
       }));
       jsonObject = jsonArr.reduce((a, b) => Object.assign(a, b), {});
-      fs.writeFileSync(path.join(__dirname, './locales',`${jsonArr[0].key}.json`), JSON.stringify(jsonObject, null, 2));
+      fs.writeFileSync(path.join(__dirname, './locales', `${jsonArr[0].key}.json`), JSON.stringify(jsonObject, null, 2));
     }
 
     // Write to file in parent directory

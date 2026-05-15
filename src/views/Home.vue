@@ -106,54 +106,6 @@
           </div>
         </router-link>
       </div>
-      <!-- <div class="divid-line"></div>
-			<div class="section section-codepratice">
-				<h2 class="section-main-title home-title">前端實作練習</h2>
-				<a href="https://github.com/JohnYang02182/vueproject" target="_blank" class="profile_card code_card">
-					<div class="profile_card-pic">
-						<img src="/IMG/pic_vue.png" alt="profile">
-					</div>
-					<div class="profile_card-text">
-						<p class="headline_02">Vue 實作練習</p>
-						<p class="content-text time">2021</p>
-						<div class="tips-area">
-							<p class="tips-text">網頁設計</p>
-							<p class="tips-text">RWD</p>
-							<p class="tips-text">HTML5</p>
-							<p class="tips-text">SCSS</p>
-							<p class="tips-text">Vue</p>
-						</div>
-					</div>
-				</a>
-				<a href="https://codepen.io/warryymi/pen/BaWLPaR" target="_blank" class="profile_card code_card">
-					<div class="profile_card-pic">
-						<img src="/IMG/pic_banner_practice.png" alt="profile">
-					</div>
-					<div class="profile_card-text">
-						<p class="headline_02">BannerSlider</p>
-						<p class="content-text time">2021</p>
-						<div class="tips-area">
-							<p class="tips-text">HTML5</p>
-							<p class="tips-text">SCSS</p>
-							<p class="tips-text">Javascript</p>
-						</div>
-					</div>
-				</a>
-				<a href="https://codepen.io/warryymi/pen/roaPMY" target="_blank" class="profile_card code_card">
-					<div class="profile_card-pic">
-						<img src="https://assets.codepen.io/2202521/internal/screenshots/pens/roaPMY.default.png?fit=cover&format=auto&ha=true&height=540&quality=75&v=2&version=1545449021&width=960" alt="profile">
-					</div>
-					<div class="profile_card-text">
-						<p class="headline_02">翻牌效果</p>
-						<p class="content-text time">2019</p>
-						<div class="tips-area">
-							<p class="tips-text">HTML5</p>
-							<p class="tips-text">SCSS</p>
-							<p class="tips-text">jQuery</p>
-						</div>
-					</div>
-				</a>
-			</div> -->
       <div class="divid-line" />
     </div>
   </div>
