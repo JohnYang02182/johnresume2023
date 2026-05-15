@@ -2,7 +2,7 @@
   <footer>
     <div class="footer">
 			<div class="list-contect-me">
-				<p class="footer-title">{{ $t('Footer.ContectMe') }}</p>
+				<p class="footer-title">{{ $t('Footer.ContactMe') }}</p>
 				<ul class="footer_list">
 					<li>
 						<a href="https://github.com/JohnYang02182">
