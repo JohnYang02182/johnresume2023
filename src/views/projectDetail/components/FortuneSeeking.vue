@@ -33,8 +33,8 @@
             :class="{
               transCardBack: isClick,
               'card-back': isClick,
-              'card-front': !isClick,
-              transCardFront: !isClick && currentItem
+              'card-front': !isClick && isFlippingToBack,
+              transCardFront: !isClick && isFlippingToBack
             }"
           >
             <img src="/IMG/foutune_cardbackground.png" alt="cardbackground" />
@@ -43,7 +43,7 @@
             class="card-content"
             v-if="currentItem"
             :class="{
-              transCardBack: !isClick,
+              transCardBack: !isClick && isFlippingToBack,
               'card-back': !isClick,
               'card-front': isClick,
               transCardFront: isClick && currentItem
@@ -81,6 +81,7 @@ const loading = ref(false);
 const clickOrNot = ref(false);
 const currentItem = ref();
 const item = ref();
+const isFlippingToBack = ref(false);
 const DetailBanner = ref("banner_sample.png");
 const isClick = computed(() => {
   return clickOrNot.value;
@@ -103,7 +104,6 @@ function delayTheTrigger(time: number) {
 async function drawCard() {
   let rateNumber = getRandom(100);
   try {
-    currentItem.value = null;
     item.value = await getCardInfo();
   } finally {
     let rate = 0;
@@ -123,9 +123,13 @@ const clickCard = async () => {
   clickOrNot.value = !clickOrNot.value;
   delayTheTrigger(600);
   if (clickOrNot.value === true) return;
+  // 保留 currentItem 讓結果卡能播完 transCardBack 動畫（600ms）
+  isFlippingToBack.value = true;
   setTimeout(async () => {
-    await drawCard();
-  }, 300);
+    isFlippingToBack.value = false;
+    currentItem.value = null;   // 動畫結束才移除元素
+    await drawCard();           // 此時 v-if=false→true，無任何動畫旗標，乾淨掛載
+  }, 650);
 };
 const isLoading = ref(true);
 const Loading = defineAsyncComponent(() => import("/@/components/Loading.vue"));

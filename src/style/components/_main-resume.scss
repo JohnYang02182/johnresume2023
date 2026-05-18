@@ -767,8 +767,12 @@ body {
       }
       .home-title {
         margin-bottom: 24px;
+        flex-direction: column;
         grid-column-start: unset;
         grid-column-end: unset;
+        .icon-home-title {
+          display: none;
+        }
       }
     }
     .section-profile {
