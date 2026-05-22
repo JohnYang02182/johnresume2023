@@ -20,11 +20,11 @@
         </div>
         <ul class="list-wrapper">
           <li class="list">
-            <p class="list-title">{{ $t("CommonTitle.Period") }}：</p>
+            <p class="list-title">{{ $t("CommonTitle.Period") }}:</p>
             <span class="list-content">{{ personalData.period }}</span>
           </li>
           <li class="list">
-            <p class="list-title">{{ $t("CommonTitle.Team") }}：</p>
+            <p class="list-title">{{ $t("CommonTitle.Team") }}:</p>
             <span class="list-content">{{ $t(personalData.team) }}</span>
           </li>
           <li class="list">

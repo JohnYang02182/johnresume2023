@@ -1,97 +1,96 @@
-import axios, { AxiosInstance, InternalAxiosRequestConfig, AxiosResponse } from 'axios'
-import { showStatus } from './Status'
+import axios, { AxiosInstance, AxiosResponse } from 'axios'
 
-const baseUrl = 'https://api.openai.com/v1/chat/completions'
-axios.defaults.baseURL = baseUrl
-axios.defaults.timeout = 10000
-// axios.defaults.withCredentials = true
+// ─── 設定型別 ────────────────────────────────────────────────
+export interface APIClientConfig {
+  baseURL: string
+  timeout?: number
+  headers?: Record<string, string>
+}
 
-// const axiosinstance: AxiosInstance = axios.create({
-//   baseURL: window.location.origin,
-//   timeout: 10000,
-//   headers: {
-//     'Authorization': 'Bearer ' + import.meta.env.OPENAI_API_KEY
-//   }
-// })
-// Add request Interceptor
-// axios.interceptors.request.use((config: InternalAxiosRequestConfig) => {
-//   config.headers!.Authorization = 'Bearer ' + import.meta.env.VITE_OPENAI_API_KEY
-//   console.log('openai',import.meta.env.VITE_OPENAI_API_KEY);
-//   return config
-// }, (error: any) => {
-//   return Promise.reject(error)
-// })
+// ─── 建立獨立 instance ────────────────────────────────────────
+function createAPIClient(config: APIClientConfig): AxiosInstance {
+  const instance = axios.create({
+    baseURL: config.baseURL,
+    timeout: config.timeout ?? 10000,
+    headers: config.headers ?? {},
+  })
 
-// Add response interceptor
-axios.interceptors.response.use((response: AxiosResponse) => {
-  // Handle any custom response data or errors here
-  if(response.status>=200 && response.status < 300){
-    if (response.data.code !== '993') {
-      return Promise.resolve(response)
-    } else {
-      console.log('access overtime!')
-    }
-  } 
-  return response;
-}, (error: any) => {
-  return Promise.reject(error);
-});
+  instance.interceptors.response.use(
+    (response: AxiosResponse) => response,
+    (error: any) => Promise.reject(error)
+  )
 
-// axios.interceptors.response.use((res) => {
-//   if (res.status === 200) {
-//     if (res.data.code !== '993') {
-//       return Promise.resolve(res)
-//     } else {
-//       console.log('overtime')
-//     }
-//   } else {
-//     return Promise.reject(res)
-//   }
-// })
-const detectStatusCode = (response: AxiosResponse) => {
+  return instance
+}
+
+// ─── 通用 Status Code 檢查 ────────────────────────────────────
+function detectStatusCode(response: AxiosResponse) {
   if (response.status >= 200 && response.status < 300) {
-    // Successful response
-    return response.data;
-  } else {
-    // Error response
-    throw new Error(`Request failed with status code ${response.status}`);
+    return response.data
   }
+  throw new Error(`Request failed with status code ${response.status}`)
 }
 
-export async function get<T>(url: string){
+// ─── 通用 CRUD 方法 ───────────────────────────────────────────
+export async function get<T>(instance: AxiosInstance, url: string) {
   try {
-    const response = await axios.get<T>(url)
-    return response
-  } catch(error) {
-    throw new Error(`Error data when require get ${url}`)
-  }
-}
-
-export async function post<T>(url: string, data: object){
-  try {
-    const response = await axios.post<T>(url,data)
-    console.log('response ',response)
+    const response = await instance.get<T>(url)
     return detectStatusCode(response)
-  } catch(error) {
-    console.log('error', error)
-    throw new Error(`Error data when require post ${url}`)
+  } catch (error) {
+    throw new Error(`GET ${url} failed`)
   }
 }
 
-export async function pull<T>(url: string, data: object){
+export async function post<T>(instance: AxiosInstance, url: string, data: object) {
   try {
-    const response = await axios.put<T>(url, data)
+    const response = await instance.post<T>(url, data)
     return detectStatusCode(response)
-  } catch(error) {
-    throw new Error (`Error data when require put ${ url }`)
+  } catch (error) {
+    throw new Error(`POST ${url} failed`)
   }
 }
 
-export async function del<T>(url: string){
+export async function put<T>(instance: AxiosInstance, url: string, data: object) {
   try {
-    const response = await axios.delete(url)
+    const response = await instance.put<T>(url, data)
     return detectStatusCode(response)
-  } catch(error) {
-    throw new Error (`Error data when require dele ${ url }`)
+  } catch (error) {
+    throw new Error(`PUT ${url} failed`)
   }
 }
+
+export async function del<T>(instance: AxiosInstance, url: string) {
+  try {
+    const response = await instance.delete<T>(url)
+    return detectStatusCode(response)
+  } catch (error) {
+    throw new Error(`DELETE ${url} failed`)
+  }
+}
+
+// ─── 預設 API Clients ─────────────────────────────────────────
+export const openAIClient = createAPIClient({
+  baseURL: 'https://api.openai.com/v1',
+  headers: {
+    Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
+  },
+})
+
+export const githubClient = createAPIClient({
+  baseURL: 'https://api.github.com',
+  headers: {
+    Accept: 'application/vnd.github+json',
+  },
+})
+
+export const rawGithubClient = createAPIClient({
+  baseURL: 'https://raw.githubusercontent.com',
+  // headers: { Authorization: `token ${import.meta.env.VITE_GITHUB_TOKEN}` },
+})
+
+// export const directusClient = createAPIClient({
+//   baseURL: import.meta.env.VITE_DIRECTUS_URL,
+// })
+// export const directusClient = createAPIClient({
+//   baseURL: import.meta.env.VITE_DIRECTUS_URL,
+// })
