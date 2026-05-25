@@ -21,5 +21,5 @@ import { post } from "./common/APIMethod"
 //     ]
 // })
 export const ChatGPTLink = async (params: ChatGPTParams) => {
-    return await post<ChatGPTModal>('https://api.openai.com/v1/chat/completions', params)
+    // return await post<ChatGPTModal>('https://api.openai.com/v1/chat/completions', params)
 }
