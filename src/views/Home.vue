@@ -93,8 +93,8 @@
 						<img class="img-loading" :src="`${ getImgUrl(item.bannerImg) ? item.bannerImg : getImgUrl(item.bannerImg)}`" alt="profile" />
 					</div> -->
           <div class="profile_card-text">
-            <p class="headline_02">{{ $t(item.title) }}</p>
-            <p class="content-text time">{{ item.period }}</p>
+            <p class="headline_02">{{ item.title ? $t(item.title) : "" }}</p>
+            <p class="content-text time">{{ item.period ? item.period : "" }}</p>
             <div class="tips-area">
               <span
                 class="tips-text"

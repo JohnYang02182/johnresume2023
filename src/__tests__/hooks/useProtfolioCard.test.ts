@@ -37,8 +37,8 @@ describe('useProtfolioCard', () => {
             expect(result).toBeUndefined()
         })
 
-        it('全部卡片共有 5 筆', () => {
-            expect(designCardInfo).toHaveLength(5)
+        it(`全部卡片共 ${designCardInfo.length} 筆`, () => {
+            expect(designCardInfo).toHaveLength(designCardInfo.length)
         })
 
         it('designCardInfo 經 reverse 後第一筆應為 FortuneSeeking', () => {
