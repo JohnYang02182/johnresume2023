@@ -16,7 +16,7 @@
       <div class="info-wrapper">
         <div class="title-wrapper">
           <p class="info-title">{{ $t("CommonTitle.Title") }}:</p>
-          <h3 class="info-title-items">{{ $t(personalData.title) }}</h3>
+          <h3 class="info-title-items">{{ personalData.title }}</h3>
         </div>
         <ul class="list-wrapper">
           <li class="list">
@@ -93,7 +93,8 @@ const componentMap = {
     defineAsyncComponent(() => import("./components/AnimeDetail.vue"))
   ),
   4: markRaw(defineAsyncComponent(() => import("./components/BahaECShop.vue"))),
-  5: markRaw(defineAsyncComponent(() => import("./components/BahaWorld.vue")))
+  5: markRaw(defineAsyncComponent(() => import("./components/BahaWorld.vue"))),
+  6: markRaw(defineAsyncComponent(() => import("./components/ProjectContent.vue")))
 };
 
 currentID.value =

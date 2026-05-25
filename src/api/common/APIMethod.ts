@@ -27,6 +27,8 @@ function createAPIClient(config: APIClientConfig): AxiosInstance {
 function detectStatusCode(response: AxiosResponse) {
   if (response.status >= 200 && response.status < 300) {
     return response.data
+  } else if (response.status >= 400 && response.status < 600) {
+    return response.status
   }
   throw new Error(`Request failed with status code ${response.status}`)
 }
@@ -80,13 +82,16 @@ export const githubClient = createAPIClient({
   baseURL: 'https://api.github.com',
   headers: {
     Accept: 'application/vnd.github+json',
+    ...(import.meta.env.VITE_GITHUB_TOKEN
+      ? { Authorization: `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}` }
+      : {}),
   },
 })
 
-export const rawGithubClient = createAPIClient({
-  baseURL: 'https://raw.githubusercontent.com',
-  // headers: { Authorization: `token ${import.meta.env.VITE_GITHUB_TOKEN}` },
-})
+// export const rawGithubClient = createAPIClient({
+//   baseURL: 'https://raw.githubusercontent.com',
+//   // headers: { Authorization: `token ${import.meta.env.VITE_GITHUB_TOKEN}` },
+// })
 
 // export const directusClient = createAPIClient({
 //   baseURL: import.meta.env.VITE_DIRECTUS_URL,
