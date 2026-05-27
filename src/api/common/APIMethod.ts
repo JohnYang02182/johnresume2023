@@ -27,9 +27,8 @@ function createAPIClient(config: APIClientConfig): AxiosInstance {
 function detectStatusCode(response: AxiosResponse) {
   if (response.status >= 200 && response.status < 300) {
     return response.data
-  } else if (response.status >= 400 && response.status < 600) {
-    return response.status
   }
+  // For any non-2xx status, throw an error so caller wrappers can handle/convert it
   throw new Error(`Request failed with status code ${response.status}`)
 }
 

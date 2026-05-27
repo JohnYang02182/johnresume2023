@@ -10,7 +10,7 @@ const REPO = import.meta.env.VITE_GITHUB_REPO
  * @param path - e.g. `/content/projects/zh-TW/build-a-cms-service.md`
  */
 export async function getMarkdown(path: string): Promise<string> {
-    const apiPath = `/repos/${OWNER}/${REPO}/contents${path}`
+    const apiPath = `/repos/${OWNER}/${REPO}/contents${path}?t=${Date.now()}`
 
     try {
         const res = await get<GitHubContentsResponse>(githubClient, apiPath)
