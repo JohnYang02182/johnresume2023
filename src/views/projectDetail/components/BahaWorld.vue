@@ -41,7 +41,7 @@
         <div class="card-group col">
           <div class="card scrollAnimation">
             <div class="card-head">
-              <div class="sub-title number-style">
+              <div class="n-title">
                 <span class="num">1</span>{{ $t("ProjectAnime.Process01") }}
               </div>
             </div>
@@ -68,7 +68,7 @@
           </div>
           <div class="card scrollAnimation">
             <div class="card-head">
-              <div class="sub-title number-style">
+              <div class="n-title">
                 <span class="num">2</span>{{ $t("ProjectBahaworld.Process02") }}
               </div>
             </div>
@@ -87,14 +87,14 @@
           </div>
           <div class="card scrollAnimation">
             <div class="card-head">
-              <div class="sub-title number-style">
+              <div class="n-title">
                 <span class="num">3</span>{{ $t("ProjectAnime.Process02") }}
               </div>
             </div>
             <div class="card-body">
-              <div class="content-text">
+              <p class="content-text">
                 {{ $t("ProjectBahaworld.Process03ListContent01") }}
-              </div>
+              </p>
               <div class="content-img-wrapper maginationLoading">
                 <img
                   class="content-img-body img-loading"
@@ -102,9 +102,9 @@
                   alt="guideLine"
                 />
               </div>
-              <div class="content-text">
+              <p class="content-text">
                 {{ $t("ProjectBahaworld.Process03ListContent02") }}
-              </div>
+              </p>
               <div class="content-img-wrapper maginationLoading">
                 <img
                   class="content-img-body img-loading"
@@ -116,7 +116,7 @@
           </div>
           <div class="card scrollAnimation">
             <div class="card-head">
-              <div class="sub-title number-style">
+              <div class="n-title">
                 <span class="num">4</span>{{ $t("ProjectAnime.Process05") }}
               </div>
             </div>

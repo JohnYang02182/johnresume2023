@@ -55,7 +55,7 @@
         <div class="card-group col">
           <div class="card scrollAnimation">
             <div class="card-head">
-              <div class="sub-title number-style">
+              <div class="n-title">
                 <span class="num">1</span>{{ $t("ProjectAnime.Process01") }}
               </div>
             </div>
@@ -85,7 +85,7 @@
           </div>
           <div class="card scrollAnimation">
             <div class="card-head">
-              <div class="sub-title number-style">
+              <div class="n-title">
                 <span class="num">2</span>{{ $t("ProjectAnime.Process02") }}
               </div>
             </div>
@@ -104,7 +104,7 @@
           </div>
           <div class="card scrollAnimation">
             <div class="card-head">
-              <div class="sub-title number-style">
+              <div class="n-title">
                 <span class="num">3</span>{{ $t("ProjectAnime.Process03") }}
               </div>
             </div>
@@ -116,14 +116,14 @@
                   alt="guideLine"
                 />
               </div>
-              <div class="content-text">
+              <p class="content-text">
                 {{ $t("ProjectAnime.Process03ListContent01") }}
-              </div>
+              </p>
             </div>
           </div>
           <div class="card scrollAnimation">
             <div class="card-head">
-              <div class="sub-title number-style">
+              <div class="n-title">
                 <span class="num">4</span>{{ $t("ProjectAnime.Process04") }}
               </div>
             </div>
@@ -242,7 +242,7 @@
           </div>
           <div class="card scrollAnimation">
             <div class="card-head">
-              <div class="sub-title number-style">
+              <div class="n-title">
                 <span class="num">5</span>{{ $t("ProjectAnime.Process05") }}
               </div>
             </div>

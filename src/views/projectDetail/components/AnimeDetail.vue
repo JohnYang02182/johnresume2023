@@ -1,5 +1,6 @@
 <template>
   <section class="section-body">
+    <!-- banner block start-->
     <div class="banner-wrapper">
       <div class="banner-content-wrapper row">
         <div class="banner-content-item" :class="{'img-loading-wrapper img-loading-dark': isImgLoading}">
@@ -8,6 +9,8 @@
         <p class="banner-content-title">My Work</p>
       </div>
     </div>
+    <!-- banner block end-->
+    <!-- project detail info start-->
     <div class="container-wrapper col">
       <div class="content-wrapper col scrollAnimation">
         <h2 class="main-title">{{ $t('ProjectCommon.ProjectTitle01') }}</h2>
@@ -29,12 +32,13 @@
           <li class="list dot dot-secondary">{{ $t('ProjectAnime.Problem03') }}</li>
         </ul>
       </div>
+      <!-- project detail info end-->
       <div class="content-wrapper col">
         <h2 class="main-title scrollAnimation">{{ $t('ProjectCommon.ProjectTitle04') }}</h2>
         <div class="card-group col">
           <div class="card scrollAnimation">
             <div class="card-head">
-              <div class="sub-title number-style">
+              <div class="n-title">
                 <span class="num">1</span>{{ $t('ProjectAnime.Process01') }}
               </div>
             </div>
@@ -54,7 +58,7 @@
           </div>
           <div class="card scrollAnimation">
             <div class="card-head">
-              <div class="sub-title number-style">
+              <div class="n-title">
                 <span class="num">2</span>{{ $t('ProjectAnime.Process02') }}
               </div>
             </div>
@@ -67,7 +71,7 @@
           </div>
           <div class="card scrollAnimation">
             <div class="card-head">
-              <div class="sub-title number-style">
+              <div class="n-title">
                 <span class="num">3</span>{{ $t('ProjectAnime.Process03') }}
               </div>
             </div>
@@ -75,12 +79,12 @@
               <div class="content-img-wrapper">
                 <img class="content-img-body" src="/IMG/anime_guideLine.png" alt="guideLine">
               </div>
-              <div class="content-text">{{ $t('ProjectAnime.Process03ListContent01') }}</div>
+              <p class="content-text">{{ $t('ProjectAnime.Process03ListContent01') }}</p>
             </div>
           </div>
           <div class="card scrollAnimation">
             <div class="card-head">
-              <div class="sub-title number-style">
+              <div class="n-title">
                 <span class="num">4</span>{{ $t('ProjectAnime.Process04') }}
               </div>
             </div>
@@ -157,7 +161,7 @@
           </div>
           <div class="card scrollAnimation">
             <div class="card-head">
-              <div class="sub-title number-style">
+              <div class="n-title">
                 <span class="num">5</span>{{ $t('ProjectAnime.Process05') }}
               </div>
             </div>

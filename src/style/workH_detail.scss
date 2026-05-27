@@ -69,6 +69,7 @@
     font-size: var(--font_body_small);
   }
 }
+// Project Foutune Seeking content start
 .card-wrapper {
   position: relative;
   display: flex;
@@ -115,6 +116,8 @@
     }
   }
 }
+// Project Foutune Seeking content end
+
 .btn-group {
   position: relative;
   margin: auto;
@@ -134,7 +137,13 @@
 }
 
 .scrollAnimation {
-  animation: animationLoading 1s ease-in 0.4s;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  &.scrolled {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .img-loading-wrapper {
   background-color: var(--gradient_20);
@@ -325,7 +334,7 @@
     }
   }
 }
-.number-style {
+.n-title {
   .num {
     flex-shrink: 0;
     display: flex;
@@ -357,7 +366,7 @@
       width: clamp(240px, 25dvw, 420px);
     }
   }
-  .list {
+  li {
     display: flex;
     font-size: var(--font_body_medium);
     color: var(--text_primary);
@@ -451,26 +460,26 @@
 }
 .container-wrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;  
   row-gap: clamp(2.5rem, 7.5vw, 104px);
   margin: clamp(1rem, 7.5vw, 104px) auto;
   max-width: 1280px;
   width: 75%;
-  .content-text {
+  p {
     color: var(--text_primary);
   }
-  .main-title {
+  h2 {
     font-size: clamp(1.2rem, 2vw, var(--font_title_large));
   }
-  .sub-title {
+  .n-title {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
     font-size: clamp(1rem, 1.8vw, var(--font_title_small));
     line-height: 1.5;
-    font-weight: unset;
-    &.number-style {
-      display: flex;
-      align-items: center;
-      flex-wrap: nowrap;
-      gap: 8px;
-    }
+    font-weight: unset;    
   }
 }
 .content-img-wrapper {
