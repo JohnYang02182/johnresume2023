@@ -2,6 +2,7 @@ import MarkdownIt from 'markdown-it'
 import type Token from 'markdown-it/lib/token.mjs'
 import markdownItContainer from 'markdown-it-container'
 import markdownItAttrs from 'markdown-it-attrs'
+import markdownItTaskLists from 'markdown-it-task-lists'
 import DOMPurify from "dompurify"
 
 /**
@@ -20,13 +21,29 @@ function parseContainerAttrs(info: string): ContainerAttrs {
     const result: ContainerAttrs = { class: '', id: '' }
     if (!match) return result
     for (const part of match[1].trim().split(/\s+/)) {
-        if (part.startsWith('.')) result.class = part.slice(1)
+        if (part.startsWith('.')) result.class = result.class ? `${result.class} ${part.slice(1)}` : part.slice(1)
         else if (part.startsWith('#')) result.id = part.slice(1)
     }
     return result
 }
 
+function applyContainerAttrs(token: Token, info: string) {
+    const { class: cls, id } = parseContainerAttrs(info)
+    if (cls) token.attrJoin('class', cls)
+    if (id) token.attrSet('id', id)
+}
+
+function transferTokenAttrs(source: Token, target: Token) {
+    const cls = source.attrGet('class')
+    const id = source.attrGet('id')
+    if (cls) target.attrJoin('class', cls)
+    if (id) target.attrSet('id', id)
+}
+
 const md = new MarkdownIt({ html: true, linkify: true, typographer: true })
+
+// Plugin: [x] / [ ] task list items
+md.use(markdownItTaskLists, { label: true })
 
 /**
  * Custom container: ::: div {.my-class #unique-id} ... :::
@@ -38,7 +55,6 @@ md.use(markdownItContainer, 'div', {
         const token = tokens[idx]
         if (token.nesting === 1) {
             const cls = token.attrGet('class') ?? ''
-            console.log('cls = ', { cls: cls === '' ? 'empty string' : cls })
             const id = token.attrGet('id') ?? ''
             return `<div${cls ? ` class="${cls}"` : ''}${id ? ` id="${id}"` : ''}>\n`
         }
@@ -46,21 +62,24 @@ md.use(markdownItContainer, 'div', {
     },
 })
 
-/**
- * Core rule: pre-store container attrs on the token BEFORE markdown-it-attrs
- * strips {.class #id} from token.info.
- */
-md.core.ruler.before('normalize', 'container_attrs', (state) => {
-    for (const token of state.tokens) {
-        if (token.type === 'container_div_open') {
-            const { class: cls, id } = parseContainerAttrs(token.info)
-            if (cls) token.attrSet('class', cls)
-            if (id) token.attrSet('id', id)
+for (const listTag of ['ul', 'ol']) {
+    md.use(markdownItContainer, listTag, {
+        validate: (params: string) => params.trim().startsWith(listTag),
+        render(tokens: Token[], idx: number) {
+            if (tokens[idx].nesting === 1) {
+                const listToken = tokens[idx + 1]
+                const expectedType = listTag === 'ul' ? 'bullet_list_open' : 'ordered_list_open'
+                if (listToken?.type === expectedType) {
+                    transferTokenAttrs(tokens[idx], listToken)
+                    applyContainerAttrs(listToken, tokens[idx].info)
+                }
+            }
+            return ''
         }
-    }
-})
+    })
+}
 
-// Plugin: {.class #id} attributes on inline elements — must load AFTER core rule
+// Plugin: {.class #id} attributes on inline elements and block containers.
 md.use(markdownItAttrs)
 
 /**
@@ -68,6 +87,10 @@ md.use(markdownItAttrs)
  * Supports:
  *   ::: div {.my-class #unique-id}
  *   content
+ *   :::
+ *
+ *   ::: ul {.list-wrapper}
+ *   - list item
  *   :::
  *
  *   inline text {.class #id}

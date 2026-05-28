@@ -79,7 +79,6 @@ const personalData: Ref<CardInfoDetail> = ref(
   route.meta.msg1 as CardInfoDetail
 );
 
-const currentComponent = ref();
 const currentID = ref();
 
 // define async components with markRaw

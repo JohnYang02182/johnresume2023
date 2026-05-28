@@ -1,5 +1,9 @@
 @import "components/_banner.scss";
 
+:deep() {
+  @import "content_detail.scss";
+}
+
 @keyframes opacityShowUp {
   0% {
     opacity: 0;
@@ -354,9 +358,11 @@
   color: var(--primary);
 }
 .content-wrapper {
+  display: flex;
+  flex-direction: column;
   row-gap: 20px;
 }
-.list-wrapper {
+ul,ol {
   display: grid;
   row-gap: clamp(0px, 1vw, 4px);
   &.row-2 {
