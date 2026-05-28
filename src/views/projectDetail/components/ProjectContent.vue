@@ -1,11 +1,11 @@
 <template>
     <div>
         <!-- Metadata (frontmatter) -->
-        <pre v-if="Object.keys(metadata).length">{{ JSON.stringify(metadata, null, 2) }}</pre>
+        <!-- <pre v-if="Object.keys(metadata).length">{{ JSON.stringify(metadata, null, 2) }}</pre> -->
 
         <!-- Rendered HTML content -->
-         <div class="container-wrapper">
-            <div v-html="htmlContent" />
+         <div class="container-wrapper project-markdown">
+            <div class="markdown-body" v-html="htmlContent" />
          </div>
     </div>
 </template>
@@ -41,4 +41,7 @@ const getMdContent = async () => {
 onMounted(() => {
     getMdContent()
 })
-</script> 
+</script>
+<style lang="scss" scoped>
+@import "../../../style/workH_detail.scss";
+</style>

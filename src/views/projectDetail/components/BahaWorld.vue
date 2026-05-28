@@ -149,13 +149,8 @@
 import {
   onMounted,
   ref,
-  Ref,
-  ComponentPublicInstance,
   onUnmounted,
-  nextTick,
-  computed,
-  ImgHTMLAttributes,
-  VNodeRef
+  nextTick
 } from "vue";
 import { observeScroll, imageLazyLoad } from "../../../../util/lazyLoad";
 import LoadingImg from "/@/components/LoadingImg.vue";
