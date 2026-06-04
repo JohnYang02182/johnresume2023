@@ -54,6 +54,10 @@
     font-weight: 400;
   }
 
+  li.shadow-main {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
   a {
     color: var(--primary);
     text-decoration: underline;
@@ -84,6 +88,24 @@
       display: flex;
       flex-direction: column;
       row-gap: 20px;
+  }
+
+  .card-body {
+    display: grid;
+    gap: 12px;
+    margin-block-start: 1em;
+    ul, ol {
+      display: grid;
+      gap: 0.5rem;
+      padding-left: 1.25rem;
+    }
+    li {
+      position: relative;
+      padding: 1rem;
+      align-items: start;
+      gap: 0.25rem;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
   }
 
   img {

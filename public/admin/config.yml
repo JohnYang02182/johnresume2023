@@ -1,0 +1,42 @@
+backend:
+  name: github
+  repo: JohnYang02182/johnportfolio-content
+  branch: main
+  commit_messages:
+    create: '"content: add {{collection}} - {{slug}}" [skip netlify]'
+    update: '"content: update {{collection}} - {{slug}}" [skip netlify]'
+    delete: '"content: delete {{collection}} - {{slug}}" [skip netlify]'
+    uploadMedia: '"content: upload media {{path}}" [skip netlify]'
+    deleteMedia: '"content: delete media {{path}}" [skip netlify]'
+media_folder: public/uploads
+public_folder: /uploads
+
+i18n:
+  structure: multiple_folders
+  locales: [zh-TW, en, ja]
+  default_locale: zh-TW
+
+collections:
+  - name: projects
+    label: Projects
+    folder: content/projects
+    create: true
+    slug: "{{fields.name}}"
+    format: frontmatter
+    extension: md
+    i18n: true
+    fields:
+      - { label: Name, name: name, widget: string, i18n: duplicate }
+      - { label: Banner Image, name: bannerImg, widget: image, i18n: duplicate }
+      - { label: Title, name: title, widget: string, i18n: duplicate }
+      - { label: Link, name: link, widget: string, required: false, i18n: duplicate }
+      - { label: Team, name: team, widget: string, i18n: duplicate }
+      - { label: Period, name: period, widget: string, i18n: duplicate }
+      - { label: Character, name: character, widget: string, i18n: duplicate }
+      - label: Tags
+        name: tags
+        widget: list
+        field: { label: Tag, name: tag, widget: string, i18n: duplicate }
+        i18n: duplicate
+      - { label: Side Project, name: sideProject, widget: boolean, default: false, i18n: duplicate }
+      - { label: Body, name: body, widget: markdown, i18n: true }
