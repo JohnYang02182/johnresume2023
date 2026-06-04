@@ -2,6 +2,7 @@ backend:
   name: github
   repo: JohnYang02182/johnportfolio-content
   branch: main
+  base_url: https://johnresume2023.pages.dev
   commit_messages:
     create: '"content: add {{collection}} - {{slug}}" [skip netlify]'
     update: '"content: update {{collection}} - {{slug}}" [skip netlify]'
