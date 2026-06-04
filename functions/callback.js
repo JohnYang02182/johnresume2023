@@ -1,14 +1,6 @@
 export async function onRequestGet({ request, env }) {
     const { searchParams } = new URL(request.url)
     const code = searchParams.get('code')
-    const state = searchParams.get('state')
-
-    const cookieHeader = request.headers.get('Cookie') ?? ''
-    const [, csrfToken] = cookieHeader.match(/\bcsrf-token=github_([0-9a-f]{32})\b/) ?? []
-
-    if (!csrfToken || state !== csrfToken) {
-        return outputHTML({ error: 'Potential CSRF attack detected.', errorCode: 'CSRF_DETECTED' })
-    }
 
     if (!code) {
         return outputHTML({ error: 'Failed to receive an authorization code.', errorCode: 'AUTH_CODE_REQUEST_FAILED' })
