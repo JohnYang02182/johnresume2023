@@ -1,6 +1,30 @@
+async function verifyState(secret, state) {
+    const [timestamp, receivedHex] = state.split('.')
+    if (!timestamp || !receivedHex) return false
+
+    // Reject if older than 10 minutes
+    if (Date.now() - parseInt(timestamp) > 600_000) return false
+
+    const key = await crypto.subtle.importKey(
+        'raw',
+        new TextEncoder().encode(secret),
+        { name: 'HMAC', hash: 'SHA-256' },
+        false,
+        ['sign']
+    )
+    const sig = await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(timestamp))
+    const expectedHex = Array.from(new Uint8Array(sig)).map(b => b.toString(16).padStart(2, '0')).join('')
+    return receivedHex === expectedHex
+}
+
 export async function onRequestGet({ request, env }) {
     const { searchParams } = new URL(request.url)
     const code = searchParams.get('code')
+    const state = searchParams.get('state')
+
+    if (!state || !(await verifyState(env.CSRF_SECRET, state))) {
+        return outputHTML({ error: 'Potential CSRF attack detected.', errorCode: 'CSRF_DETECTED' })
+    }
 
     if (!code) {
         return outputHTML({ error: 'Failed to receive an authorization code.', errorCode: 'AUTH_CODE_REQUEST_FAILED' })
