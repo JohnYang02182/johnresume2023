@@ -83,7 +83,7 @@ const watchWidth = computed(() => {
   windowWidth.value = window.innerWidth;
   return windowWidth.value;
 });
-
+console.log('local i18n = ', i18n.locale.value)
 onMounted(() => {
   windowWidth.value = window.innerWidth;
 });

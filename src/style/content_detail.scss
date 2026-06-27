@@ -85,7 +85,7 @@
   }
 
   .content-wrapper {
-      display: flex;
+      display: grid;
       flex-direction: column;
       row-gap: 20px;
   }
@@ -135,5 +135,8 @@
     overflow: auto;
     border-radius: .5rem;
     background-color: var(--gradient_10);
+  }
+  :where(ul, ol) {
+    list-style: initial;
   }
 }

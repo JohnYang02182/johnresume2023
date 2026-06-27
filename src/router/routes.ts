@@ -5,11 +5,12 @@ const Home = () => import('../views/Home.vue')
 const Personal = () => import('../views/Personal.vue')
 const Project = () => import('../views/Project.vue')
 const ProjectDetail = () => import('../views/projectDetail/ProjectDetail.vue')
+const CmsProjectDetail = () => import('../views/projectDetail/CmsProjectDetail.vue')
 const ErrorPage = () => import('../components/Error.vue')
 
 const routesParams: Array<RouteRecordRaw> = [
   {
-    path: '/', name: 'Home', 
+    path: '/', name: 'Home',
     component: Home,
     meta: {
       title: 'Index',
@@ -18,7 +19,7 @@ const routesParams: Array<RouteRecordRaw> = [
     }
   },
   {
-    path: '/:pathMatch(.*)*', name: 'Error', component: ErrorPage, 
+    path: '/:pathMatch(.*)*', name: 'Error', component: ErrorPage,
     meta: {
       title: 'Error',
       describtion: 'Error page',
@@ -39,17 +40,17 @@ const routesParams: Array<RouteRecordRaw> = [
       title: 'Project',
       describtion: 'Project page',
       layout: 'Base'
-    },
-    children: [
-      {
-        path: 'detail/:id',
-        name: 'ProjectDetail',
-        component: ProjectDetail, 
-        meta: {
-          layout: 'Blank'
-        }
-      }
-    ]
+    }
+  }, {
+    path: '/project/detail/:id', name: 'ProjectDetail', component: ProjectDetail,
+    meta: {
+      layout: 'Blank'
+    }
+  }, {
+    path: '/project/cms/:slug', name: 'CmsProjectDetail', component: CmsProjectDetail,
+    meta: {
+      layout: 'Blank'
+    }
   }
 ]
 export default routesParams

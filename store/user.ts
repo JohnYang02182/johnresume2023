@@ -12,12 +12,13 @@ const state: State = {
 export const useUserStore = defineStore('user', {
   state: () => state,
   actions: {
-    async setLanguage(langParam: string){
+    async setLanguage(langParam: string) {
       this.lang = langParam
       localStorage.setItem('lang', langParam)
     },
     getLanguage() {
       const thisLang = localStorage.getItem('lang') ?? 'en'
+      console.log('getLanguage', thisLang)
       this.setLanguage(thisLang)
       this.lang = thisLang
     },

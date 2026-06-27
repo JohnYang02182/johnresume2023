@@ -1,26 +1,7 @@
-export interface CardInfoDetail {
-  name: string
-  bannerImg: string
-  title: string
-  link?: string
-  team: string
-  period: string
-  character: string
-  tags: string[]
-  sideProject: boolean
-}
+import type { CardInfoDetail } from "/@/interface/CardInfoDetail";
+export type { CardInfoDetail } from "/@/interface/CardInfoDetail";
+
 export const designCardInfo: CardInfoDetail[] = [
-  {
-    name: 'ProjectContent',
-    bannerImg: 'pic_vue.png',
-    title: '',
-    link: '',
-    team: 'Team.Myself',
-    character: 'Character.FEDeveloper',
-    period: '2023',
-    tags: ['Skill.TypeScript', 'Skill.JavaScript', 'Skill.Vue3', 'Skill.Vite', 'Skill.AI', 'Skill.PS'],
-    sideProject: true
-  },
   {
     name: 'BahaWorld',
     bannerImg: 'braver_banner.png',
@@ -73,17 +54,14 @@ export const designCardInfo: CardInfoDetail[] = [
     tags: ['Skill.TypeScript', 'Skill.JavaScript', 'Skill.Vue3', 'Skill.Vite', 'Skill.AI', 'Skill.PS'],
     sideProject: true
   }
-
-  // , {
-  //   // params: 'https://www.behance.net/gallery/56143553/APP_Project',
-  //   name: 'HuanShunDetail',
-  //   bannerImg: 'https://mir-s3-cdn-cf.behance.net/projects/404/d6a21a56143553.Y3JvcCwyMjkyLDE3OTQsOTAsNjc.png',
-  //   title: 'HomeProfolio.HuanShunTitle',
+  //   name: 'ProjectContent',
+  //   bannerImg: 'pic_vue.png',
+  //   title: 'SideProject.BuildCMSTitle',
   //   link: '',
-  //   team: 'Team.HuanShunDevelope',
-  //   character: 'Character.UIUXDesigner',
-  //   period: '2018',
-  //   tags: ['Skill.UIAndUX', 'Skill.Sketch', 'Skill.iOS', 'Skill.Andriod', 'Skill.AI', 'Skill.PS'],
-  //   sideProject: false
+  //   team: 'Team.Myself',
+  //   character: 'Character.FEDeveloper',
+  //   period: '2026',
+  //   tags: ['Skill.TypeScript', 'Skill.JavaScript', 'Skill.Vue3', 'Skill.Vite', 'Skill.AI', 'Skill.PS'],
+  //   sideProject: true
   // }
 ].reverse()

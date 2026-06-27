@@ -1,12 +1,12 @@
 {
-  "key": "jp",
+  "key": "ja",
   "HeaderIntroduce": "初めまして、私は John と申します。",
   "Lang": "日本語",
   "LangLevel.Business": "ビジネスレベル",
   "LangLevel.Native": "ネイティブスピーカー",
   "LangLevel.Passed": "{exam} 合格",
-  "Common.JP": "日本語",
-  "Common.CH": "中国語（繁体字）",
+  "Common.JA": "日本語",
+  "Common.ZH-TW": "中国語（繁体字）",
   "Common.EN": "英語",
   "CommonTitle.MyWork": "私の作品集",
   "CommonTitle.Title": "プロジェクト",
@@ -58,6 +58,7 @@
   "Skill.UNOCSS": "UNOCSS",
   "Nav.HomePageTag": "ホームページ",
   "Nav.InfoPageTag": "自己紹介",
+  "Nav.ProjectsList": "作品集",
   "Home.MainTitle": "初めまして、私は JohnYang と申します。",
   "Home.MainSelfIntro": "webデザイナー、フロントエンドエンジニアとして勤めています。</br>",
   "HomeProfolio.AnimePlateFormTitle": "動画配信サービスー動畫瘋（ドンファフン）",
@@ -201,5 +202,6 @@
   "SideProjectFortune.PointTitle01": "機能説明",
   "SideProjectFortune.Point01": "このおみくじには”大吉、吉、末吉、大凶”の合計四種類がある。",
   "SideProjectFortune.Point02": "アニメション実行中の場合は、クリックイベントなどが無効になる。",
-  "SideProjectFortune.Process01Title": "おみくじ"
+  "SideProjectFortune.Process01Title": "おみくじ",
+  "SideProject.BuildCMSTitle": "ポートフォリオ管理用のCMSを構築する"
 }

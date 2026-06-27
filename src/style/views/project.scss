@@ -1,0 +1,42 @@
+.cms-status {
+  padding: 24px;
+  color: var(--text_primary);
+
+  &--error {
+    color: #e74c3c;
+  }
+}
+
+.cms-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px 0;
+
+  &__btn {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text_primary);
+    font-size: 18px;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+
+    &:not(:disabled):hover {
+      border-color: #00b4d8;
+      color: #00b4d8;
+    }
+  }
+
+  &__info {
+    font-size: var(--font_body_small);
+    color: var(--text_primary);
+  }
+}
