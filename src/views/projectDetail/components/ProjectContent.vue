@@ -10,37 +10,33 @@
     </div>
 </template>
 <script setup lang="ts">
-import { ref, onMounted } from "vue"
+import { ref, watch } from "vue"
+import { useI18n } from "vue-i18n"
 import { renderMarkdown } from "/@/methods/markdownRenderer"
 import { parseFrontmatter } from "/@/methods/parseFrontmatter"
 import { getMarkdown } from "/@/methods/markdownAPI"
 import { ENDPOINTS } from "/@/api/ENDPOINTS"
 
-const currentAPI = ENDPOINTS.GITHUBREPOCMSTW;
-const metadata = ref<Record<string, unknown>>({})
+const props = defineProps<{ slug?: string }>()
+
+const { locale } = useI18n()
 const htmlContent = ref("")
 
 const getMdContent = async () => {
-    const isError = ref(false)
+    const currentAPI = ENDPOINTS.CMSGITHUBMD(
+        locale.value as 'en' | 'ja' | 'zh-TW',
+        props.slug
+    )
     try {
         const raw = await getMarkdown(currentAPI)
-        if(typeof raw === 'number') {
-            isError.value = true
-            console.log(`Failed to fetch markdown content from ${currentAPI}: Status code ${raw}`)
-            return
-        }
-        // 解析 frontmatter → metadata (JSON) + markdown content
-        const { data, content } = parseFrontmatter(raw)
-        metadata.value = data
+        const { content } = parseFrontmatter(raw)
         htmlContent.value = renderMarkdown(content)
     } catch (error) {
         console.error(`Failed to fetch markdown content from ${currentAPI}:`, error)
     }
 }
 
-onMounted(() => {
-    getMdContent()
-})
+watch([locale, () => props.slug], getMdContent, { immediate: true })
 </script>
 <style lang="scss" scoped>
 @import "../../../style/workH_detail.scss";

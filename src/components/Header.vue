@@ -50,6 +50,10 @@ const navList: Array<NavList> = [{
   name: 'Personal',
   path: '/personal',
   transName: 'Nav.InfoPageTag'
+},{
+  name: 'Project',
+  path: '/project',
+  transName: 'Nav.ProjectsList'
 }]
 const isMobile = ref(false)
 const deviceWitch = ref(0)

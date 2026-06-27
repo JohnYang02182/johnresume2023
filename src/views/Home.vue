@@ -2,6 +2,7 @@
   <div class="container-outer">
     <div class="container">
       <div class="section-outer" ref="bannerWrapper">
+        <!-- Banner Section start -->
         <div class="section section-banner">
           <div class="banner_intro">
             <h2 class="section-main-title home-title">
@@ -10,12 +11,9 @@
             <div class="main-intro">
               {{ $t("Home.MainSelfIntro") }}
             </div>
-            <a
-              href="javascript:void(0)"
-              @click="router.push('/personal')"
-              class="button primary-button"
-              >{{ $t("Nav.InfoPageTag") }}</a
-            >
+            <router-link to="/personal" class="button primary-button">
+              {{ $t("Nav.InfoPageTag") }}
+            </router-link>
           </div>
           <div class="banner_image">
             <img
@@ -45,9 +43,12 @@
             />
           </div>
         </div>
+        <!-- Banner Section end -->
       </div>
       <div class="divid-line"></div>
+      <!-- Project files section start -->
       <div class="section section-profile">
+        <!-- Project filter start-->
         <div class="section-main-title home-title has-options">
           <font-awesome-icon class="icon-home-title" icon="fa-solid fa-flag" />
           <h2>{{ $t("CommonTitle.MyWork") }}</h2>
@@ -70,18 +71,15 @@
             >
               {{ $t("CommonTitle.SideProject") }}
             </li>
-            <!-- <li>{{ $t("CommonTitle.Portfolio") }}</li>
-            <li>{{ $t("CommonTitle.SiteProject") }}</li> -->
           </ul>
         </div>
+        <!-- Project filter end -->
+        <!-- Project cards start-->
         <router-link
           class="profile_card"
-          v-for="(item, index) in listCardInfo"
-          :key="index"
-          :to="{
-            name: 'ProjectDetail',
-            params: { id: (index + 1).toString() }
-          }"
+          v-for="item in listCardInfo"
+          :key="item.name"
+          :to="getStaticProjectRoute(item)"
         >
           <LoadingImg
             class="profile_card-pic img-loading-wrapper img-loading-light"
@@ -89,77 +87,31 @@
             :IsLight="true"
             :ImageUrl="item.bannerImg"
           />
-          <!-- <div class="profile_card-pic img-loading-wrapper img-loading-light">
-						<img class="img-loading" :src="`${ getImgUrl(item.bannerImg) ? item.bannerImg : getImgUrl(item.bannerImg)}`" alt="profile" />
-					</div> -->
           <div class="profile_card-text">
             <p class="headline_02">{{ item.title ? $t(item.title) : "" }}</p>
             <p class="content-text time">{{ item.period ? item.period : "" }}</p>
             <div class="tips-area">
               <span
                 class="tips-text"
-                v-for="(tags, index) in item.tags"
-                :key="index"
-                >{{ $t(tags) }}</span
+                v-for="tag in item.tags"
+                :key="tag"
+                >{{ $t(tag) }}</span
               >
             </div>
           </div>
         </router-link>
+        <!-- Project cards end-->
       </div>
+      <!-- Project files section end -->
       <div class="divid-line" />
     </div>
   </div>
 </template>
 <script lang="ts" setup>
-import { ref, onMounted } from "vue";
 import LoadingImg from "/@/components/LoadingImg.vue";
-import { onBeforeRouteUpdate } from "vue-router";
-import { useMouse } from "@vueuse/core";
-import type { UseMouseEventExtractor } from "@vueuse/core";
-import router from "/@/router/index";
-// import { getImgUrl } from '../../util/globalSrc'
-// import { observeScroll, imageLazyLoad } from '../../util/lazyLoad'
-import { designCardInfo } from "/@/setting/profolioCard";
+import { useHomeBanner } from "/@/hooks/useHomeBanner";
+import { usePortfolioCards } from "/@/hooks/usePortfolioCards";
 
-const userData = ref();
-const bannerWrapper = ref<HTMLElement | null>(null);
-const extractor: UseMouseEventExtractor = (event) =>
-  event instanceof Touch ? null : [event.x, event.offsetY];
-
-const windowWidth = ref(window.innerWidth);
-// console.log("windowwidth ", windowWidth.value);
-const { x, y } = useMouse({
-  target: bannerWrapper,
-  touch: false,
-  type: extractor
-});
-
-const listCardInfo = ref([...designCardInfo]);
-const listType = ref("all");
-
-function listProfileCard(type: string): void {
-  if (type === "all") {
-    listCardInfo.value = [...designCardInfo];
-    listType.value = "all";
-  } else if (type === "profolio") {
-    listCardInfo.value = designCardInfo.filter(
-      (item) => item.sideProject === false
-    );
-    listType.value = "profolio";
-  } else if (type === "sideProject") {
-    listCardInfo.value = designCardInfo.filter(
-      (item) => item.sideProject === true
-    );
-    listType.value = "sideProject";
-  }
-}
-
-onBeforeRouteUpdate(async (to, from) => {
-  // only fetch the user if the id changed as maybe only the query or the hash changed
-  if (to.params.id !== from.params.id) {
-    userData.value = designCardInfo.find(
-      (element, index) => (index + 1).toString() === to.params.id
-    );
-  }
-});
+const { bannerWrapper, windowWidth, x, y } = useHomeBanner();
+const { listCardInfo, listType, listProfileCard, getStaticProjectRoute } = usePortfolioCards();
 </script>

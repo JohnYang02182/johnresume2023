@@ -349,3 +349,47 @@ npm run test:coverage # カバレッジレポートを生成
 
 英語版（`README.en.md`）と繁体字中国語版（`README.zh-TW.md`）の README を新規作成し、各言語版の冒頭に言語切替リンクを追加した。
 
+---
+
+## :computer: ローカル開発の起動手順
+
+2 つのターミナルを同時に起動する必要があります。
+
+**Terminal 1 — Cloudflare Pages Functions（API）を起動**
+
+```bash
+npm run build
+npx wrangler pages dev ./dist --port 8788
+```
+
+> Cloudflare Workers runtime をシミュレートし、`functions/` 以下の API（例：`/api/projects`）を実行します。
+> Worker のコードを変更した場合は再実行が必要です。
+
+**Terminal 2 — Vue 開発サーバーを起動**
+
+```bash
+npm run dev
+```
+
+> Vite dev server（port 3000）を起動します。ブラウザで `http://localhost:3000` を開いてください。
+> `/api/*` リクエストは自動的に Terminal 1 の port 8788 へ proxy されます。
+> Vue / SCSS / TS のコード変更は即時ホットリロードされます。
+
+**リクエストの流れ**
+
+```
+ブラウザ（localhost:3000）
+  ↓ /api/* リクエスト
+Vite proxy
+  ↓
+wrangler（localhost:8788）→ GitHub API を呼び出し
+```
+
+**Cloudflare Pages 環境変数（デプロイ前に設定が必要）**
+
+| 変数名 | 説明 |
+|--------|------|
+| `GITHUB_TOKEN` | GitHub Fine-grained PAT（`johnportfolio-content` リポジトリの Contents: Read-only） |
+| `GITHUB_CLIENT_ID` | GitHub OAuth App Client ID（CMS ログイン用） |
+| `G_C_S` | GitHub OAuth App Client Secret（CMS ログイン用） |
+

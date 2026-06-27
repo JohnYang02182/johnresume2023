@@ -1,12 +1,12 @@
 {
-  "key": "ch",
+  "key": "zh-TW",
   "HeaderIntroduce": "hi, 您好, 我是 John ：）",
   "Lang": "中文",
   "LangLevel.Business": "商務應用",
   "LangLevel.Native": "母語",
   "LangLevel.Passed": "{exam} 合格",
-  "Common.JP": "日文",
-  "Common.CH": "繁體中文",
+  "Common.JA": "日文",
+  "Common.ZH-TW": "繁體中文",
   "Common.EN": "英文",
   "CommonTitle.MyWork": "我的作品集",
   "CommonTitle.Title": "標題",
@@ -58,6 +58,7 @@
   "Skill.UNOCSS": "UNOCSS",
   "Nav.HomePageTag": "Home",
   "Nav.InfoPageTag": "About me",
+  "Nav.ProjectsList": "List",
   "Home.MainTitle": "hi, 您好, 我是 John ：）",
   "Home.MainSelfIntro": "是一名網頁設計師 ＆ 前端工程師。</br>喜歡研究各式前端的新技術以及網頁設計的效果，希望能與大家多多交流^__^",
   "HomeProfolio.AnimePlateFormTitle": "動畫瘋改版",
@@ -201,5 +202,6 @@
   "SideProjectFortune.PointTitle01": "要點說明：",
   "SideProjectFortune.Point01": "總共有四種簽，分別是 ’大吉‘、‘吉’、’末吉‘、’大凶‘。",
   "SideProjectFortune.Point02": "在翻牌動畫進行時點擊按鈕將不會觸發任何事件。",
-  "SideProjectFortune.Process01Title": "日式抽籤"
+  "SideProjectFortune.Process01Title": "日式抽籤",
+  "SideProject.BuildCMSTitle": "建出管理 Portfolio 的 CMS"
 }

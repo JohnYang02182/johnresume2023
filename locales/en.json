@@ -5,8 +5,8 @@
   "LangLevel.Business": "Business Level",
   "LangLevel.Native": "Native",
   "LangLevel.Passed": "{exam} passed",
-  "Common.JP": "Japanese",
-  "Common.CH": "Traditional Chinese",
+  "Common.JA": "Japanese",
+  "Common.ZH-TW": "Traditional Chinese",
   "Common.EN": "English",
   "CommonTitle.MyWork": "MY WORKS",
   "CommonTitle.Title": "Title",
@@ -58,6 +58,7 @@
   "Skill.UNOCSS": "UNOCSS",
   "Nav.HomePageTag": "Home",
   "Nav.InfoPageTag": "About me",
+  "Nav.ProjectsList": "List",
   "Home.MainTitle": "Hello, my name is John, Nice to meet you：）",
   "Home.MainSelfIntro": "A front-end developer & designer</br>always curious about the lastest web development trends and technology.",
   "HomeProfolio.AnimePlateFormTitle": "Animate PlatFormー動畫瘋",
@@ -201,5 +202,6 @@
   "SideProjectFortune.PointTitle01": "Point：",
   "SideProjectFortune.Point01": "There are four kinds of omikuji: '大吉' (daikiji), '吉' (kiji), '末吉' (suekiji), and '大凶' (daikyou).",
   "SideProjectFortune.Point02": "The click event won't be activated while the animation is in progress.",
-  "SideProjectFortune.Process01Title": "Fortune-seeking"
+  "SideProjectFortune.Process01Title": "Fortune-seeking",
+  "SideProject.BuildCMSTitle": "Build a CMS for portfolio management."
 }

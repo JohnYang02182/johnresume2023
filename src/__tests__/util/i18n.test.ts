@@ -7,11 +7,11 @@ describe('i18n util', () => {
             expect(SUPPORT_LOCALES).toHaveLength(3)
         })
 
-        it('應包含 en、jp、ch', () => {
+        it('應包含 en、ja、zh-TW', () => {
             const options = SUPPORT_LOCALES.map((l) => l.langOption)
             expect(options).toContain('en')
-            expect(options).toContain('jp')
-            expect(options).toContain('ch')
+            expect(options).toContain('ja')
+            expect(options).toContain('zh-TW')
         })
 
         it('每個語言項目應有 langOption 與 langName', () => {
@@ -28,14 +28,14 @@ describe('i18n util', () => {
             expect(en?.langName).toBe('English')
         })
 
-        it('日本語 對應 jp', () => {
-            const jp = SUPPORT_LOCALES.find((l) => l.langOption === 'jp')
-            expect(jp?.langName).toBe('日本語')
+        it('日本語 對應 ja', () => {
+            const ja = SUPPORT_LOCALES.find((l) => l.langOption === 'ja')
+            expect(ja?.langName).toBe('日本語')
         })
 
-        it('繁體中文 對應 ch', () => {
-            const ch = SUPPORT_LOCALES.find((l) => l.langOption === 'ch')
-            expect(ch?.langName).toBe('繁體中文')
+        it('繁體中文 對應 zh-TW', () => {
+            const zhTW = SUPPORT_LOCALES.find((l) => l.langOption === 'zh-TW')
+            expect(zhTW?.langName).toBe('繁體中文')
         })
     })
 })

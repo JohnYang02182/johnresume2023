@@ -329,3 +329,48 @@ npm run test:coverage # 產生覆蓋率報告
 ### 新增多語系 README
 
 新增英文版（`README.en.md`）與繁體中文版（`README.zh-TW.md`），並在各語系頂部加入語言切換列。
+
+---
+
+## :computer: 本地開發啟動指令
+
+需要開啟兩個 Terminal 同時執行：
+
+**Terminal 1 — 啟動 Vue 開發伺服器（先跑）**
+
+```bash
+npm run dev
+```
+
+> 啟動 Vite dev server（port 3000），提供 HMR 熱更新。
+
+**Terminal 2 — 啟動 Cloudflare Pages Functions（後跑）**
+
+```bash
+npx wrangler pages dev --proxy 3000 --port 8788
+```
+
+> wrangler 代理 Vite（port 3000）並在 port 8788 執行 Pages Functions。
+> 修改 `functions/` 下的 Worker 程式碼會自動 reload，不需重啟。
+
+**瀏覽器開啟 `http://localhost:8788`（不是 3000）**
+
+> 透過 8788 才能同時使用 Vite HMR 與 `/api/*` Functions。
+
+**請求流程**
+
+```
+瀏覽器（localhost:3000）
+  ↓ /api/* 請求
+Vite proxy
+  ↓
+wrangler（localhost:8788）→ 呼叫 GitHub API
+```
+
+**Cloudflare Pages 環境變數（部署前需設定）**
+
+| 變數名 | 說明 |
+|--------|------|
+| `GITHUB_TOKEN` | GitHub Fine-grained PAT，對 `johnportfolio-content` repo 設定 Contents: Read-only |
+| `GITHUB_CLIENT_ID` | GitHub OAuth App Client ID（CMS 登入用） |
+| `G_C_S` | GitHub OAuth App Client Secret（CMS 登入用） |

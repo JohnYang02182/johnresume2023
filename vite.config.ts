@@ -54,6 +54,11 @@ export default defineConfig({
   base: '/',
   server: {
     port: 3000,
-    strictPort: true
+    strictPort: true,
+    proxy: {
+      // Forward /api/* to wrangler pages dev (default port 8788) during local development.
+      // Run: npx wrangler pages dev ./dist --port 8788
+      '/api': 'http://localhost:8788'
+    }
   }
 })

@@ -25,7 +25,7 @@
           </li>
           <li class="list">
             <p class="list-title">{{ $t("CommonTitle.Team") }}:</p>
-            <span class="list-content">{{ $t(personalData.team) }}</span>
+            <span class="list-content">{{ personalData.team ? $t(personalData.team) : "" }}</span>
           </li>
           <li class="list">
             <p class="list-title">{{ $t("CommonTitle.Character") }}:</p>
@@ -70,7 +70,8 @@ import Maintainance from "/@/components/Maintainance.vue";
 // import PortfolioRecord from './components/PortfolioRecord.vue'
 // import ChatWithChatGPT from './components/ChatWithChatGPT.vue'
 import Loading from "/@/components/Loading.vue";
-import { CardInfoDetail, designCardInfo } from "/@/setting/profolioCard";
+import type { CardInfoDetail } from "/@/interface/CardInfoDetail";
+import { designCardInfo } from "/@/setting/profolioCard";
 const props = defineProps({
   projectTitle: String
 });
@@ -93,9 +94,7 @@ const componentMap = {
   ),
   4: markRaw(defineAsyncComponent(() => import("./components/BahaECShop.vue"))),
   5: markRaw(defineAsyncComponent(() => import("./components/BahaWorld.vue"))),
-  6: markRaw(defineAsyncComponent(() => import("./components/ProjectContent.vue")))
 };
-
 currentID.value =
   typeof route.params.id === "string" ? parseInt(route.params.id) : 0;
 

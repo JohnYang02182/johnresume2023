@@ -5,10 +5,10 @@ export const SUPPORT_LOCALES = [
     langOption: 'en',
     langName: 'English'
   }, {
-    langOption: 'jp',
+    langOption: 'ja',
     langName: '日本語'
   }, {
-    langOption: 'ch',
+    langOption: 'zh-TW',
     langName: '繁體中文'
   }
 ]
@@ -24,11 +24,10 @@ export function setupI18n() {
   })
   try {
     // console.log('setmes', localStorage.getItem('lang') )
-    i18n.global.locale.value = localStorage.getItem('lang') ? localStorage.getItem('lang')! : 'en'
-    // console.log('global',i18n.global.locale.value)
+    i18n.global.locale.value = localStorage.getItem('lang') ? (localStorage.getItem('lang')! as 'en' | 'ja' | 'zh-TW') : 'en'
   } finally {
-      document.querySelector('html')!.setAttribute('lang', localStorage.getItem('lang') ?? 'en')
-      return i18n
+    document.querySelector('html')!.setAttribute('lang', localStorage.getItem('lang') ?? 'en')
+    return i18n
   }
 }
 

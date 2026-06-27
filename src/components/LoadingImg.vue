@@ -44,12 +44,15 @@ onMounted(() => {
 });
 
 const getImageUrl = (url: string) => {
+  if (!url) return '';
+  // External URLs (e.g. CMS images served from raw.githubusercontent.com)
+  if (url.startsWith('http://') || url.startsWith('https://')) return url;
   let urlNow = `../assets/images/${url}`;
   let currentUrl = import.meta.glob<{ default: string }>("../assets/images/*", {
     eager: true
   });
   let mod = currentUrl[urlNow] as { default: string };
-  return mod.default;
+  return mod?.default ?? url;
 };
 </script>
 <style lang="scss" scoped>
