@@ -52,26 +52,10 @@
         <div class="section-main-title home-title has-options">
           <font-awesome-icon class="icon-home-title" icon="fa-solid fa-flag" />
           <h2>{{ $t("CommonTitle.MyWork") }}</h2>
-          <ul class="option-list">
-            <li
-              :class="{ active: listType === 'all' }"
-              @click="listProfileCard('all')"
-            >
-              {{ $t("CommonTitle.All") }}
-            </li>
-            <li
-              :class="{ active: listType === 'profolio' }"
-              @click="listProfileCard('profolio')"
-            >
-              {{ $t("CommonTitle.Portfolio") }}
-            </li>
-            <li
-              :class="{ active: listType === 'sideProject' }"
-              @click="listProfileCard('sideProject')"
-            >
-              {{ $t("CommonTitle.SideProject") }}
-            </li>
-          </ul>
+          <PortfolioOptionList
+            :active-type="listType"
+            @select="listProfileCard"
+          />
         </div>
         <!-- Project filter end -->
         <!-- Project cards start-->
@@ -109,6 +93,7 @@
 </template>
 <script lang="ts" setup>
 import LoadingImg from "/@/components/LoadingImg.vue";
+import PortfolioOptionList from "/@/components/PortfolioOptionList.vue";
 import { useHomeBanner } from "/@/hooks/useHomeBanner";
 import { usePortfolioCards } from "/@/hooks/usePortfolioCards";
 
