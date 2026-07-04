@@ -16,7 +16,7 @@
       <div class="info-wrapper">
         <div class="title-wrapper">
           <p class="info-title">{{ $t("CommonTitle.Title") }}:</p>
-          <h3 class="info-title-items">{{ personalData.title }}</h3>
+          <h3 class="info-title-items">{{ $t(personalData.title) }}</h3>
         </div>
         <ul class="list-wrapper">
           <li class="list">

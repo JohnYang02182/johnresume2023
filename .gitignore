@@ -132,3 +132,6 @@ dist
 
 # Google generated creds info
 google-generated-creds.json
+
+# Cloudflare wrangler tmp
+.wrangler/

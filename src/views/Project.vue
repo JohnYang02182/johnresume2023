@@ -1,6 +1,12 @@
 <template>
   <div class="container">
     <div class="section section-profile">
+      <div class="section-main-title project-title has-options">
+        <PortfolioOptionList
+          :active-type="listType"
+          @select="listProfileCard"
+        />
+      </div>
       <template v-if="loading">
         <Loading />
       </template>
@@ -52,14 +58,17 @@
 <script setup lang="ts">
 import Loading from "/@/components/Loading.vue";
 import LoadingImg from "/@/components/LoadingImg.vue";
+import PortfolioOptionList from "/@/components/PortfolioOptionList.vue";
 import { useProjectList } from "/@/hooks/useProjectList";
 
 const {
   projectItems,
+  listType,
   page,
   totalPages,
   loading,
   error,
+  listProfileCard,
   goPage,
   getProjectKey,
   getProjectRoute,
