@@ -1,27 +1,4 @@
-import axios, { AxiosInstance, AxiosResponse } from 'axios'
-
-// ─── 設定型別 ────────────────────────────────────────────────
-export interface APIClientConfig {
-  baseURL: string
-  timeout?: number
-  headers?: Record<string, string>
-}
-
-// ─── 建立獨立 instance ────────────────────────────────────────
-function createAPIClient(config: APIClientConfig): AxiosInstance {
-  const instance = axios.create({
-    baseURL: config.baseURL,
-    timeout: config.timeout ?? 10000,
-    headers: config.headers ?? {},
-  })
-
-  instance.interceptors.response.use(
-    (response: AxiosResponse) => response,
-    (error: any) => Promise.reject(error)
-  )
-
-  return instance
-}
+import { AxiosInstance, AxiosResponse } from 'axios'
 
 // ─── 通用 Status Code 檢查 ────────────────────────────────────
 function detectStatusCode(response: AxiosResponse) {
@@ -69,32 +46,3 @@ export async function del<T>(instance: AxiosInstance, url: string) {
   }
 }
 
-// ─── 預設 API Clients ─────────────────────────────────────────
-export const openAIClient = createAPIClient({
-  baseURL: 'https://api.openai.com/v1',
-  headers: {
-    Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
-  },
-})
-
-export const githubClient = createAPIClient({
-  baseURL: 'https://api.github.com',
-  headers: {
-    Accept: 'application/vnd.github+json',
-    ...(import.meta.env.VITE_GITHUB_TOKEN
-      ? { Authorization: `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}` }
-      : {}),
-  },
-})
-
-// export const rawGithubClient = createAPIClient({
-//   baseURL: 'https://raw.githubusercontent.com',
-//   // headers: { Authorization: `token ${import.meta.env.VITE_GITHUB_TOKEN}` },
-// })
-
-// export const directusClient = createAPIClient({
-//   baseURL: import.meta.env.VITE_DIRECTUS_URL,
-// })
-// export const directusClient = createAPIClient({
-//   baseURL: import.meta.env.VITE_DIRECTUS_URL,
-// })
