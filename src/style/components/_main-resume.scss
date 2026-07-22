@@ -417,95 +417,97 @@ body {
       }
     }
   }
-  .section-work-history {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 0;
-    .work-block-area {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    .work-block {
-      display: flex;
-      flex-direction: column;
-      padding: 1vw 0;
-      &:nth-of-type(1) {
-        margin-bottom: 16px;
-      }
-    }
-    .work-flow {
-      position: relative;
-      flex: 40px;
-      flex-grow: 0;
-      flex-shrink: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      .circle {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 20px;
-        height: 20px;
-        overflow: hidden;
-        z-index: 1;
-        circle {
-          fill: var(--primary);
-        }
-        .active {
-          fill: var(--tertiary);
-        }
-      }
-      .line {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        display: inline-block;
-        width: 4px;
-        height: 100%;
-        background-color: rgba(0, 180, 216, 0.15);
-        border-radius: 4px;
-      }
-    }
-    .work-title-block {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-items: center;
-      color: var(--text_secondary);
-    }
-    .work-job_title {
-      color: var(--text_primary);
-      font-weight: normal;
-      font-size: var(--font_body_small);
-    }
-    .work-time {
-      color: var(--secondary);
-    }
-    .work-content {
-      padding: 8px 0;
-      font-size: var(--font_body_medium);
-      font-weight: normal;
-      color: var(--text_primary);
-      > ul {
-        display: grid;
-        gap: 4px;
-      }
-      li {
+  .container {
+    .section-work-history {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 0;
+      .work-block-area {
         display: flex;
-        gap: 4px;
-        font-size: 14px;
-        line-height: 20px;
-        &::before {
-          content: "";
-          display: block;
-          margin: 6px 4px;
-          width: 6px;
-          height: 6px;
-          border-radius: 12px;
-          background-color: var(--secondary);
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .work-block {
+        display: flex;
+        flex-direction: column;
+        padding: 1vw 0;
+        &:nth-of-type(1) {
+          margin-bottom: 16px;
+        }
+      }
+      .work-flow {
+        position: relative;
+        flex: 40px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        .circle {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 20px;
+          height: 20px;
+          overflow: hidden;
+          z-index: 1;
+          circle {
+            fill: var(--primary);
+          }
+          .active {
+            fill: var(--tertiary);
+          }
+        }
+        .line {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          display: inline-block;
+          width: 4px;
+          height: 100%;
+          background-color: rgba(0, 180, 216, 0.15);
+          border-radius: 4px;
+        }
+      }
+      .work-title-block {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        color: var(--text_secondary);
+      }
+      .work-job_title {
+        color: var(--text_primary);
+        font-weight: normal;
+        font-size: var(--font_body_small);
+      }
+      .work-time {
+        color: var(--secondary);
+      }
+      .work-content {
+        padding: 8px 0;
+        font-size: var(--font_body_medium);
+        font-weight: normal;
+        color: var(--text_primary);
+        > ul {
+          display: grid;
+          gap: 4px;
+        }
+        li {
+          display: flex;
+          gap: 4px;
+          font-size: 14px;
+          line-height: 20px;
+          &::before {
+            content: "";
+            display: block;
+            margin: 6px 4px;
+            width: 6px;
+            height: 6px;
+            border-radius: 12px;
+            background-color: var(--secondary);
+          }
         }
       }
     }
